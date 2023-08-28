@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.page-container {
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container {
+  @apply max-w-6xl px-4 mx-auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.homeSectionTitle {
+  background: url("/images/home/title-pattern.svg");
+  background-size: 8px;
+  background-repeat: repeat;
+}
+
+/* Swiper */
+.homeSwiper {
+  @apply w-full aspect-[3.2] cursor-pointer;
+}
+
+.homeSwiper:hover .swiper-button-prev,
+.homeSwiper:hover .swiper-button-next {
+  @apply -translate-x-8 opacity-100 transition duration-500;
+}
+
+.homeSwiper:hover .swiper-button-next {
+  @apply translate-x-8;
+}
+
+.homeSwiper .swiper-button-prev,
+.homeSwiper .swiper-button-next {
+  @apply text-white scale-[0.3] -translate-y-[26px] w-[90px] h-[90px] transition duration-500 
+  bg-[rgba(102,102,102,0.354)] grid place-items-center translate-x-0 opacity-0
+  rounded-full border-white border-4 hover:border-none hover:bg-secondary;
+}
+
+.homeSwiper .swiper-pagination-bullet {
+  @apply w-2 h-2 rounded-full border-[2px] border-[#7a7e7a] opacity-60 bg-transparent;
+}
+
+.homeSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-white border-none;
 }
