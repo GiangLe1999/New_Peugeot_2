@@ -1,4 +1,5 @@
 import { FC } from "react";
+import ContainNextImage from "../ContainNextImage";
 
 interface Props {
   title: string;
@@ -7,8 +8,12 @@ interface Props {
 const SectionTitle: FC<Props> = ({ title }): JSX.Element => {
   return (
     <div className="text-center">
-      <h3 className="font-bold text-primary text-xl uppercase">{title}</h3>
-      <div className="homeSectionTitle w-44 h-[6px] mx-auto"></div>
+      <h3 className="font-bold text-primary text-[26px] uppercase mb-1">
+        {title}
+      </h3>
+      <div className="w-full h-[7px] relative text-center">
+        <ContainNextImage src="/images/home/divider.png" alt="Divider line" />
+      </div>
     </div>
   );
 };

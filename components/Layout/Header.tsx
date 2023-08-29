@@ -40,13 +40,13 @@ const Header: FC<Props> = (props): JSX.Element => {
       </div>
 
       {/* Sticky Header */}
-      <div className="bg-primary text-center sticky top-0">
+      <div className="bg-primary text-center sticky top-0 z-50">
         <nav className="container flex items-center justify-center h-10">
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className="uppercase text-[11px] text-white px-4 py-2 hover:bg-secondary rounded-sm transition"
+              className="uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition"
             >
               {item.title}
             </Link>

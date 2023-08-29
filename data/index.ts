@@ -8,6 +8,8 @@ import {
   FaUsersCog,
 } from "react-icons/fa";
 import { HiReceiptTax } from "react-icons/hi";
+import { BsChatHeartFill, BsTagsFill, BsFillGiftFill } from "react-icons/bs";
+import { SiAdguard } from "react-icons/si";
 
 import { IconType } from "react-icons";
 
@@ -110,5 +112,28 @@ export const promotionItems: promotionItemType[] = [
     subtitle:
       "Quý khách hàng sẽ được tư vấn đầy đủ các thông tin về giá bán, phiên bản và tính năng của từng sản phẩm Mazda thế hệ mới phù hợp với nhu cầu sử dụng thực tế.",
     desc: "Song song với các chương trình ưu đãi hấp dẫn, Mazda vẫn đảm bảo thực hiện nhiều biện pháp phòng, chống dịch và đặt sự an toàn của khách hàng lên hàng đầu với chương trình <b class='text-primary'>“Tư vấn trực tuyến – Lái thử tại nhà”</b>. Thông qua các ứng dụng trực tuyến trên <b>Facebook, Zalo</b> … Quý khách hàng sẽ được tư vấn đầy đủ các thông tin về giá bán, phiên bản và tính năng của từng sản phẩm Mazda thế hệ mới phù hợp với nhu cầu sử dụng thực tế.",
+  },
+];
+
+export const reasonsToBuy: { icon: IconType; title: string; desc: string }[] = [
+  {
+    icon: BsTagsFill,
+    title: "GIÁ CẢ ƯU ĐÃI - GIAO XE SỚM",
+    desc: "Mazda Sài Gòn luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất trong 1 ngày.",
+  },
+  {
+    icon: SiAdguard,
+    title: "BẢO HÀNH THEO TIÊU CHUẨN TOÀN QUỐC",
+    desc: "Anh chị sẽ yên tâm khi mua xe tại Mazda Phú Mỹ Hưng, vì chúng tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng của Mazda trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.",
+  },
+  {
+    icon: BsFillGiftFill,
+    title: "KHUYẾN MÃI NHIỀU NHẤT",
+    desc: "Với hoạt động bán hàng sôi nổi, chúng tôi luôn cập nhật sớm nhất các chương trình khuyến mãi của hãng và đại lý",
+  },
+  {
+    icon: BsChatHeartFill,
+    title: "TƯ VẤN TẬN TÌNH",
+    desc: "Đội ngũ tư vấn luôn sẵn lòng giúp Anh chị tìm được chiếc xe ưng ý.",
   },
 ];

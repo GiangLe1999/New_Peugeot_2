@@ -1,15 +1,23 @@
+import CarsSection from "@/components/home/CarsSection";
 import MainOptions from "@/components/home/MainOptions";
 import MainSwiper from "@/components/home/MainSwiper";
-import PromtionSection from "@/components/home/PromtionSection";
+import PromotionSection from "@/components/home/PromotionSection";
+import ReasonsSection from "@/components/home/ReasonsSection";
+import { getAllCarsData } from "@/lib/fetchData";
+import { CarType } from "@/types";
 
-export default function Home() {
+export default async function Home() {
+  const cars = (await getAllCarsData()) as CarType[];
+
   return (
     <main>
       <MainSwiper />
 
-      <div className="container mt-4">
+      <div className="mt-4">
         <MainOptions />
-        <PromtionSection />
+        <PromotionSection />
+        <CarsSection cars={cars} />
+        <ReasonsSection />
       </div>
     </main>
   );

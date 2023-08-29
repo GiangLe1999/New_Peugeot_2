@@ -4,24 +4,26 @@ import { promotionItems } from "@/data";
 
 interface Props {}
 
-const PromtionSection: FC<Props> = (props): JSX.Element => {
+const PromotionSection: FC<Props> = (props): JSX.Element => {
   return (
-    <section className="py-6">
+    <section className="py-10 container">
       <SectionTitle title="KHUYẾN MÃI MAZDA" />
 
-      <div className="grid grid-cols-2 gap-8 py-5">
+      <div className="grid grid-cols-2 gap-12 py-8">
         {promotionItems.map((item, index) => (
           <div key={index}>
-            <p className="text-primary text-xs font-bold mb-1 flex items-center gap-1">
+            <p className="text-primary text-base font-bold mb-1 flex items-center gap-1">
               {item.icon({
                 size: 20,
                 color: "#C4161C",
               })}
               {item.title}
             </p>
-            <p className="text-[10px] mb-1">{item.subtitle}</p>
+            <p className="text-sm mb-1 text-textColor leading-7">
+              {item.subtitle}
+            </p>
             <p
-              className="text-[10px]"
+              className="text-sm text-textColor leading-7"
               dangerouslySetInnerHTML={{ __html: item.desc }}
             />
           </div>
@@ -31,4 +33,4 @@ const PromtionSection: FC<Props> = (props): JSX.Element => {
   );
 };
 
-export default PromtionSection;
+export default PromotionSection;

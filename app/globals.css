@@ -9,10 +9,22 @@
   @apply max-w-6xl px-4 mx-auto;
 }
 
-.homeSectionTitle {
-  background: url("/images/home/title-pattern.svg");
-  background-size: 8px;
-  background-repeat: repeat;
+.main-image-ratio {
+  aspect-ratio: 22 / 10;
+}
+
+.car-main-infos li::marker {
+  @apply text-[#cccccc];
+}
+
+.price-block-decor {
+  @apply w-10/12 h-11 ml-auto grid place-items-center text-white bg-primary relative z-10 font-medium;
+}
+
+.price-block-decor::before {
+  @apply absolute top-0 -left-[10px] w-8 h-full bg-primary -z-10;
+  content: "";
+  transform: skew(-14deg, 0deg);
 }
 
 /* Swiper */

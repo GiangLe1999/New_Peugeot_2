@@ -6,7 +6,7 @@ interface Props {}
 
 const MainOptions: FC<Props> = (props): JSX.Element => {
   return (
-    <div className="grid grid-cols-4 gap-7">
+    <div className="container grid grid-cols-4 gap-7">
       {homeOptions.map((option, index) => {
         return (
           <Link
