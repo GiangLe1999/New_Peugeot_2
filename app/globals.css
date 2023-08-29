@@ -9,6 +9,10 @@
   @apply max-w-6xl px-4 mx-auto;
 }
 
+.main-container {
+  @apply max-w-6xl px-4 mx-auto;
+}
+
 .main-image-ratio {
   aspect-ratio: 22 / 10;
 }
@@ -27,7 +31,22 @@
   transform: skew(-14deg, 0deg);
 }
 
-/* Swiper */
+.video-wrapper {
+  @apply relative w-full aspect-video rounded-sm overflow-hidden;
+}
+
+.iframe {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.mazda-bg {
+  background: url("/images/home/mazda-bao-gia-lan-banh.jpg");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 45%;
+}
+
+/* Home Main Swiper */
 .homeSwiper {
   @apply w-full aspect-[3.2] cursor-pointer;
 }
@@ -54,4 +73,13 @@
 
 .homeSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-white border-none;
+}
+
+/* Home Customers Swiper */
+.customerSwiper {
+  @apply cursor-pointer;
+}
+
+.customerSwiper .swiper-pagination-bullets {
+  display: none;
 }

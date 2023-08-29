@@ -1,6 +1,8 @@
 import { FC } from "react";
 import SectionTitle from "./SectionTitle";
 import { reasonsToBuy } from "@/data";
+import NextImage from "../NextImage";
+import CustomerSwiper from "./CustomerSwiper";
 
 interface Props {}
 
@@ -12,8 +14,8 @@ const ReasonsSection: FC<Props> = (props): JSX.Element => {
       </p>
       <SectionTitle title="MAZDA SÀI GÒN" />
 
-      <div className="grid grid-cols-2 mt-8">
-        <ul className="space-y-8">
+      <div className="grid grid-cols-2 mt-8 gap-6">
+        <ul className="space-y-5">
           {reasonsToBuy.map((reason, index) => (
             <li key={index}>
               <p className="flex items-center gap-2 text-primary font-bold text-lg">
@@ -23,7 +25,16 @@ const ReasonsSection: FC<Props> = (props): JSX.Element => {
             </li>
           ))}
         </ul>
+
+        <div className="relative w-full aspect-[739/493] rounded-sm overflow-hidden">
+          <NextImage
+            src="/images/home/mazda-tai-sao-nen-mua.jpg"
+            alt="Tại sao nên mua xe Mazda?"
+          />
+        </div>
       </div>
+
+      <CustomerSwiper />
     </section>
   );
 };

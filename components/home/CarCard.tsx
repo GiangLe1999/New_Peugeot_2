@@ -10,7 +10,7 @@ interface Props {
 
 const CarCard: FC<Props> = ({ car }): JSX.Element => {
   return (
-    <div className="shadow-md bg-white">
+    <div className="shadow-md bg-white rounded-sm overflow-hidden">
       <Link
         href={"/" + car.slug}
         className="relative w-full main-image-ratio block overflow-hidden"

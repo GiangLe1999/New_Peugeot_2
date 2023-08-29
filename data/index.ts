@@ -6,6 +6,10 @@ import {
   FaCarAlt,
   FaChartPie,
   FaUsersCog,
+  FaFlag,
+  FaThumbsUp,
+  FaShieldAlt,
+  FaHeartbeat,
 } from "react-icons/fa";
 import { HiReceiptTax } from "react-icons/hi";
 import { BsChatHeartFill, BsTagsFill, BsFillGiftFill } from "react-icons/bs";
@@ -115,7 +119,9 @@ export const promotionItems: promotionItemType[] = [
   },
 ];
 
-export const reasonsToBuy: { icon: IconType; title: string; desc: string }[] = [
+type itemType = { icon: IconType; title: string; desc: string };
+
+export const reasonsToBuy: itemType[] = [
   {
     icon: BsTagsFill,
     title: "GIÁ CẢ ƯU ĐÃI - GIAO XE SỚM",
@@ -135,5 +141,28 @@ export const reasonsToBuy: { icon: IconType; title: string; desc: string }[] = [
     icon: BsChatHeartFill,
     title: "TƯ VẤN TẬN TÌNH",
     desc: "Đội ngũ tư vấn luôn sẵn lòng giúp Anh chị tìm được chiếc xe ưng ý.",
+  },
+];
+
+export const aboutItems: itemType[] = [
+  {
+    icon: FaFlag,
+    title: "THIẾT KẾ",
+    desc: "Chúng tôi mang đến niềm vui lái xe thuần túy bằng cách tạo nên những mẫu xe chứa đựng tính cách và tâm hồn. Trong đó, ngôn ngữ thiết kế chính là nét độc đáo mà Mazda sử dụng để tác động và kết nối các giác quan của người nhìn.",
+  },
+  {
+    icon: FaThumbsUp,
+    title: "SÁNG TẠO",
+    desc: "Tại Mazda, tất cả chúng ta đều nói về việc lái xe và cảm giác hứng khởi mà điều đó mang lại. Lái xe không đơn thuần chỉ là vận hành một cỗ máy mà còn liên hệ đến những va chạm và cảm xúc. Một chiếc xe không những phải phản ứng hoàn hảo với các thao tác của người lái mà còn phải sở hữu các hệ thống trực quan.",
+  },
+  {
+    icon: FaShieldAlt,
+    title: "AN TOÀN",
+    desc: "Mazda nhắm đến mục tiêu mang đến cho tất cả khách hàng niềm vui lái xe và hiệu suất an toàn trong một môi trường vượt trội. Dựa trên triết lý này, Mazda đang thúc đẩy nghiên cứu và phát triển các tính năng an toàn để hoàn thành mục tiêu quan trọng: xe lưu thông an toàn và không xảy ra tai nạn.",
+  },
+  {
+    icon: FaHeartbeat,
+    title: "CẢM XÚC",
+    desc: "Tại Mazda, Chúng tôi không chỉ sản xuất xe, mà còn mang lại niềm vui và hạnh phúc cho khách hàng bởi Mazda tin rằng chiếc xe sẽ lay động cảm xúc và thức tỉnh các giác quan, tạo sự phấn khích cho người sở hữu.",
   },
 ];
