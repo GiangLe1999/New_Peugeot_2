@@ -19,7 +19,7 @@ export default async function Home() {
       <div className="mt-4">
         <MainOptions />
         <PromotionSection />
-        {/* <CarsSection cars={cars} /> */}
+        <CarsSection cars={cars} />
         <ReasonsSection />
         <AboutSection />
         <PostsSection />
