@@ -6,11 +6,11 @@ interface Props {}
 
 const QuoteSection: FC<Props> = (props): JSX.Element => {
   return (
-    <section className="bg-secondary">
+    <section className="bg-[#e7e7e7]">
       <div className="mazda-bg">
         <div className="container">
           <div className="grid grid-cols-2 gap-3">
-            <div className="py-8 text-white space-y-6">
+            <div className="py-8 text-textColor space-y-6">
               <p className="text-center font-bold text-2xl">
                 BẢNG TÍNH GIÁ LĂN BÁNH
               </p>
@@ -24,7 +24,7 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
                 số liên hệ để biết giá xe lăn bánh tại từng khu vực ).
               </p>
 
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid grid-cols-2 gap-10 text-white">
                 <BtnWithIcon
                   href="/tinh-phi-lan-banh"
                   content="BẢNG TÍNH GIÁ LĂN BÁNH"

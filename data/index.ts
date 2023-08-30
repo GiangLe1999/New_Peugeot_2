@@ -14,6 +14,7 @@ import {
 import { HiReceiptTax } from "react-icons/hi";
 import { BsChatHeartFill, BsTagsFill, BsFillGiftFill } from "react-icons/bs";
 import { SiAdguard } from "react-icons/si";
+import { MdMail, MdPhone } from "react-icons/md";
 
 import { IconType } from "react-icons";
 
@@ -164,5 +165,49 @@ export const aboutItems: itemType[] = [
     icon: FaHeartbeat,
     title: "CẢM XÚC",
     desc: "Tại Mazda, Chúng tôi không chỉ sản xuất xe, mà còn mang lại niềm vui và hạnh phúc cho khách hàng bởi Mazda tin rằng chiếc xe sẽ lay động cảm xúc và thức tỉnh các giác quan, tạo sự phấn khích cho người sở hữu.",
+  },
+];
+
+export const footerCol1: string[] = [
+  "Giấy CNĐKDN: 400077880 Ngày cấp 27/10/2010",
+  "Cơ quan cấp: Cơ quan cấp: Phòng đăng ký kinh doanh Sở kế hoạch và đầu tư tỉnh Quảng Nam",
+  "Địa chỉ : Thôn 4, Xã Tam Hiệp, Huyện Núi Thành, Tỉnh Quảng Nam, Việt Nam",
+];
+
+type footerItemType = { title: string; link: string };
+
+export const footerCol2: footerItemType[] = [
+  { title: "New Mazda CX-5", link: "/mazda-cx-5" },
+  { title: "Mazda2", link: "/mazda-2" },
+  { title: "Mazda2 Sport", link: "/mazda-2-sport" },
+  { title: "Mazda3", link: "/mazda-3" },
+  { title: "Mazda3 Sport", link: "/mazda-3-sport" },
+  { title: "Mazda6", link: "/mazda-6" },
+  { title: "Mazda CX-8", link: "/mazda-cx-8" },
+  { title: "Mazda BT-50", link: "/mazda-bt-50" },
+];
+
+export const footerCol3: footerItemType[] = [
+  { title: "Dịch vụ sau bán hàng", link: "/bao-duong-dinh-ky-mazda" },
+  { title: "Phụ tùng - phụ kiện", link: "/phu-tung-bao-duong-mazda" },
+  { title: "Chăm sóc khách hàng", link: "/tong-dai-cham-soc-khach-hang-mazda" },
+  { title: "Đặt hẹn dịch vụ", link: "/dat-hen-dich-vu-mazda" },
+];
+
+export const footerCol32: footerItemType[] = [
+  { title: "Chính sách Thanh toán", link: "/chinh-sach-thanh-toan-mazda" },
+  { title: "Chính sách Bảo mật", link: "/chinh-sach-bao-mat-mazda" },
+  {
+    title: "Chính sách Giao nhận - Vận chuyển",
+    link: "/chinh-sach-giao-nhan-van-chuyen-mazda",
+  },
+];
+
+export const footerCol4: { title: string; link: string; icon: IconType }[] = [
+  { title: "Hotline: 0962334807", link: "tel:0962334807", icon: MdPhone },
+  {
+    title: "cskh@thaco.com.vn",
+    link: "mailto:cskh@thaco.com.vn",
+    icon: MdMail,
   },
 ];

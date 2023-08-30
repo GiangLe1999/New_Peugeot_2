@@ -2,6 +2,7 @@ import Header from "@/components/Layout/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Footer from "@/components/Layout/Footer";
 
 const mazda = localFont({
   src: [
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className={mazda.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

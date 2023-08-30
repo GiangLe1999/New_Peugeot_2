@@ -1,3 +1,4 @@
+import { type } from "os";
 import { FC } from "react";
 import { IconType } from "react-icons";
 
@@ -8,6 +9,7 @@ interface Props {
   iconSize?: number;
   href?: string;
   customClasses?: string;
+  type?: string;
 }
 
 const BtnWithIcon: FC<Props> = ({
@@ -17,6 +19,7 @@ const BtnWithIcon: FC<Props> = ({
   href,
   iconSize,
   customClasses,
+  type,
 }): JSX.Element => {
   let Component = "button" as any;
   if (!onClick && href) {
@@ -29,6 +32,7 @@ const BtnWithIcon: FC<Props> = ({
       onClick={onClick}
       className={`py-2 px-4 flex items-center justify-center gap-x-1 rounded-sm transition
       border border-transparent ${customClasses} hover:scale-[1.02]`}
+      type={type}
     >
       {icon && icon({ size: iconSize })}
       {content}

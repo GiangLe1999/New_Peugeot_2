@@ -46,6 +46,30 @@
   background-size: 45%;
 }
 
+.footer-title {
+  @apply font-bold uppercase text-white mb-3;
+}
+
+.footer-item {
+  @apply text-[#999999] text-xs my-[10px] hover:font-bold leading-5;
+}
+
+.footer-icon {
+  @apply relative w-7 h-7 rounded-full overflow-hidden;
+}
+
+.form-input-wrapper {
+  @apply flex flex-col gap-1;
+}
+
+.form-input-label {
+  @apply text-white text-sm;
+}
+
+.form-input {
+  @apply px-4 py-2 rounded-sm outline-none;
+}
+
 /* Home Main Swiper */
 .homeSwiper {
   @apply w-full aspect-[3.2] cursor-pointer;
