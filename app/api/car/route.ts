@@ -2,6 +2,16 @@ import dbConnect from "@/lib/db";
 import Car from "@/model/Car";
 import { NextResponse } from "next/server";
 
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const slug = searchParams.get("slug");
+
+  await dbConnect();
+  const car = await Car.findOne({ slug });
+
+  return NextResponse.json(car);
+}
+
 export async function POST(req: Request) {
   const { searchParams } = new URL(req.url);
   const secret = searchParams.get("secret");

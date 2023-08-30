@@ -13,7 +13,7 @@ const config: Config = {
         secondary: "#2b2b2b",
         tertiary: "#0298da",
         lightBg: "#F8FAFC",
-        textColor: "#2D2D2D",
+        textColor: "#54595f",
       },
       aspectRatio: {
         "22 / 10": "22 / 10",

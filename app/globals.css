@@ -46,6 +46,30 @@
   background-size: 45%;
 }
 
+.wrapper-shadow {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.post-heading-2 {
+  @apply border-b-[2px] border-primary leading-none py-[10px] mb-4;
+}
+
+.post-heading-2 span {
+  @apply bg-primary text-white uppercase px-3 py-[9px] text-2xl leading-none font-bold;
+}
+
+.price-table td {
+  @apply border border-[#80808080] pl-[10px] py-2;
+}
+
+.price-table thead {
+  @apply bg-secondary text-white font-bold;
+}
+
+.price-table tbody tr:nth-child(odd) {
+  @apply bg-[#F4F9FE];
+}
+
 .footer-title {
   @apply font-bold uppercase text-white mb-3;
 }
@@ -106,4 +130,30 @@
 
 .customerSwiper .swiper-pagination-bullets {
   display: none;
+}
+
+/* Car Image Gallery */
+.carousel.carousel-slider {
+  aspect-ratio: 22 / 10;
+}
+
+.carousel .thumbs {
+  text-align: center;
+}
+
+.carousel .thumb {
+  @apply !w-[50px] h-[30px] rounded;
+}
+
+.carousel .thumb:hover,
+.carousel .thumb.selected {
+  @apply !border-2 !border-[#aaa];
+}
+
+.carousel .thumb {
+  @apply !border !border-[#ccc];
+}
+
+.carousel-status {
+  @apply hidden;
 }

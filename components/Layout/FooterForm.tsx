@@ -6,7 +6,7 @@ interface Props {}
 
 const FooterForm: FC<Props> = (props): JSX.Element => {
   return (
-    <form className="w-full bg-primary py-3 pb-5 px-5 rounded-sm space-y-3">
+    <form className="w-full bg-primary py-3 pb-5 px-5 rounded-md space-y-3">
       <div className="form-input-wrapper">
         <label htmlFor="name" className="form-input-label">
           Họ tên *
