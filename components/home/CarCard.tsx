@@ -24,11 +24,14 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
 
       <div>
         <div className="grid grid-cols-2 gap-6 pl-4 items-center">
-          <Link href={"/" + car.slug}>
-            <h4 className="text-[15px] text-textColor font-bold hover:text-primary transition">
+          <h4>
+            <Link
+              className="text-[15px] text-textColor font-bold hover:text-primary transition"
+              href={"/" + car.slug}
+            >
               {car.name.toUpperCase()}
-            </h4>
-          </Link>
+            </Link>
+          </h4>
 
           <div className="price-block-decor">
             <span>
