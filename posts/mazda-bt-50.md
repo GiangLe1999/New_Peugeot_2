@@ -44,13 +44,13 @@ Tất cả các phiên bản của Mazda BT-50 đều sử dụng bóng halogen,
 
 Mazda BT-50 đời mới sở hữu không gian nội thất quen thuộc và lịch sự với ghế và vô lăng bọc da cũng như ghế lái điều khiển điện. Bên cạnh đó, xe được bổ sung thêm một màn hình cảm ứng ở vị trí trung tâm kích thước 7 inch, cho phép điều khiển nhiều tác vụ. Điều này khiến cho bệ điều khiển trung tâm trở nên gọn gàng hơn rất nhiều.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.77778}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693474994/mazda-bt-50-khoang-lai_pqsbps.jpg" alt="Khoang lái và màn hình cảm ứng KIA Mazda BT-50" fill={true} />
 </div>
 
 Với màn hình cảm ứng mới của Mazda BT-50 hiện nay, lái xe có thể sử dụng các kết nối đa phương tiện như DVD, Bluetooth, AUX, USB và iPod một cách linh hoạt hơn. Đồng thời có thể kiểm soát điện thoại thông qua tính năng thoại rảnh tay, sao lưu danh bạ hay kể cả việc quay số trực tiếp trên màn hình. Ngoài ra còn có tính năng dẫn đường định vị GPS tích hợp trên màn hình cảm ứng của Mazda BT-50 cho phép người lái có thể chủ động tìm đường.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.625}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693474993/mazda-bt-50-dong-ho_kn0bnf.jpg" alt="Đồng hồ và màn hình cảm ứng KIA Mazda BT-50" fill={true} />
 </div>
 
