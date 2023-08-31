@@ -139,7 +139,7 @@ Hệ thống treo cứng vững đem lại phản hồi thân xe dứt khoát v�
 
 Có một "bí kíp" được nhà sản xuất âm thầm trang bị để hoàn thiện khả năng vận cho các dòng xe Mazda nói chung và bao gồm cả Mazda6, đó là G-Vectoring Control Plus - hệ thống kiểm soát gia tốc nâng cao (GVC Plus).
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:2}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693457764/Mazda/Mazda-post/mazda-6-dong-co_jwj3v2.jpg" alt="Động cơ New Mazda 6" fill={true} />
 </div>
 
