@@ -15,11 +15,18 @@ const config: Config = {
         lightBg: "#F8FAFC",
         textColor: "#54595f",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "100ch",
+          },
+        },
+      },
       aspectRatio: {
         "22 / 10": "22 / 10",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

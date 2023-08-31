@@ -58,6 +58,7 @@
   @apply bg-primary text-white uppercase px-3 py-[9px] text-2xl leading-none font-bold;
 }
 
+/* Car Table */
 .price-table td {
   @apply border border-[#80808080] px-[10px] py-2;
 }
@@ -86,18 +87,6 @@
   @apply border-b border-tertiary text-tertiary font-bold text-xl;
 }
 
-.footer-title {
-  @apply font-bold uppercase text-white mb-3;
-}
-
-.footer-item {
-  @apply text-[#999999] text-xs my-[10px] hover:font-bold leading-5;
-}
-
-.footer-icon {
-  @apply relative w-7 h-7 rounded-full overflow-hidden;
-}
-
 .form-input-wrapper {
   @apply flex flex-col gap-1;
 }
@@ -118,6 +107,48 @@
 .cal-price-form-input select,
 .cal-price-form-input div {
   @apply flex-1 border border-[#ccc] bg-[#f9fafb] outline-none rounded-md px-3 py-2;
+}
+
+/* Car Post Content */
+.post-img-wrapper {
+  @apply relative w-full aspect-[3/2];
+}
+
+.postContent img {
+  @apply rounded-md m-0;
+}
+
+.postContent h2,
+.postContent h3 {
+  @apply w-fit px-3 py-[9px] text-2xl bg-primary text-white relative uppercase;
+}
+
+.postContent h2::after,
+.postContent h3::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-[2000px] h-[2px] bg-primary block;
+}
+
+.postContent h3 {
+  @apply bg-secondary text-lg capitalize;
+}
+
+.postContent h3::after {
+  content: "";
+  @apply bg-secondary block;
+}
+
+/* Footer */
+.footer-title {
+  @apply font-bold uppercase text-white mb-3;
+}
+
+.footer-item {
+  @apply text-[#999999] text-xs my-[10px] hover:font-bold leading-5;
+}
+
+.footer-icon {
+  @apply relative w-7 h-7 rounded-full overflow-hidden;
 }
 
 /* Home Main Swiper */
