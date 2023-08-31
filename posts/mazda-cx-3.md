@@ -18,7 +18,7 @@ Theo công bố từ nhà sản xuất, Mazda CX-3  có kích thước tổng t
 
 Nhìn từ trực diện đầu xe, Mazda CX-3  khách hàng sẽ có cảm giác Mazda CX-3  trông như phiên bản thu nhỏ của xe Mazda CX-5 thế hệ đầu tiên (2012-2017). Điều này thể hiện rõ qua bộ lưới tản nhiệt gồm các nan ngang kép và dải đèn LED ban ngày dạng nửa vòng tròn quen thuộc.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.3333}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693454164/Mazda/Mazda-post/Mazda-cx3-truc-dien-dau-xe_ssxbu5.jpg" alt="Đầu xe và lưới tản nhiệt KIA Mazda CX3" fill={true} />
 </div>
 
@@ -30,7 +30,7 @@ Phiên bản tiêu chuẩn Deluxe chỉ được trang bị đèn pha Halogen th
 
 Di chuyển qua phần hông, CX-3  trông như đang chuyển động dù đang đứng yên nhờ đường nhấn nhá đầy tinh tế. Hấp dẫn không kém là bộ vành 16-18 inch đa chấu mày phay xước toát lên vẻ cao cấp.![]
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.33333}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693454164/Mazda/Mazda-post/Mazda-cx3-than-xe_veytnx.jpg" alt="Thân xe KIA Mazda CX3" fill={true} />
 </div>
 
@@ -102,28 +102,28 @@ Hiệu quả giảm xóc trên CX-3 2021 sẽ phụ thuộc vào hệ thống tr
 
 Mazda CX-3 2021 sẽ được trang bị các tính năng an toàn tiêu chuẩn như:
 
-- _Màn hình kính lái HUD_
-- _Phanh tay điện tử tích hợp giữ phanh tự động_
-- _Kiểm soát hành trình_
-- _6 túi khí_
-- _Chống bó cứng phanh_
-- _Phân phối lực phanh điện tử_
-- _Hỗ trợ lực phanh khẩn cấp_
-- _Cân bằng điện tử_
-- _Kiểm soát lực kéo_
-- _Hỗ trợ khởi hành ngang dốc_
-- _Camera lùi_
-- _Cảm biến lùi_
+- Màn hình kính lái HUD
+- Phanh tay điện tử tích hợp giữ phanh tự động
+- Kiểm soát hành trình
+- 6 túi khí
+- Chống bó cứng phanh
+- Phân phối lực phanh điện tử
+- Hỗ trợ lực phanh khẩn cấp
+- Cân bằng điện tử
+- Kiểm soát lực kéo
+- Hỗ trợ khởi hành ngang dốc
+- Camera lùi
+- Cảm biến lùi
 
 Đặc biệt phiên bản cao cấp nhất Premium còn sở hữu gói an toàn cao cấp* I-ACTIVSENSE* gồm các tính năng thông minh như:
 
-- _Hệ thống tự động điều chỉnh đèn pha_
-- _Cảnh báo điểm mù_
-- _Cảnh báo phương tiện cắt ngang khi lùi_
-- _Cảnh báo chệch làn đường_
-- _Hỗ trợ phanh thông minh trong thành phố trước/sau_
-- _Nhận diện người đi bộ_
-- _Hệ thống lưu ý người lái nghỉ ngơi_
+- Hệ thống tự động điều chỉnh đèn pha
+- Cảnh báo điểm mù
+- Cảnh báo phương tiện cắt ngang khi lùi
+- Cảnh báo chệch làn đường
+- Hỗ trợ phanh thông minh trong thành phố trước/sau
+- Nhận diện người đi bộ
+- Hệ thống lưu ý người lái nghỉ ngơi
 
 ## THÔNG SỐ NEW MAZDA CX3
 

@@ -6,8 +6,8 @@ promotion: <ul class="promotion-ul"><li><span class="text-primary"><strong>Hỗ 
 
 Mới đây, Thaco đã chính thức giới thiệu đến quý khách hàng Việt phiên bản nâng cấp giữa dòng đời Mazda2. Có tất cả 7 phiên bản gồm 4 bản Sedan và 3 bản Sport. Mazda 2 tiếp tục xuất xứ nhập khẩu nguyên chiếc từ Thái Lan.
 
-<div class="post-img-wrapper">
-<Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693452775/Mazda/Mazda-post/Mazda-2-sport-tong-quan_fex3gu.jpg" alt="Kia Mazda 2" fill={true} />
+<div class="post-img-wrapper" style={{aspectRatio:1.7779}}>
+<Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693452775/Mazda/Mazda-post/Mazda-2-sport-tong-quan_fex3gu.jpg" alt="Kia Mazda 2 Sport" fill={true} />
 </div>
 
 Phụ nữ hiện đại đang ngày càng khẳng định vị trí của mình trong tất cả lĩnh vực. Đặc biệt, họ đang ngày càng bản lĩnh hơn, năng động hơn và biết cách hưởng thụ cuộc sống hơn, từ việc lựa chọn xu hướng thời trang cũng như lựa chọn một chiếc "xế cưng" phù hợp. Với phụ nữ, ô tô không chỉ là phương tiện di chuyển che nắng che mưa, mà còn như một món trang sức tô điểm cho cuộc sống. Vì vậy, việc lựa chọn xe cũng như chọn một bộ đồ thời trang vừa thể hiện vẻ đẹp cũng như sự độc lập, tự tin của phụ nữ hiện đại, nhưng vẫn đảm bảo tính ứng dụng cao.
@@ -16,8 +16,8 @@ Phụ nữ hiện đại đang ngày càng khẳng định vị trí của mình
 
 New Mazda2 Sport có diện mạo cá tính, sang trọng hơn hẳn đời trước sở hữu phong cách thiết kế theo triết lý "Car As Art -- Xe là nghệ thuật".
 
-<div class="post-img-wrapper">
-<Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693452775/Mazda/Mazda-post/Mazda-2-sport-ngoai-that_nm0n49.jpg" alt="Ngoại thất Kia Mazda 2" fill={true} />
+<div class="post-img-wrapper" style={{aspectRatio:1.66667}}>
+<Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693452775/Mazda/Mazda-post/Mazda-2-sport-ngoai-that_nm0n49.jpg" alt="Ngoại thất Kia Mazda 2 Sport" fill={true} />
 </div>
 
 Về mặt số đo, xe vẫn giữ nguyên kích thước tổng thể dài x rộng x cao lần lượt là 4065 x 1695 x 1515 mm. Bán kính vòng quay ở mức 4.7 m đảm bảo cho việc xoay trở dễ dàng trong đô thị.

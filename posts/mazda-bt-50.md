@@ -6,7 +6,7 @@ promotion: <ul class="promotion-ul"><li>Hỗ trợ mua xe trả góp&nbsp;<stron
 
 So với các ối thủ trong cùng phân khúc như Ford Ranger, Hilux hay Mitsubishi Triton, số lượng Mazda BT-50 có phần khiêm tốn hơn. Tính tổng năm 2019, có 1.894 chiếc BT-50 ược giao ến tay khách hàng và năm 2020, số lượng của Mazda BT-50 bán ược là 1.329 chiếc, theo báo cáo của VAMA.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.7778}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693474995/mazda-bt-50-tong-quan_zwt1oj.jpg" alt="Tổng quan KIA Mazda BT-50" fill={true} />
 </div>
 
@@ -14,7 +14,7 @@ Trong phân khúc xe bán tải ang khá sôi ộng tại thị trường Việt
 
 ## NGOẠI THẤT NEW MAZDA BT-50
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.7778}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693474995/mazda-bt-50-ngoai-hanh_evaxur.jpg" alt="Ngoại thất KIA Mazda BT-50" fill={true} />
 </div>
 
@@ -84,7 +84,7 @@ Chưa hết, xe còn có những hệ thống khác như: kiểm soát chống l
 
 BT-50 ghi điểm cộng lớn trong mắt người dùng khi được tích hợp hệ thống an ninh như mã hóa động cơ và hệ thống chống trộm, điều mà một số đối thủ khác vẫn chưa có.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.625}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693474993/mazda-bt-50-ancap-safety_fkj9rj.jpg" alt="ANCAP Safety KIA Mazda BT-50" fill={true} />
 </div>
 

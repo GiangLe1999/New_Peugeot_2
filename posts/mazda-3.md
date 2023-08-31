@@ -6,7 +6,7 @@ promotion: <ul class="promotion-ul"><li>Ưu đãi giá lên đến <b class="tex
 
 Ông vua phân khúc hạng C đã chính thức ra mắt giới chơi xe. Lột xác hoàn toàn từ ngoại thất đến nội thất. Đẹp, chất, ngầu, ngập tràn công nghệ...là một trong những mỹ từ mà những tín đồ bốn bánh đã dành cho chiếc xe đáng sở hữu nhất năm nay.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.7778}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693455950/Mazda/Mazda-post/mazda3-tong-quan_gznjj7.jpg" alt="Kia Mazda 3" fill={true} />
 </div>
 
@@ -68,7 +68,7 @@ Khoang lái cho cảm giác lạ lẫm với bảng tablo gần như lột xác 
 
 Vô lăng xe là loại bọc da 3 chấu quen thuộc. Tay lái này cho thấy sự pha trộn hài hòa giữa những chi tiết da tối màu và kim loại bạc sáng màu, qua đó mang tới cảm quan thẩm mỹ rất cao. Ngoài ra, còn tiện dụng với hàng loạt tính năng được tích hợp như nút bấm tiện ích, Cruise Control và lẫy chuyển số.
 
-<div class="post-img-wrapper">
+<div class="post-img-wrapper" style={{aspectRatio:1.7778}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693455950/Mazda/Mazda-post/mazda3-cabin-khoang-lai_lzbm54.jpg" alt="Khoang lái cabin Kia Mazda 3" fill={true} />
 </div>
 
