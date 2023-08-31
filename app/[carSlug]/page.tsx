@@ -42,7 +42,10 @@ const page: NextPage<Props> = async ({ params }) => {
               <CarPromotionSection content={promotionContent} name={car.name} />
             </div>
 
-            <CarPriceSection lines={car.carLines} />
+            <CarPriceSection
+              lines={car.carLines}
+              registration={car.registration}
+            />
 
             <ContentSection content={serializedContent} />
           </div>

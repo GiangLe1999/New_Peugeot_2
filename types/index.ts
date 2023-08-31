@@ -7,6 +7,7 @@ export interface CarType {
   priceFromText: string;
   slug: string;
   avatar: string;
+  registration: number;
   mainInfo: {
     kind: string;
     seats: number;
@@ -15,5 +16,15 @@ export interface CarType {
     fuel: string;
   };
   colors: { color: string; colorImg: string }[];
-  carLines: { name: string; price: number; priceText: string }[];
+  carLines: {
+    name: string;
+    price: number;
+    tax: string;
+  }[];
+}
+
+export interface CarLineType {
+  name: string;
+  price: number;
+  tax: string;
 }

@@ -59,7 +59,11 @@
 }
 
 .price-table td {
-  @apply border border-[#80808080] pl-[10px] py-2;
+  @apply border border-[#80808080] px-[10px] py-2;
+}
+
+.price-table tbody td {
+  @apply text-textColor;
 }
 
 .price-table thead {
@@ -68,6 +72,18 @@
 
 .price-table tbody tr:nth-child(odd) {
   @apply bg-[#F4F9FE];
+}
+
+.interest-table td {
+  @apply text-center py-1 text-sm;
+}
+
+.cal-price-wrapper {
+  @apply p-5 w-full border border-[#eee] rounded-md;
+}
+
+.cal-price-title {
+  @apply border-b border-tertiary text-tertiary font-bold text-xl;
 }
 
 .footer-title {
@@ -92,6 +108,16 @@
 
 .form-input {
   @apply px-4 py-2 rounded-sm outline-none;
+}
+
+.cal-price-form-input {
+  @apply flex items-center mb-5;
+}
+
+.cal-price-form-input input,
+.cal-price-form-input select,
+.cal-price-form-input div {
+  @apply flex-1 border border-[#ccc] bg-[#f9fafb] outline-none rounded-md px-3 py-2;
 }
 
 /* Home Main Swiper */

@@ -28,6 +28,7 @@ import {
   banner7,
   banner8,
 } from "@/public/images/home";
+import { formatPrice } from "@/lib/formatData";
 
 export const navItems: { title: string; link: string }[] = [
   {
@@ -211,3 +212,12 @@ export const footerCol4: { title: string; link: string; icon: IconType }[] = [
     icon: MdMail,
   },
 ];
+
+export const carFees = {
+  phiDkyBienso: 20000000,
+  phiDuongbo: 1560000,
+  phiDkiem: 45000,
+  phiDvu: 2000000,
+  thuchiho: 630000,
+  bhTNDS: 530700,
+};

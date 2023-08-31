@@ -1,3 +1,4 @@
+import { Decimal128 } from "mongodb";
 import mongoose from "mongoose";
 
 const CarSchema = new mongoose.Schema(
@@ -25,6 +26,8 @@ const CarSchema = new mongoose.Schema(
       unique: true,
     },
 
+    registration: { type: Number },
+
     avatar: { type: String, required: true },
 
     mainInfo: {
@@ -39,7 +42,15 @@ const CarSchema = new mongoose.Schema(
 
     colors: [{ type: { color: String, colorImg: String } }],
 
-    carLines: [{ type: { name: String, price: Number, priceText: String } }],
+    carLines: [
+      {
+        type: {
+          name: String,
+          price: Number,
+          tax: String,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );
