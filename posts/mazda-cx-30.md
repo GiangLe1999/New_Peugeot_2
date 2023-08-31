@@ -109,7 +109,7 @@ Các phiên bản của chiếc CX-30 đều được trang bị rất nhiều 
 
 Mazda CX-30 sử dụng khối động cơ Xăng Skyactiv-G 2.0L sinh rất công suất tối đa 153 mã lực tại 6000 vòng/phút, mô men xoắn cực đại 200 Nm tại 4000 vòng/phút. Đi kèm là hộp số tự động 6 cấp và hệ dẫn động cầu trước.
 
-<div class="post-img-wrapper" style={{aspectRatio: 1}}>
+<div class="post-img-wrapper">
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1693456719/Mazda/Mazda-post/mazda-cx30-dong-co_zqueey.webp" alt="Động cơ xe KIA Mazda CX30" fill={true} />
 </div>
 
