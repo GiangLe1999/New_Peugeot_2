@@ -22,7 +22,7 @@ const InterestDetailTable: FC<Props> = ({
           <td>Dư nợ đầu kỳ</td>
           <td>Gốc phải trả (VNĐ)</td>
           <td>Lãi phải trả (VNĐ)</td>
-          <td>Gốc + Lãi(VNĐ)</td>
+          <td>Gốc + Lãi (VNĐ)</td>
         </tr>
       </thead>
 

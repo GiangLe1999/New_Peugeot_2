@@ -158,7 +158,7 @@ const CalInterestForm: FC<Props> = ({
         <div className={calRowClasses}>
           <span>Tổng số tiền phải trả</span>
           <span className={calRowPriceClasses}>
-            {formatPrice(totalPayment)} VNĐ
+            {formatPrice(totalPayment)}VNĐ
           </span>
         </div>
 
