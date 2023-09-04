@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.page-container {
-}
-
 .container {
   @apply max-w-6xl px-4 mx-auto;
 }

@@ -1,6 +1,25 @@
 import { CarType } from "@/types";
 import { cache } from "react";
 
+export const getAllCarsFullData = async () => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/cars?getAll=true`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json() as Promise<CarType[]>;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getAllCarsData = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`, {
