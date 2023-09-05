@@ -1,18 +1,33 @@
 "use client";
 
-import { FC } from "react";
-import Accordion from "@/components/Accordion";
+import { Dispatch, FC, SetStateAction } from "react";
+import FilterAccordion from "@/components/quotePage/FilterAccordion";
 import { CarType } from "@/types";
 
 interface Props {
   cars: CarType[];
+  setCars: Dispatch<SetStateAction<CarType[]>>;
 }
 
-const Filter: FC<Props> = ({ cars }): JSX.Element => {
+const Filter: FC<Props> = ({ cars, setCars }): JSX.Element => {
   const accordionData = [
-    { header: "DÒNG XE", items: cars.map((car) => car.name) },
     {
-      header: "GIÁ",
+      header: "line",
+      items: [
+        "new mazda 2",
+        "new mazda 2 sport",
+        "new mazda cx-3",
+        "new mazda 3",
+        "new mazda3 sport",
+        "new mazda cx-30",
+        "new mazda 6",
+        "new mazda cx-5 ipm",
+        "new mazda cx-8",
+        "new mazda bt-50",
+      ],
+    },
+    {
+      header: "price",
       items: [
         "Dưới 500 triệu",
         "500 triệu - 700 triệu",
@@ -20,18 +35,25 @@ const Filter: FC<Props> = ({ cars }): JSX.Element => {
         "1 tỷ - 2 tỷ",
       ],
     },
-    { header: "NHIÊN LIỆU", items: ["Xăng", "Dầu"] },
-    { header: "SỐ CHỖ", items: ["5", "7"] },
+    { header: "fuel", items: ["Xăng", "Dầu"] },
+    { header: "seats", items: ["5", "7"] },
     {
-      header: "KIÊU DÁNG",
-      items: Array.from(new Set(...[cars.map((car) => car.mainInfo.kind)])),
+      header: "kind",
+      items: [
+        "Hatchback",
+        "Sedan",
+        "Sedan & Hatchback",
+        "Coupe (xe thể thao)",
+        "SUV (xe thể thao đa dụng)",
+        "Pickup (xe bán tải)",
+      ],
     },
   ];
 
   return (
     <div className="w-[28%] bg-[#F3F3F3] p-4 h-fit">
       <h3 className="text-xl font-bold text-center">BỘ LỌC</h3>
-      <Accordion data={accordionData} />
+      <FilterAccordion data={accordionData} setCars={setCars} />
     </div>
   );
 };

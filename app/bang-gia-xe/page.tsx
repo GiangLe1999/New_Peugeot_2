@@ -1,14 +1,30 @@
+"use client";
+
 import FirstBanner from "@/components/FirstBanner";
 import CarList from "@/components/quotePage/CarList";
 import Filter from "@/components/quotePage/Filter";
-import { getAllCarsFullData } from "@/lib/fetchData";
 import { CarType } from "@/types";
-import { NextPage } from "next";
+import { useEffect, useState } from "react";
+import { ImSpinner3 } from "react-icons/im";
 
-interface Props {}
+const QuotePage = () => {
+  const [cars, setCars] = useState<CarType[]>([]);
+  const [loading, setLoading] = useState(false);
 
-const page: NextPage<Props> = async () => {
-  const cars = (await getAllCarsFullData()) as CarType[];
+  useEffect(() => {
+    setLoading(true);
+    try {
+      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars?getAll=true`)
+        .then((res) => res.json())
+        .then((data) => {
+          setLoading(false);
+          setCars(data);
+        });
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  }, []);
 
   return (
     <div>
@@ -20,12 +36,19 @@ const page: NextPage<Props> = async () => {
 
       <div className="container">
         <div className="flex mt-8 mb-16 gap-7">
-          <Filter cars={cars} />
-          <CarList cars={cars} />
+          <Filter cars={cars} setCars={setCars} />
+          {loading ? (
+            <div className="w-full h-screen flex flex-col items-center justify-center text-primary">
+              <ImSpinner3 className="animate-spin" size={50} />
+              <p className="mt-2 text-xl">Đang tải dữ liệu</p>
+            </div>
+          ) : (
+            <CarList cars={cars} />
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default QuotePage;
