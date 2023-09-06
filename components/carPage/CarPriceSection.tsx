@@ -8,11 +8,16 @@ import { formatPrice } from "@/lib/formatData";
 import InterestDetailTable from "./InterestDetailTable";
 
 interface Props {
+  name: string;
   lines: CarLineType[];
   registration: number;
 }
 
-const CarPriceSection: FC<Props> = ({ lines, registration }): JSX.Element => {
+const CarPriceSection: FC<Props> = ({
+  name,
+  lines,
+  registration,
+}): JSX.Element => {
   const [choseCarLine, setChoseCarLine] = useState("");
   const [chosePercent, setChosePercent] = useState("0");
   const [choseLength, setChoseLength] = useState("5");
@@ -61,8 +66,8 @@ const CarPriceSection: FC<Props> = ({ lines, registration }): JSX.Element => {
 
   return (
     <section className="space-y-6">
-      <h2 className="post-heading-2">
-        <span>GIÁ XE NEW MAZDA 2</span>
+      <h2 className="post-heading-2 uppercase">
+        <span>Giá xe {name}</span>
       </h2>
 
       {/* Table 1 */}

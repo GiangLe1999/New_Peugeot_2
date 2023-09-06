@@ -43,6 +43,7 @@ const page: NextPage<Props> = async ({ params }) => {
             </div>
 
             <CarPriceSection
+              name={car.name}
               lines={car.carLines}
               registration={car.registration}
             />

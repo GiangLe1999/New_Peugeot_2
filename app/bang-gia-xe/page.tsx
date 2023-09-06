@@ -6,7 +6,6 @@ import CarList from "@/components/quotePage/CarList";
 import Filter from "@/components/quotePage/Filter";
 import { CarType } from "@/types";
 import { useEffect, useState } from "react";
-import { ImSpinner3 } from "react-icons/im";
 
 const QuotePage = () => {
   const [cars, setCars] = useState<CarType[]>([]);
