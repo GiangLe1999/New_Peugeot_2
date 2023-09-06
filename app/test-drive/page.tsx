@@ -1,18 +1,28 @@
+"use client";
+
 import FirstBanner from "@/components/FirstBanner";
 import TestDriveForm from "@/components/testDrivePage/TestDriveForm";
 import { getAllCarsLinesData } from "@/lib/fetchData";
 import { CarLineType } from "@/types";
 import { NextPage } from "next";
+import { useEffect, useState } from "react";
 
 type DataType = {
   name: string;
   carLines: CarLineType[];
 };
 
-interface Props {}
+const TestDrivePage = () => {
+  const [carLines, setCarLines] = useState<DataType[]>([]);
 
-const page: NextPage<Props> = async () => {
-  const carLines = (await getAllCarsLinesData()) as DataType[];
+  const fetchDataHandler = async () => {
+    const carLines = (await getAllCarsLinesData()) as DataType[];
+    setCarLines(carLines);
+  };
+
+  useEffect(() => {
+    fetchDataHandler();
+  }, []);
 
   return (
     <div>
@@ -29,4 +39,4 @@ const page: NextPage<Props> = async () => {
   );
 };
 
-export default page;
+export default TestDrivePage;

@@ -25,9 +25,13 @@ const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
   const [loading, setLoading] = useState(false);
 
   const carNames = carLines.map((item) => item.name.toUpperCase());
-  const carLinesNames = carLines
-    .find((item) => item.name.toUpperCase() === choseCarName)
-    ?.carLines.map((item2) => item2.name);
+
+  let carLinesNames = [];
+  if (choseCarName) {
+    carLinesNames = carLines
+      .find((item) => item.name.toUpperCase() === choseCarName)
+      ?.carLines.map((item2) => item2.name) as any[];
+  }
 
   const resetFormValue = () => {
     setEnteredName("");
