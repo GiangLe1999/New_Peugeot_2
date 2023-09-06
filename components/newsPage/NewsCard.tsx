@@ -21,19 +21,22 @@ const NewsCard: FC<Props> = ({ item }): JSX.Element => {
         />
       </Link>
 
-      <Link href={`/tin-tuc/${item.slug}`} className="p-4 text-textColor block">
+      <div className="p-4 text-textColor block">
         <h2 className="text-center uppercase font-semibold mb-4 leading-8">
-          {item.title}
+          <Link href={`/tin-tuc/${item.slug}`}>{item.title}</Link>
         </h2>
 
         <div className="pt-4 mb-6 border-t border-[#d5d5d5] text-justify leading-8 line-clamp-3">
           {item.description}
         </div>
 
-        <div className="w-fit mx-auto uppercase tracking-widest font-bold pb-6 relative after:w-full after:h-[2px] after:left-0 after:bg-textColor after:absolute after:bottom-0 group-hover:after:-translate-y-4 after:opacity-0 group-hover:after:opacity-100 after:transition">
+        <Link
+          href={`/tin-tuc/${item.slug}`}
+          className="block w-fit mx-auto uppercase tracking-widest font-bold pb-6 relative after:w-full after:h-[2px] after:left-0 after:bg-textColor after:absolute after:bottom-0 group-hover:after:-translate-y-4 after:opacity-0 group-hover:after:opacity-100 after:transition"
+        >
           Xem chi tiết
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };
