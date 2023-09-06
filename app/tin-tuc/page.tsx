@@ -1,13 +1,29 @@
+"use client";
+
 import FirstBanner from "@/components/FirstBanner";
 import NewsCard from "@/components/newsPage/NewsCard";
 import { getAllNewsPostsData } from "@/lib/fetchData";
 import { NextPage } from "next";
 import { frontType } from "./[postSlug]/page";
+import { useEffect, useState } from "react";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 interface Props {}
 
-const page: NextPage<Props> = async () => {
-  const data = (await getAllNewsPostsData()) as frontType[];
+const AllNewsPage: NextPage<Props> = () => {
+  const [newsPosts, setNewsPosts] = useState<frontType[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchDataHandler = async () => {
+    setLoading(true);
+    const data = (await getAllNewsPostsData()) as frontType[];
+    setLoading(false);
+    setNewsPosts(data);
+  };
+
+  useEffect(() => {
+    fetchDataHandler();
+  }, []);
 
   return (
     <div>
@@ -18,14 +34,20 @@ const page: NextPage<Props> = async () => {
       />
 
       <div className="container my-16">
-        <div className="grid grid-cols-3 gap-4">
-          {data.map((item, index) => (
-            <NewsCard item={item} key={index} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="w-full h-screen flex items-center justify-center">
+            <LoadingSpinner />
+          </div>
+        ) : (
+          <div className="grid grid-cols-3 gap-4">
+            {newsPosts.map((post, index) => (
+              <NewsCard item={post} key={index} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default page;
+export default AllNewsPage;

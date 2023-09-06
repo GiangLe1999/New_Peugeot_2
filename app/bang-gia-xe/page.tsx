@@ -1,6 +1,7 @@
 "use client";
 
 import FirstBanner from "@/components/FirstBanner";
+import LoadingSpinner from "@/components/LoadingSpinner";
 import CarList from "@/components/quotePage/CarList";
 import Filter from "@/components/quotePage/Filter";
 import { CarType } from "@/types";
@@ -37,14 +38,7 @@ const QuotePage = () => {
       <div className="container">
         <div className="flex mt-8 mb-16 gap-7">
           <Filter cars={cars} setCars={setCars} />
-          {loading ? (
-            <div className="w-full h-screen flex flex-col items-center justify-center text-primary">
-              <ImSpinner3 className="animate-spin" size={50} />
-              <p className="mt-2 text-xl">Đang tải dữ liệu</p>
-            </div>
-          ) : (
-            <CarList cars={cars} />
-          )}
+          {loading ? <LoadingSpinner /> : <CarList cars={cars} />}
         </div>
       </div>
     </div>
