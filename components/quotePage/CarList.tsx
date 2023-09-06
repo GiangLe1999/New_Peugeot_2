@@ -18,13 +18,20 @@ const CarList: FC<Props> = ({ cars }): JSX.Element => {
       {Array.isArray(cars) ? (
         cars.map((car) => (
           <div key={car._id.toString()} className="mb-16">
-            <h2 className="font-bold text-xl uppercase border-b border-textColor py-1 mb-5">
-              {car.name}
+            <h2 className="font-bold text-xl uppercase border-b border-textColor py-1 mb-5 hover:text-primary transition">
+              <Link href={`/${car.slug}`}>{car.name}</Link>
             </h2>
             <div className="flex items-center gap-4">
-              <div className="relative w-[30%] main-image-ratio">
-                <NextImage src={car.avatar} alt={car.name} />
-              </div>
+              <Link
+                href={`/${car.slug}`}
+                className="relative w-[30%] main-image-ratio"
+              >
+                <NextImage
+                  src={car.avatar}
+                  alt={car.name}
+                  className="hover:scale-[1.05]"
+                />
+              </Link>
 
               <div className="flex-1 space-y-8">
                 {car.carLines.map((line, index) => (
@@ -34,7 +41,7 @@ const CarList: FC<Props> = ({ cars }): JSX.Element => {
                       Giá: {formatPrice(line.price)} VNĐ
                     </div>
                     <BtnWithIcon
-                      href=""
+                      to="/test-drive"
                       customClasses="w-1/4 bg-primary text-white !p-2"
                       icon={GiSteeringWheel}
                       content="Đăng ký lái thử"

@@ -20,7 +20,7 @@ export async function GET(
   const filePathToRead = path.join(
     process.cwd(),
     "posts",
-    "cars",
+    "news",
     slug + ".md"
   );
   const fileContent = fs.readFileSync(filePathToRead, { encoding: "utf-8" });

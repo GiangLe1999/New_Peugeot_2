@@ -49,7 +49,7 @@ export async function POST(req: Request) {
         case "1 tỷ - 2 tỷ":
           carQuery.$or = [
             ...carQuery.$or,
-            { priceFrom: { $gte: 100000000, $lte: 2000000000 } },
+            { priceFrom: { $gte: 1000000000, $lte: 20000000000 } },
           ];
           break;
       }

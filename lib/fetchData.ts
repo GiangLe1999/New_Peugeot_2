@@ -1,3 +1,4 @@
+import { frontType } from "./../app/tin-tuc/[postSlug]/page";
 import { CarType } from "@/types";
 import { cache } from "react";
 
@@ -15,6 +16,25 @@ export const getAllCarsFullData = async () => {
     }
 
     return res.json() as Promise<CarType[]>;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAllCarsLinesData = async () => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/cars?getLines=true`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
   } catch (error) {
     console.log(error);
   }
@@ -67,6 +87,39 @@ export const getCarPostData = async (slug: string) => {
       content: string;
       data: { promotion: string };
     }>;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getNewsPostData = async (slug: string) => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/news/${slug}`
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json() as Promise<{
+      content: string;
+      data: frontType;
+    }>;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAllNewsPostsData = async () => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/news`);
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json() as Promise<frontType[]>;
   } catch (error) {
     console.log(error);
   }

@@ -37,15 +37,15 @@ export const navItems: { title: string; link: string }[] = [
   },
   {
     title: "giới thiệu",
-    link: "gioi-thieu",
+    link: "/gioi-thieu",
   },
   {
     title: "bảng giá xe",
-    link: "bang-gia-xe",
+    link: "/bang-gia-xe",
   },
   {
     title: "xe mazda",
-    link: "bang-gia-xe",
+    link: "/bang-gia-xe",
   },
   {
     title: "mua xe",
@@ -53,11 +53,11 @@ export const navItems: { title: string; link: string }[] = [
   },
   {
     title: "tin tức",
-    link: "tin-tuc",
+    link: "/tin-tuc",
   },
   {
     title: "liên hệ",
-    link: "lien-he",
+    link: "/lien-he",
   },
 ];
 
