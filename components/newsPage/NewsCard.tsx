@@ -10,8 +10,8 @@ interface Props {
 const NewsCard: FC<Props> = ({ item }): JSX.Element => {
   return (
     <div className="shadow-md group rounded-md overflow-hidden border">
-      <Link
-        href={`/tin-tuc/${item.slug}`}
+      <div
+        // href={`/tin-tuc/${item.slug}`}
         className="block relative w-full aspect-video overflow-hidden"
       >
         <NextImage
@@ -19,7 +19,7 @@ const NewsCard: FC<Props> = ({ item }): JSX.Element => {
           alt={item.title}
           className="group-hover:scale-[1.05] duration-200"
         />
-      </Link>
+      </div>
 
       <div className="p-4 text-textColor block">
         <h2 className="text-center uppercase font-semibold mb-4 leading-8">
