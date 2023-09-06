@@ -66,6 +66,8 @@ const AccordionItem: FC<ItemsProps> = ({ header, ...rest }) => {
 interface Props {
   data: { header: string; items: string[] }[];
   setCars: Dispatch<SetStateAction<CarType[]>>;
+  setFilterLoading: Dispatch<SetStateAction<boolean>>;
+  filterLoading: boolean;
 }
 
 export type QueryType = {
@@ -86,7 +88,12 @@ const initialQuery = {
   kind: [],
 };
 
-const FilterAccordion: FC<Props> = ({ data, setCars }): JSX.Element => {
+const FilterAccordion: FC<Props> = ({
+  data,
+  setCars,
+  setFilterLoading,
+  filterLoading,
+}): JSX.Element => {
   const [query, setQuery] = useState<QueryType>(initialQuery);
 
   const inputChangeHandler = (name: FieldNameType, value: string) => {
@@ -103,6 +110,7 @@ const FilterAccordion: FC<Props> = ({ data, setCars }): JSX.Element => {
 
   useEffect(() => {
     try {
+      setFilterLoading(true);
       fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/filter`, {
         method: "POST",
         body: JSON.stringify({
@@ -115,7 +123,10 @@ const FilterAccordion: FC<Props> = ({ data, setCars }): JSX.Element => {
           }
           return res.json();
         })
-        .then((data) => setCars(data));
+        .then((data) => {
+          setFilterLoading(false);
+          setCars(data);
+        });
     } catch (error) {
       console.log(error);
     }
@@ -149,6 +160,7 @@ const FilterAccordion: FC<Props> = ({ data, setCars }): JSX.Element => {
                     onChange={() =>
                       inputChangeHandler(group.header as FieldNameType, item)
                     }
+                    disabled={filterLoading}
                   />
                   {item}
                 </label>

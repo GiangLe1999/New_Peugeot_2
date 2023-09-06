@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 const QuotePage = () => {
   const [cars, setCars] = useState<CarType[]>([]);
   const [loading, setLoading] = useState(false);
+  const [filterLoading, setFilterLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -36,8 +37,18 @@ const QuotePage = () => {
 
       <div className="container">
         <div className="flex mt-8 mb-16 gap-7">
-          <Filter cars={cars} setCars={setCars} />
-          {loading ? <LoadingSpinner /> : <CarList cars={cars} />}
+          <Filter
+            setCars={setCars}
+            filterLoading={filterLoading}
+            setFilterLoading={setFilterLoading}
+          />
+          {loading || filterLoading ? (
+            <div className="flex-1">
+              <LoadingSpinner />
+            </div>
+          ) : (
+            <CarList cars={cars} />
+          )}
         </div>
       </div>
     </div>

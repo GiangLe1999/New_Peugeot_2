@@ -5,11 +5,16 @@ import FilterAccordion from "@/components/quotePage/FilterAccordion";
 import { CarType } from "@/types";
 
 interface Props {
-  cars: CarType[];
   setCars: Dispatch<SetStateAction<CarType[]>>;
+  setFilterLoading: Dispatch<SetStateAction<boolean>>;
+  filterLoading: boolean;
 }
 
-const Filter: FC<Props> = ({ cars, setCars }): JSX.Element => {
+const Filter: FC<Props> = ({
+  setCars,
+  setFilterLoading,
+  filterLoading,
+}): JSX.Element => {
   const accordionData = [
     {
       header: "line",
@@ -53,7 +58,12 @@ const Filter: FC<Props> = ({ cars, setCars }): JSX.Element => {
   return (
     <div className="w-[28%] bg-[#F3F3F3] p-4 h-fit">
       <h3 className="text-xl font-bold text-center">BỘ LỌC</h3>
-      <FilterAccordion data={accordionData} setCars={setCars} />
+      <FilterAccordion
+        data={accordionData}
+        setCars={setCars}
+        setFilterLoading={setFilterLoading}
+        filterLoading={filterLoading}
+      />
     </div>
   );
 };
