@@ -241,3 +241,28 @@ html {
 .contact-table table tr {
   @apply border-b border-[#ececec];
 }
+
+/* Introduce page */
+.introduce-section {
+  @apply grid grid-cols-2 gap-12 text-textColor;
+}
+
+.introduce-section p {
+  @apply text-primary font-bold text-xl text-center mb-2;
+}
+
+.introduce-section h2 {
+  @apply font-bold text-3xl uppercase text-center mb-3;
+}
+
+.introduce-section ul {
+  @apply list-disc space-y-2 ml-4;
+}
+
+.introduce-section li {
+  @apply text-justify text-[15px];
+}
+
+.introduce-section li span {
+  @apply font-bold;
+}

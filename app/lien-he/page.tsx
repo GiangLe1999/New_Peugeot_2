@@ -50,7 +50,7 @@ const ContactPage: NextPage<Props> = () => {
         heading="LIÊN HỆ CHÚNG TÔI"
         subHeading="Hoặc ghé thăm trực tiếp đại lý Mazda Sài Gòn"
         bgImg="/images/lien-he/first-banner.jpg"
-        bgClasses="!bg-[50%_50%]"
+        bgClasses="!bg-[50%_50%] !bg-cover"
       />
       <div className="container py-16">
         <div className="pb-16">

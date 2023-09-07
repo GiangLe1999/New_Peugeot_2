@@ -136,8 +136,8 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
 
   return (
     <form
-      className={`w-[70%] mx-auto shadow-md p-6 border rounded-md text-textColor bg-white ${
-        isContactForm && "w-full"
+      className={`p-6 rounded-r-md text-textColor bg-white ${
+        isContactForm && "w-full rounded-md shadow-md border"
       }`}
     >
       <p className="text-center font-bold leading-8 mt-4 mb-8 text-black">
@@ -265,9 +265,12 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
                 setConfirm1Checked(e.target.checked);
               }}
             />
-            <label htmlFor="confirm1" className="cursor-pointer">
-              Tôi xác nhận rằng Mazda có thể gửi cho tôi thêm thông tin về các
-              sản phẩm hoặc dịch vụ của Mazda. *
+            <label
+              htmlFor="confirm1"
+              className={`cursor-pointer ${!isContactForm && "mt-4"}`}
+            >
+              Tôi xác nhận rằng Mazda Sài Gòn có thể gửi cho tôi thêm thông tin
+              về các sản phẩm hoặc dịch vụ của Mazda. *
             </label>
           </div>
           {submitted && !confirm1Checked && (
@@ -292,7 +295,7 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
             />
 
             <label htmlFor="confirm2" className="cursor-pointer">
-              Tôi đã đọc và đồng ý với các quy định và chính xách của Mazda Việt
+              Tôi đã đọc và đồng ý với các quy định và chính sách của Mazda Việt
               Nam. *
             </label>
           </div>
