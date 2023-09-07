@@ -1,8 +1,5 @@
-"use client";
-
 import FirstBanner from "@/components/FirstBanner";
-import CustomerForm from "@/components/testDrivePage/CustomerForm";
-import { useFetchCarLines } from "@/hooks/useFetchCarLines";
+import ContactForm from "@/components/contactPage/ContactForm";
 import { NextPage } from "next";
 import { BsDot } from "react-icons/bs";
 
@@ -42,8 +39,6 @@ const infos = [
 ];
 
 const ContactPage: NextPage<Props> = () => {
-  const carLines = useFetchCarLines();
-
   return (
     <div className="text-textColor">
       <FirstBanner
@@ -54,7 +49,7 @@ const ContactPage: NextPage<Props> = () => {
       />
       <div className="container py-16">
         <div className="pb-16">
-          <CustomerForm carLines={carLines} isContactForm />
+          <ContactForm />
         </div>
 
         <div className="grid grid-cols-2 gap-9 max-[846px]:grid-cols-1">
