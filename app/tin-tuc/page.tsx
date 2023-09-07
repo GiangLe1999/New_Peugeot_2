@@ -35,7 +35,7 @@ const AllNewsPage: NextPage<Props> = () => {
 
       <div className="container my-16">
         {loading ? (
-          <div className="w-full h-screen flex items-center justify-center">
+          <div className="w-full h-[300px] flex items-center justify-center">
             <LoadingSpinner />
           </div>
         ) : (
