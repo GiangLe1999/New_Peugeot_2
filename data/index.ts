@@ -29,7 +29,7 @@ import {
   banner8,
 } from "@/public/images/home";
 
-export const navItems: { title: string; link: string }[] = [
+export const navItems: { title: string; link: string; isParent?: boolean }[] = [
   {
     title: "trang chủ",
     link: "/",
@@ -39,16 +39,14 @@ export const navItems: { title: string; link: string }[] = [
     link: "/gioi-thieu",
   },
   {
-    title: "bảng giá xe",
+    title: "giá xe mazda",
     link: "/bang-gia-xe",
-  },
-  {
-    title: "xe mazda",
-    link: "/bang-gia-xe",
+    isParent: true,
   },
   {
     title: "mua xe",
-    link: "#",
+    link: "/#",
+    isParent: true,
   },
   {
     title: "tin tức",

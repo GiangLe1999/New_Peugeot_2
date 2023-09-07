@@ -1,13 +1,20 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useState } from "react";
 
 import ContainNextImage from "@/components/ContainNextImage";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BsHeadset } from "react-icons/bs";
+import { BiChevronDown } from "react-icons/bi";
 import { navItems } from "@/data";
 
 interface Props {}
 
 const Header: FC<Props> = (props): JSX.Element => {
+  const pathname = usePathname();
+  const [showCarMenu, setShowCarMenu] = useState(false);
+
   return (
     <>
       {/* Top Header */}
@@ -41,14 +48,24 @@ const Header: FC<Props> = (props): JSX.Element => {
 
       {/* Sticky Header */}
       <div className="bg-primary text-center sticky top-0 z-50">
-        <nav className="container flex items-center justify-center h-10">
+        <nav className="container flex gap-2 items-center justify-center h-10">
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className="uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition"
+              className={`uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition ${
+                pathname === item.link && "bg-secondary"
+              }`}
+              onMouseOver={() => setShowCarMenu(true)}
             >
-              {item.title}
+              {item.isParent ? (
+                <span className="flex gap-2 items-center">
+                  {item.title}
+                  <BiChevronDown size={20} className="-mr-2" />
+                </span>
+              ) : (
+                item.title
+              )}
             </Link>
           ))}
         </nav>
