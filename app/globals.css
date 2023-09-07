@@ -232,3 +232,12 @@ html {
 .carousel-status {
   @apply hidden;
 }
+
+/* Contact Table */
+.contact-table table td {
+  @apply py-2;
+}
+
+.contact-table table tr {
+  @apply border-b border-[#ececec];
+}

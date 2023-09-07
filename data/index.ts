@@ -28,12 +28,11 @@ import {
   banner7,
   banner8,
 } from "@/public/images/home";
-import { formatPrice } from "@/lib/formatData";
 
 export const navItems: { title: string; link: string }[] = [
   {
     title: "trang chủ",
-    link: "",
+    link: "/",
   },
   {
     title: "giới thiệu",

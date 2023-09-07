@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const TestDriverSchema = new mongoose.Schema(
+const ContactSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -30,6 +30,16 @@ const TestDriverSchema = new mongoose.Schema(
       required: true,
     },
 
+    section: {
+      type: String,
+      required: true,
+    },
+
+    service: {
+      type: String,
+      required: true,
+    },
+
     content: {
       type: String,
     },
@@ -37,7 +47,7 @@ const TestDriverSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const TestDriver =
-  mongoose.models?.TestDriver || mongoose.model("TestDriver", TestDriverSchema);
+const Contact =
+  mongoose.models?.Contact || mongoose.model("Contact", ContactSchema);
 
-export default TestDriver;
+export default Contact;

@@ -7,18 +7,22 @@ import FormSelect from "../FormSelect";
 import { IoWarningOutline } from "react-icons/io5";
 import { ImSpinner3 } from "react-icons/im";
 import Swal from "sweetalert2";
+import { provinces, services } from "@/data/formSelectData";
 
 interface Props {
   carLines: { name: string; carLines: CarLineType[] }[];
+  isContactForm?: boolean;
 }
 
-const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
+const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredPhone, setEnteredPhone] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [choseCarName, setChoseCarName] = useState("");
   const [choseCarLine, setCarLine] = useState("");
   const [enteredContent, setEnteredContent] = useState("");
+  const [choseSection, setChoseSection] = useState("");
+  const [choseService, setChoseService] = useState("");
   const [confirm1Checked, setConfirm1Checked] = useState(false);
   const [confirm2Checked, setConfirm2Checked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -40,6 +44,8 @@ const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
     setChoseCarName("");
     setCarLine("");
     setEnteredContent("");
+    setChoseSection("");
+    setChoseService("");
     setSubmitted(false);
     setLoading(false);
     setConfirm1Checked(false);
@@ -74,16 +80,31 @@ const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
     try {
       setLoading(true);
 
-      const data = JSON.stringify({
+      const rawData = {
         name: enteredName,
         phone: enteredPhone,
         email: enteredEmail,
         carName: choseCarName,
         carLine: choseCarLine,
         content: enteredContent,
-      });
+      };
+
+      let data;
+
+      if (isContactForm) {
+        data = JSON.stringify({
+          ...rawData,
+          section: choseSection,
+          service: choseService,
+        });
+      } else {
+        data = JSON.stringify(rawData);
+      }
+
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/test-drive`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/${
+          isContactForm ? "contact" : "test-drive"
+        }`,
         {
           method: "POST",
           body: data,
@@ -114,10 +135,22 @@ const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
   };
 
   return (
-    <form className="w-[70%] mx-auto shadow-md p-6 border rounded-md text-textColor">
+    <form
+      className={`w-[70%] mx-auto shadow-md p-6 border rounded-md text-textColor bg-white ${
+        isContactForm && "w-full"
+      }`}
+    >
       <p className="text-center font-bold leading-8 mt-4 mb-8 text-black">
-        XIN VUI LÒNG ĐIỀN THÔNG TIN BÊN DƯỚI. <br />
-        ĐẠI LÝ MAZDA SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT
+        {isContactForm ? (
+          <>
+            MỌI THẮC MẮC VUI LÒNG ĐIỀN FORM BÊN DƯỚI. <br />
+          </>
+        ) : (
+          <>
+            XIN VUI LÒNG ĐIỀN THÔNG TIN BÊN DƯỚI. <br />
+          </>
+        )}
+        MAZDA SÀI GÒN SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT
       </p>
 
       <div className="space-y-6">
@@ -179,6 +212,33 @@ const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
             value={choseCarLine}
           />
         </div>
+
+        {isContactForm && (
+          <div className="grid grid-cols-2 gap-4">
+            <FormSelect
+              data={provinces}
+              id="section"
+              label="Khu vực *"
+              setState={setChoseSection}
+              defaultOpt="--- Tỉnh thành sinh sống ---"
+              error={!choseSection}
+              submitted={submitted}
+              setSubmitted={setSubmitted}
+              value={choseSection}
+            />
+            <FormSelect
+              data={services}
+              id="service"
+              label="Dịch vụ *"
+              setState={setChoseService}
+              defaultOpt="--- Vấn đề quan tâm ---"
+              error={!choseService}
+              submitted={submitted}
+              setSubmitted={setSubmitted}
+              value={choseService}
+            />
+          </div>
+        )}
 
         <FormInput
           id="content"
@@ -265,4 +325,4 @@ const TestDriveForm: FC<Props> = ({ carLines }): JSX.Element => {
   );
 };
 
-export default TestDriveForm;
+export default CustomerForm;
