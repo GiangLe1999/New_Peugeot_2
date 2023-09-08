@@ -10,7 +10,6 @@ import { BiChevronDown } from "react-icons/bi";
 import { navItems } from "@/data";
 import NavCarMenu from "./NavCarMenu";
 import BuyCarMenu from "./BuyCarMenu";
-import { linkConstants } from "@/data/constants";
 import ServiceMenu from "./ServiceMenu";
 
 interface Props {}
@@ -43,7 +42,7 @@ const Header: FC<Props> = (props): JSX.Element => {
     }
   };
 
-  const parentUnHoverHandler = () => {
+  const parentUnHoverHandler = (): void => {
     setShowCarMenu(false);
     setShowBuyMenu(false);
     setShowServiceMenu(false);
@@ -114,7 +113,10 @@ const Header: FC<Props> = (props): JSX.Element => {
             </Link>
           ))}
 
-          <NavCarMenu showCarMenu={showCarMenu} />
+          <NavCarMenu
+            showCarMenu={showCarMenu}
+            parentUnHoverHandler={parentUnHoverHandler}
+          />
           <ServiceMenu showServiceMenu={showServiceMenu} />
         </nav>
       </div>

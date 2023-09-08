@@ -1,3 +1,5 @@
+"use client";
+
 import { navCarMenu } from "@/data";
 import { FC } from "react";
 import Link from "next/link";
@@ -5,9 +7,13 @@ import Image from "next/image";
 
 interface Props {
   showCarMenu: boolean;
+  parentUnHoverHandler: () => void;
 }
 
-const NavCarMenu: FC<Props> = ({ showCarMenu }): JSX.Element => {
+const NavCarMenu: FC<Props> = ({
+  showCarMenu,
+  parentUnHoverHandler,
+}): JSX.Element => {
   return (
     <div
       className={`absolute w-full -bottom-[378px] left-0 z-50 bg-white p-5 grid grid-cols-5 gap-3 rounded-sm shadow-md transition origin-top ${
@@ -19,6 +25,7 @@ const NavCarMenu: FC<Props> = ({ showCarMenu }): JSX.Element => {
           href={"/" + car.link}
           key={index}
           className="text-center hover:scale-[1.04] transition"
+          onClick={parentUnHoverHandler}
         >
           <div className="relative w-full aspect-video">
             <Image
