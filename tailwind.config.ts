@@ -25,6 +25,9 @@ const config: Config = {
       aspectRatio: {
         "22 / 10": "22 / 10",
       },
+      boxShadow: {
+        stickyBtns: "0px 0px 1px 1px rgba(192, 192, 192, 0.3)",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
