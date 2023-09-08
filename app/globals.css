@@ -266,3 +266,14 @@ html {
 .introduce-section li span {
   @apply font-bold;
 }
+
+/* Scale 3d */
+.scale-3d-0 {
+  opacity: 0;
+  transform: scale3d(1, 0, 1);
+}
+
+.scale-3d-1 {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}

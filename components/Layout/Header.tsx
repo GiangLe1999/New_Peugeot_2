@@ -8,12 +8,39 @@ import { usePathname } from "next/navigation";
 import { BsHeadset } from "react-icons/bs";
 import { BiChevronDown } from "react-icons/bi";
 import { navItems } from "@/data";
+import NavCarMenu from "./NavCarMenu";
+import BuyCarMenu from "./BuyCarMenu";
 
 interface Props {}
 
 const Header: FC<Props> = (props): JSX.Element => {
   const pathname = usePathname();
   const [showCarMenu, setShowCarMenu] = useState(false);
+  const [showBuyMenu, setShowBuyMenu] = useState(false);
+  const [showServiceMenu, setShowServiceMenu] = useState(false);
+
+  const parentHoverHandler = (link: string) => {
+    if (link === "/bang-gia-xe") {
+      setShowCarMenu(true);
+    } else if (link === "/mua-xe") {
+      setShowBuyMenu(true);
+    } else if (link === "dich-vu") {
+      setShowServiceMenu(true);
+    }
+
+    if (showCarMenu === true && link !== "/bang-gia-xe") {
+      setShowCarMenu(false);
+    } else if (showBuyMenu === true && link !== "/mua-xe") {
+      setShowBuyMenu(false);
+    } else if (showServiceMenu === true && link !== "/dich-vu") {
+      setShowServiceMenu(false);
+    }
+  };
+
+  const parentUnHoverHandler = () => {
+    setShowCarMenu(false);
+    setShowBuyMenu(false);
+  };
 
   return (
     <>
@@ -48,15 +75,20 @@ const Header: FC<Props> = (props): JSX.Element => {
 
       {/* Sticky Header */}
       <div className="bg-primary text-center sticky top-0 z-50">
-        <nav className="container flex gap-2 items-center justify-center h-10">
+        <nav
+          className="container flex gap-2 items-center justify-center h-10 relative transition"
+          onMouseLeave={parentUnHoverHandler}
+        >
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className={`uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition ${
+              className={`relative uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition ${
                 pathname === item.link && "bg-secondary"
+              } ${
+                showCarMenu && item.link === "/bang-gia-xe" && "bg-secondary"
               }`}
-              onMouseOver={() => setShowCarMenu(true)}
+              onMouseEnter={() => parentHoverHandler(item.link)}
             >
               {item.isParent ? (
                 <span className="flex gap-2 items-center">
@@ -66,8 +98,18 @@ const Header: FC<Props> = (props): JSX.Element => {
               ) : (
                 item.title
               )}
+
+              {item.link === "/mua-xe" && (
+                <BuyCarMenu showBuyMenu={showBuyMenu} />
+              )}
+
+              {item.link === "/dich-vu" && (
+                <BuyCarMenu showBuyMenu={showBuyMenu} />
+              )}
             </Link>
           ))}
+
+          <NavCarMenu showCarMenu={showCarMenu} />
         </nav>
       </div>
     </>

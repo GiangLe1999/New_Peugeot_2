@@ -45,7 +45,12 @@ export const navItems: { title: string; link: string; isParent?: boolean }[] = [
   },
   {
     title: "mua xe",
-    link: "/#",
+    link: "/mua-xe",
+    isParent: true,
+  },
+  {
+    title: "dịch vụ",
+    link: "/dich-vu",
     isParent: true,
   },
   {
@@ -55,6 +60,76 @@ export const navItems: { title: string; link: string; isParent?: boolean }[] = [
   {
     title: "liên hệ",
     link: "/lien-he",
+  },
+];
+
+type navCarItemType = {
+  img: string;
+  name: string;
+  price: string;
+  link: string;
+};
+
+export const navCarMenu: navCarItemType[] = [
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194430/Mazda/mazda2-do_ekcwdn.jpg",
+    name: "New Mazda 2",
+    price: "429",
+    link: "mazda-2",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194430/Mazda/mazda2-sport-trang_qwmme7.jpg",
+    name: "New Mazda2 Sport",
+    price: "513",
+    link: "mazda-2-sport",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194429/Mazda/mazda-cx3-xanh_g7kbvr.jpg",
+    name: "New Mazda CX3",
+    price: "569",
+    link: "mazda-cx-3",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194429/Mazda/mazda3-den_lhjkli.jpg",
+    name: "New Mazda 3",
+    price: "579",
+    link: "mazda-3",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194427/Mazda/mazdasport-xam_aaj30s.jpg",
+    name: "New Mazda3 Sport",
+    price: "649",
+    link: "mazda-3-sport",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194427/Mazda/mazdacx30-trang_xvfhyd.jpg",
+    name: "Mazda CX30",
+    price: "709",
+    link: "mazda-cx-30",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194426/Mazda/mazda6-xanhden_n05nvx.jpg",
+    name: "New Mazda 6",
+    price: "779",
+    link: "mazda-6",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194426/Mazda/mazdacx5-do_eaoitz.jpg",
+    name: "New Mazda CX5 IPM",
+    price: "779",
+    link: "mazda-cx-5",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194425/Mazda/mazdacx8-den_znommi.jpg",
+    name: "New Mazda CX8",
+    price: "949",
+    link: "mazda-cx-8",
+  },
+  {
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194425/Mazda/bt50-xam_d9htf5.jpg",
+    name: "New Mazda BT-50",
+    price: "609",
+    link: "mazda-bt-50",
   },
 ];
 
