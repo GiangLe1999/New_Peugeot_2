@@ -1,3 +1,6 @@
+"use client";
+
+import { linkConstants } from "@/data/constants";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -7,8 +10,8 @@ interface Props {
 
 const buyCarMenu: { title: string; link: string }[] = [
   { title: "Thủ tục trả góp", link: "/thu-tuc-tra-gop" },
-  { title: "Đăng ký lái thử", link: "/test-drive" },
-  { title: "Tính phí lăn bánh", link: "/test-drive" },
+  { title: "Đăng ký lái thử", link: linkConstants.testDrive },
+  { title: "Tính phí lăn bánh", link: linkConstants.testDrive },
 ];
 
 const BuyCarMenu: FC<Props> = ({ showBuyMenu }): JSX.Element => {

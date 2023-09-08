@@ -7,6 +7,7 @@ import { formatPrice } from "@/lib/formatData";
 import { GiSteeringWheel } from "react-icons/gi";
 import Link from "next/link";
 import BtnWithIcon from "../BtnWithIcon";
+import { linkConstants } from "@/data/constants";
 
 interface Props {
   cars: CarType[];
@@ -41,7 +42,7 @@ const CarList: FC<Props> = ({ cars }): JSX.Element => {
                       Giá: {formatPrice(line.price)} VNĐ
                     </div>
                     <BtnWithIcon
-                      to="/test-drive"
+                      to={linkConstants.testDrive}
                       customClasses="w-1/4 bg-primary text-white !p-2"
                       icon={GiSteeringWheel}
                       content="Đăng ký lái thử"

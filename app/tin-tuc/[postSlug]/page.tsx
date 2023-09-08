@@ -5,6 +5,7 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import NewsContent from "@/components/newsPage/NewsContent";
 import Link from "next/link";
 import { IoReturnUpBackSharp } from "react-icons/io5";
+import { linkConstants } from "@/data/constants";
 
 interface Props {
   params: { postSlug: string };
@@ -34,7 +35,7 @@ const page: NextPage<Props> = async ({ params }) => {
   return (
     <div className="container my-12 text-textColor">
       <Link
-        href="/tin-tuc"
+        href={linkConstants.news}
         className="flex items-center w-fit gap-1 mb-10 text-sm hover:text-primary hover:-translate-x-4 transition"
       >
         <IoReturnUpBackSharp size={20} /> Quay lại trang tin tức
