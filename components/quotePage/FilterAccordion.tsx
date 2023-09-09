@@ -133,7 +133,7 @@ const FilterAccordion: FC<Props> = ({
   }, [query, setCars]);
 
   return (
-    <div className="mx-2 my-4 border-t">
+    <div className="my-4 border-t">
       {/* `transitionTimeout` prop should be equal to the transition duration in CSS */}
       <Accordion transition allowMultiple transitionTimeout={300}>
         {data.map((group, index) => (

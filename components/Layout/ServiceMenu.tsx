@@ -16,8 +16,8 @@ const serviceList = [
     icon: icon2,
     title: "PHỤ TÙNG - PHỤ KIỆN",
     children: [
-      { title: "Phụ tùng chính hãng", link: linkConstants.warranty },
-      { title: "Phụ kiện chính hãng", link: linkConstants.warranty },
+      { title: "Phụ tùng chính hãng", link: linkConstants.appliance },
+      { title: "Phụ kiện chính hãng", link: linkConstants.appliance },
     ],
   },
 

@@ -19,7 +19,9 @@ const FirstBanner: FC<Props> = ({
       style={{ background: `url('${bgImg}')`, backgroundRepeat: "no-repeat" }}
     >
       <h1 className="font-bold uppercase text-3xl relative z-10">{heading}</h1>
-      <span className="text-xl relative z-10">{subHeading}</span>
+      <span className="text-xl relative z-10 max-w-[80%] text-center">
+        {subHeading}
+      </span>
     </div>
   );
 };

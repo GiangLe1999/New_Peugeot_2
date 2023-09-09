@@ -324,3 +324,20 @@ html {
 .installment-block-sm ol {
   @apply list-decimal ml-6 space-y-2 text-textColor;
 }
+
+/* Common Accordion */
+.szh-accordion__item p {
+  @apply font-bold text-lg py-2 ml-0;
+}
+
+.szh-accordion__item ul {
+  @apply list-disc space-y-1 ml-4;
+}
+
+.szh-accordion__item ul li {
+  @apply py-1;
+}
+
+.list-child-item li {
+  @apply list-none;
+}
