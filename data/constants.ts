@@ -10,4 +10,6 @@ export const linkConstants = {
   requireQuotation: "/bao-gia",
   finalPrice: "/tinh-phi-lan-banh",
   appliance: "/tin-tuc/phu-tung-chinh-hang-mazda",
+  periodWarranty: "/tin-tuc/bao-duong-xe-mazda-dinh-ky",
+  fix: "/tin-tuc/dich-vu-sua-chua-mazda",
 };

@@ -26,8 +26,8 @@ const serviceList = [
     title: "DỊCH VỤ SAU BÁN HÀNG",
     children: [
       { title: "Chính sách bảo hành", link: linkConstants.warranty },
-      { title: "Bảo dưỡng định kỳ", link: linkConstants.warranty },
-      { title: "Dịch vụ sửa chữa", link: linkConstants.warranty },
+      { title: "Bảo dưỡng định kỳ", link: linkConstants.periodWarranty },
+      { title: "Dịch vụ sửa chữa", link: linkConstants.fix },
       { title: "Dịch vụ chăm sóc xe", link: linkConstants.warranty },
     ],
   },
