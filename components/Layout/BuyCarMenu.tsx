@@ -18,7 +18,7 @@ const buyCarMenu: { title: string; link: string }[] = [
 const BuyCarMenu: FC<Props> = ({ showBuyMenu }): JSX.Element => {
   return (
     <ul
-      className={`absolute w-[141px] top-full translate-y-1 left-0 z-50 bg-white px-2 py-1 transition rounded-sm shadow-md origin-top text-primary ${
+      className={`absolute w-[141px] top-[calc(100%+2px)] left-0 z-50 bg-white px-2 py-1 transition rounded-sm shadow-md origin-top text-primary ${
         showBuyMenu ? "scale-3d-1" : "scale-3d-0"
       }`}
     >
