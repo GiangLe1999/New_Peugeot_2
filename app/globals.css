@@ -86,7 +86,7 @@ html {
 }
 
 .cal-price-wrapper {
-  @apply p-5 w-full border border-[#eee] rounded-md;
+  @apply p-5 w-full border border-[#eee] rounded-md shadow-md;
 }
 
 .cal-price-title {
@@ -281,4 +281,46 @@ html {
 /* Sticky Btns */
 .active-shadow {
   box-shadow: 0px 0px 1px 1px rgba(192, 192, 192, 0.3);
+}
+
+/* Installment page */
+.installment-block,
+.installment-block-sm {
+  @apply p-6 border border-dashed border-primary rounded-md;
+}
+
+.installment-block h3 {
+  @apply text-center font-bold uppercase text-primary text-2xl mb-4;
+}
+
+.installment-block ol {
+  @apply list-decimal ml-6 space-y-3 text-textColor;
+}
+
+.installment-block ol ul {
+  @apply list-disc ml-4;
+}
+
+.installment-block ol ul li {
+  @apply pt-2;
+}
+
+.installment-block span {
+  @apply italic text-primary mt-3 block;
+}
+
+.installment-block-sm {
+  @apply border-tertiary;
+}
+
+.installment-block-sm p {
+  @apply grid place-items-center mb-3;
+}
+
+.installment-block-sm h3 {
+  @apply text-center font-bold text-tertiary text-xl mb-3;
+}
+
+.installment-block-sm ol {
+  @apply list-decimal ml-6 space-y-2 text-textColor;
 }

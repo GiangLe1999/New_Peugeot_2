@@ -1,17 +1,21 @@
 import { carFees } from "@/data";
 import { formatPrice } from "@/lib/formatData";
 import { CarLineType } from "@/types";
-import { FC, SetStateAction } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 
 const rowClasses = "flex justify-between items-center";
 
 interface Props {
-  lines: CarLineType[];
+  lines?: CarLineType[];
   choseCarLine: string;
-  setChoseCarLine: React.Dispatch<SetStateAction<string>>;
+  setChoseCarLine: Dispatch<SetStateAction<string>>;
   registration: number;
   currentListPrice: number;
   currentLine: CarLineType;
+  carNameArr?: string[];
+  isInstallmentPage?: boolean;
+  choseCarName: string;
+  setChoseCarName: Dispatch<SetStateAction<string>>;
 }
 
 const FinalPriceFrom: FC<Props> = ({
@@ -21,6 +25,10 @@ const FinalPriceFrom: FC<Props> = ({
   registration,
   currentListPrice,
   currentLine,
+  carNameArr,
+  isInstallmentPage,
+  choseCarName,
+  setChoseCarName,
 }): JSX.Element => {
   const currentTax = Number(currentLine?.tax);
   const currentRegistrationFee =
@@ -54,6 +62,27 @@ const FinalPriceFrom: FC<Props> = ({
           </select>
         </div>
 
+        {/* Car name */}
+        {isInstallmentPage && (
+          <div className="cal-price-form-input">
+            <label htmlFor="carName" className="w-1/3">
+              Dòng xe :
+            </label>
+            <select
+              id="carName"
+              value={choseCarName}
+              onChange={(e) => setChoseCarName(e.target.value)}
+            >
+              <option value="">Chọn dòng xe</option>
+              {carNameArr?.map((name, index) => (
+                <option value={name} key={index}>
+                  {name.toUpperCase()}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
         {/* Car line */}
         <div className="cal-price-form-input">
           <label htmlFor="carLine" className="w-1/3">
@@ -65,7 +94,7 @@ const FinalPriceFrom: FC<Props> = ({
             onChange={(e) => setChoseCarLine(e.target.value)}
           >
             <option value="">Chọn phiên bản</option>
-            {lines.map((line, index) => (
+            {lines?.map((line, index) => (
               <option value={line.name} key={index}>
                 {line.name}
               </option>

@@ -5,9 +5,12 @@ import { NextResponse } from "next/server";
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const slug = searchParams.get("slug");
+  const name = searchParams.get("name");
 
   await dbConnect();
-  const car = await Car.findOne({ slug });
+  const car = slug
+    ? await Car.findOne({ slug })
+    : await Car.findOne({ name }).select("registration");
 
   return NextResponse.json(car);
 }

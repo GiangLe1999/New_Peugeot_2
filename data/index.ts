@@ -294,3 +294,16 @@ export const carFees = {
   thuchiho: 630000,
   bhTNDS: 530700,
 };
+
+export const carNames: string[] = [
+  "new mazda 2",
+  "new mazda 2 sport",
+  "new mazda cx-3",
+  "new mazda 3",
+  "new mazda3 sport",
+  "new mazda cx-30",
+  "new mazda 6",
+  "new mazda cx-5 ipm",
+  "new mazda cx-8",
+  "new mazda bt-50",
+];

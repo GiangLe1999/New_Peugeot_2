@@ -3,6 +3,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import FilterAccordion from "@/components/quotePage/FilterAccordion";
 import { CarType } from "@/types";
+import { carNames } from "@/data";
 
 interface Props {
   setCars: Dispatch<SetStateAction<CarType[]>>;
@@ -18,18 +19,7 @@ const Filter: FC<Props> = ({
   const accordionData = [
     {
       header: "line",
-      items: [
-        "new mazda 2",
-        "new mazda 2 sport",
-        "new mazda cx-3",
-        "new mazda 3",
-        "new mazda3 sport",
-        "new mazda cx-30",
-        "new mazda 6",
-        "new mazda cx-5 ipm",
-        "new mazda cx-8",
-        "new mazda bt-50",
-      ],
+      items: carNames,
     },
     {
       header: "price",

@@ -56,10 +56,12 @@ export const getAllCarsData = async () => {
   }
 };
 
-export const getCarData = cache(async (carSlug: string) => {
+export const getCarData = async (carSlug?: string, carName?: string) => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/car?slug=${carSlug}`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/car?${
+        carSlug ? `slug=${carSlug}` : `name=${carName}`
+      }`,
       { cache: "no-store" }
     );
 
@@ -71,7 +73,7 @@ export const getCarData = cache(async (carSlug: string) => {
   } catch (error) {
     console.log(error);
   }
-});
+};
 
 export const getCarPostData = async (slug: string) => {
   try {

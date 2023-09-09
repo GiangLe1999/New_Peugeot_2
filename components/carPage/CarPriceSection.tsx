@@ -1,37 +1,60 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import FinalPriceForm from "./FinalPriceForm";
 import { CarLineType } from "@/types";
 import CalInterestForm from "./CalInterestForm";
 import { formatPrice } from "@/lib/formatData";
 import InterestDetailTable from "./InterestDetailTable";
+import { useFetchCarLines } from "@/hooks/useFetchCarLines";
+import { getCarData } from "@/lib/fetchData";
 
 interface Props {
-  name: string;
-  lines: CarLineType[];
+  name?: string;
+  lines?: CarLineType[];
   registration: number;
+  carNameArr?: string[];
+  isInstallmentPage?: boolean;
 }
 
 const CarPriceSection: FC<Props> = ({
   name,
   lines,
   registration,
+  isInstallmentPage,
+  carNameArr,
 }): JSX.Element => {
   const [choseCarLine, setChoseCarLine] = useState("");
   const [chosePercent, setChosePercent] = useState("0");
   const [choseLength, setChoseLength] = useState("5");
   const [choseInterest, setChoseInterest] = useState("7");
   const [choseKind, setChoseKind] = useState("descend");
+  const [choseCarName, setChoseCarName] = useState("");
+  const [choseCarData, setChoseCarData] = useState({
+    registration: 0,
+  });
 
   const [showInterestTable, setShowInterestTable] = useState(false);
 
-  const currentLine = lines.find(
+  let currentLine = lines?.find(
     (line) => line.name === choseCarLine
   ) as CarLineType;
-  const currentListPrice = currentLine?.price || 0;
 
-  const borrowedMoney = (Number(chosePercent) * currentListPrice) / 100;
+  let currentListPrice = currentLine?.price;
+
+  const allCarLines = useFetchCarLines();
+
+  let carLines = [] as CarLineType[];
+  if (isInstallmentPage && choseCarName) {
+    carLines = allCarLines.find((item) => item.name === choseCarName)
+      ?.carLines as CarLineType[];
+    currentLine = carLines.find(
+      (line) => line.name === choseCarLine
+    ) as CarLineType;
+    currentListPrice = currentLine?.price;
+  }
+
+  const borrowedMoney = (Number(chosePercent) * currentListPrice) / 100 || 0;
 
   const originalPaidMonthly = borrowedMoney / (Number(choseLength) * 12);
 
@@ -64,42 +87,63 @@ const CarPriceSection: FC<Props> = ({
     }
   }
 
+  const fetchCarDataByName = async () => {
+    const carData = (await getCarData("", choseCarName)) as {
+      registration: number;
+    };
+    setChoseCarData(carData);
+  };
+
+  useEffect(() => {
+    fetchCarDataByName();
+    setChoseCarLine("");
+  }, [choseCarName]);
+
   return (
     <section className="space-y-6">
-      <h2 className="post-heading-2 uppercase">
-        <span>Giá xe {name}</span>
-      </h2>
+      {!isInstallmentPage && (
+        <>
+          <h2 className="post-heading-2">
+            <span>Giá xe {name}</span>
+          </h2>
+          {/* Table 1 */}
+          <table className="price-table w-full">
+            <thead>
+              <tr>
+                <td>Phiên Bản</td>
+                <td className="text-right">Giá Xe</td>
+              </tr>
+            </thead>
 
-      {/* Table 1 */}
-      <table className="price-table w-full">
-        <thead>
-          <tr>
-            <td>Phiên Bản</td>
-            <td className="text-right">Giá Xe</td>
-          </tr>
-        </thead>
-
-        <tbody>
-          {lines.map((line, index) => (
-            <tr key={index}>
-              <td>{line.name}</td>
-              <td className="text-right font-bold">
-                {formatPrice(line.price)} VNĐ
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            <tbody>
+              {lines?.map((line, index) => (
+                <tr key={index}>
+                  <td>{line.name}</td>
+                  <td className="text-right font-bold">
+                    {formatPrice(line.price)} VNĐ
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
 
       <div className="grid grid-cols-2 gap-6">
         {/* Table 2 */}
         <FinalPriceForm
-          lines={lines}
+          lines={isInstallmentPage ? carLines : lines}
           choseCarLine={choseCarLine}
           setChoseCarLine={setChoseCarLine}
-          registration={registration}
+          registration={
+            isInstallmentPage ? choseCarData?.registration : registration
+          }
           currentLine={currentLine}
           currentListPrice={currentListPrice}
+          carNameArr={carNameArr}
+          isInstallmentPage={isInstallmentPage}
+          choseCarName={choseCarName}
+          setChoseCarName={setChoseCarName}
         />
 
         {/* Table 3 */}

@@ -12,8 +12,6 @@ promotion: <ul class="promotion-ul"><li>Ưu đãi giá lên đến <b class="tex
 
 ## NGOẠI THẤT NEW MAZDA 3
 
-# Mazda 3 thế hệ mới mang tới nhiều cải tiến nơi ngoại hình - Mazda Sài Gòn
-
 Xe Mazda 3 thế hệ mới mang tới nhiều cải tiến nơi ngoại hình, xe theo đuổi lối thiết kế tối giản nhưng cũng đầy thanh lịch và ấn tượng, với kích thước tổng thể 4660 x 1795 x 1450 mm.
 
 ### Đầu xe
