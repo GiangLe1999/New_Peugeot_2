@@ -152,20 +152,24 @@ type homeOptionType = {
 };
 
 export const homeOptions: homeOptionType[] = [
-  { title: "yêu cầu báo giá", link: "#baogia", icon: FaEnvelopeOpenText },
+  {
+    title: "yêu cầu báo giá",
+    link: linkConstants.requireQuotation,
+    icon: FaEnvelopeOpenText,
+  },
   {
     title: "tính phí lăn bánh",
-    link: "/tinh-phi-lan-banh",
+    link: linkConstants.finalPrice,
     icon: FaCalculator,
   },
   {
     title: "mua xe trả góp",
-    link: "/thu-tuc-tra-gop",
+    link: linkConstants.installment,
     icon: FaChartPie,
   },
   {
     title: "đăng ký lái thử",
-    link: "/dang-ky-lai-thu",
+    link: linkConstants.testDrive,
     icon: FaCarAlt,
   },
 ];

@@ -11,13 +11,14 @@ interface Props {
 const buyCarMenu: { title: string; link: string }[] = [
   { title: "Thủ tục trả góp", link: "/thu-tuc-tra-gop" },
   { title: "Đăng ký lái thử", link: linkConstants.testDrive },
-  { title: "Tính phí lăn bánh", link: linkConstants.testDrive },
+  { title: "Đăng ký báo giá", link: linkConstants.requireQuotation },
+  { title: "Tính phí lăn bánh", link: linkConstants.finalPrice },
 ];
 
 const BuyCarMenu: FC<Props> = ({ showBuyMenu }): JSX.Element => {
   return (
     <ul
-      className={`absolute w-[141px] -bottom-[142px] left-0 z-50 bg-white px-2 py-1 transition rounded-sm shadow-md origin-top text-primary ${
+      className={`absolute w-[141px] top-full translate-y-1 left-0 z-50 bg-white px-2 py-1 transition rounded-sm shadow-md origin-top text-primary ${
         showBuyMenu ? "scale-3d-1" : "scale-3d-0"
       }`}
     >

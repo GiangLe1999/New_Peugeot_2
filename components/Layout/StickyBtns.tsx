@@ -3,6 +3,7 @@
 import { linkConstants } from "@/data/constants";
 import Link from "next/link";
 import { FC, useState } from "react";
+import { BiSolidPieChartAlt2 } from "react-icons/bi";
 import {
   FaCar,
   FaDonate,
@@ -11,6 +12,7 @@ import {
   FaPhone,
   FaTimes,
 } from "react-icons/fa";
+import { GiCarWheel } from "react-icons/gi";
 
 interface Props {}
 
@@ -37,6 +39,18 @@ const StickyBtnsData = [
     move: "117",
   },
   {
+    title: "Tính phí lăn bánh",
+    icon: GiCarWheel,
+    link: linkConstants.finalPrice,
+    move: "133",
+  },
+  {
+    title: "Thủ tục trả góp",
+    icon: BiSolidPieChartAlt2,
+    link: linkConstants.installment,
+    move: "118",
+  },
+  {
     title: "Hotline: 096.2334.807",
     icon: FaPhone,
     tel: "tel:0962334807",
@@ -54,7 +68,7 @@ const StickyBtns: FC<Props> = (props): JSX.Element => {
   const [itemHovered, setItemHovered] = useState<number>(-1);
 
   return (
-    <div className="fixed right-0 top-[32%] w-11 bg-white z-[9999] shadow-stickyBtns">
+    <div className="fixed right-0 top-[30%] w-11 bg-white z-[9999] shadow-stickyBtns">
       {maximized ? (
         <div>
           <ul>

@@ -51,7 +51,7 @@ const serviceList = [
 const ServiceMenu: FC<Props> = ({ showServiceMenu }): JSX.Element => {
   return (
     <div
-      className={`absolute w-full -bottom-[194px] left-0 z-50 bg-white text-textColor p-5 grid grid-cols-4 gap-3 rounded-sm shadow-md transition origin-top
+      className={`absolute w-full top-full left-0 z-50 bg-white text-textColor p-5 grid grid-cols-4 gap-3 rounded-sm shadow-md transition origin-top
      ${showServiceMenu ? "scale-3d-1" : "scale-3d-0"}`}
     >
       {serviceList.map((item, index) => (

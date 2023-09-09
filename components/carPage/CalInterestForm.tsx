@@ -1,6 +1,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import BtnWithIcon from "../BtnWithIcon";
 import { formatPrice } from "@/lib/formatData";
+import Swal from "sweetalert2";
 
 interface Props {
   chosePercent: string;
@@ -50,7 +51,12 @@ const CalInterestForm: FC<Props> = ({
     if (borrowedMoney > 0) {
       setShowInterestTable(!showInterestTable);
     } else {
-      alert("Vui lòng chọn Phiên bản xe & Số tiền mà Anh / Chị muốn vay");
+      Swal.fire({
+        icon: "error",
+        title: "Không hợp lệ!",
+        text: "Vui lòng kiểm tra Phiên bản xe và Số tiền mà cần vay",
+        confirmButtonColor: "#C4161C",
+      });
     }
   };
 

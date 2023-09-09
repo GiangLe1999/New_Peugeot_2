@@ -12,7 +12,7 @@ import { getCarData } from "@/lib/fetchData";
 interface Props {
   name?: string;
   lines?: CarLineType[];
-  registration: number;
+  registration?: number;
   carNameArr?: string[];
   isInstallmentPage?: boolean;
 }
@@ -136,7 +136,9 @@ const CarPriceSection: FC<Props> = ({
           choseCarLine={choseCarLine}
           setChoseCarLine={setChoseCarLine}
           registration={
-            isInstallmentPage ? choseCarData?.registration : registration
+            isInstallmentPage
+              ? (choseCarData?.registration as number)
+              : (registration as number)
           }
           currentLine={currentLine}
           currentListPrice={currentListPrice}

@@ -11,31 +11,32 @@ export type CarLinesType = {
   carLines: CarLineType[];
 };
 
-const TestDrivePage = () => {
+const RequireQuotationPage = () => {
   const carLines = useFetchCarLines();
 
   return (
     <div>
       <FirstBanner
-        heading="ĐĂNG KÝ LÁI THỬ"
-        subHeading="Đăng ký và nhận bảng báo giá mới nhất cho dòng xe mà bạn quan tâm."
-        bgImg="/images/test-drive/first-banner.jpg"
+        heading="ĐĂNG KÝ NHẬN BÁO GIÁ"
+        subHeading="Đăng ký và đặt lịch lái thử dòng xe bạn mong muốn tại đại lý gần nhất."
+        bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
+        bgClasses="!bg-cover"
       />
 
       <div className="container my-12">
         <div className="shadow-md grid grid-cols-2 border rounded-md overflow-hidden">
           <div className="relative w-full h-full">
             <NextImage
-              src="/images/test-drive/lai-thu-mazda.jpg"
+              src="/images/bao-gia/form-image-1.jpg"
               alt="Lái thử Mazda"
             />
           </div>
 
-          <CustomerForm carLines={carLines} />
+          <CustomerForm carLines={carLines} isQuotation />
         </div>
       </div>
     </div>
   );
 };
 
-export default TestDrivePage;
+export default RequireQuotationPage;

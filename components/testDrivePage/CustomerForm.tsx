@@ -12,9 +12,14 @@ import { provinces, services } from "@/data/formSelectData";
 interface Props {
   carLines: { name: string; carLines: CarLineType[] }[];
   isContactForm?: boolean;
+  isQuotation?: boolean;
 }
 
-const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
+const CustomerForm: FC<Props> = ({
+  carLines,
+  isContactForm,
+  isQuotation,
+}): JSX.Element => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredPhone, setEnteredPhone] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -103,7 +108,7 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
 
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/${
-          isContactForm ? "contact" : "test-drive"
+          isContactForm ? "contact" : isQuotation ? "quotation" : "test-drive"
         }`,
         {
           method: "POST",
@@ -116,7 +121,9 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
         Swal.fire({
           icon: "success",
           title: "Thành công!",
-          text: "Chúng tôi sẽ liên hệ đến anh (chị) trong thời gian sớm nhất.",
+          text: isQuotation
+            ? "Chúng tôi sẽ gửi báo giá đến anh (chị) trong thời gian sớm nhất."
+            : "Chúng tôi sẽ liên hệ đến anh (chị) trong thời gian sớm nhất.",
           confirmButtonColor: "#2b2b2b",
         });
       } else {
@@ -150,7 +157,11 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
             XIN VUI LÒNG ĐIỀN THÔNG TIN BÊN DƯỚI. <br />
           </>
         )}
-        MAZDA SÀI GÒN SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT
+        {isQuotation ? (
+          <>MAZDA SÀI GÒN SẼ GỬI BÁO GIÁ ĐẾN BẠN SỚM NHẤT CÓ THỂ</>
+        ) : (
+          <>MAZDA SÀI GÒN SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
+        )}
       </p>
 
       <div className="space-y-6">
@@ -252,7 +263,7 @@ const CustomerForm: FC<Props> = ({ carLines, isContactForm }): JSX.Element => {
           noValidate
         />
 
-        <div>
+        <div className={`${isContactForm ? "" : "!mt-0"}`}>
           <div className="flex gap-2 items-center text-sm">
             <input
               type="checkbox"

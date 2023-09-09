@@ -143,7 +143,6 @@ const page: NextPage<Props> = async () => {
           </h2>
           <CarPriceSection
             name={"new mazda 2"}
-            registration={10}
             carNameArr={carNames}
             isInstallmentPage
           />
