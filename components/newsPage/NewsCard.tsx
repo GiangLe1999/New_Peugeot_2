@@ -23,7 +23,7 @@ const NewsCard: FC<Props> = ({ item }): JSX.Element => {
       </Link>
 
       <div className="p-4 text-textColor block">
-        <h2 className="text-center uppercase font-semibold mb-4 leading-8">
+        <h2 className="text-center uppercase font-semibold mb-4 leading-8 line-clamp-1">
           <Link href={`${linkConstants.news}/${item.slug}`}>{item.title}</Link>
         </h2>
 

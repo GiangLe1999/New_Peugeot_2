@@ -16,4 +16,7 @@ export const linkConstants = {
   careCustomer: "/tin-tuc/tong-dai-cham-soc-khach-hang-mazda",
   mobileService: "/tin-tuc/cham-soc-xe-luu-dong-mazda",
   bookService: "/tin-tuc/dat-hen-dich-vu-mazda",
+  paymentPolicy: "/chinh-sach-thanh-toan",
+  privacyPolicy: "/chinh-sach-bao-mat",
+  deliveryPolicy: "/chinh-sach-giao-nhan-van-chuyen",
 };

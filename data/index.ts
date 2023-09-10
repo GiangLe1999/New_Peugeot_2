@@ -266,18 +266,18 @@ export const footerCol2: footerItemType[] = [
 ];
 
 export const footerCol3: footerItemType[] = [
-  { title: "Dịch vụ sau bán hàng", link: "/bao-duong-dinh-ky-mazda" },
-  { title: "Phụ tùng - phụ kiện", link: "/phu-tung-bao-duong-mazda" },
-  { title: "Chăm sóc khách hàng", link: "/tong-dai-cham-soc-khach-hang-mazda" },
-  { title: "Đặt hẹn dịch vụ", link: "/dat-hen-dich-vu-mazda" },
+  { title: "Dịch vụ sau bán hàng", link: linkConstants.periodWarranty },
+  { title: "Phụ tùng - phụ kiện", link: linkConstants.appliance },
+  { title: "Chăm sóc khách hàng", link: linkConstants.careCustomer },
+  { title: "Đặt hẹn dịch vụ", link: linkConstants.bookService },
 ];
 
 export const footerCol32: footerItemType[] = [
-  { title: "Chính sách Thanh toán", link: "/chinh-sach-thanh-toan-mazda" },
-  { title: "Chính sách Bảo mật", link: "/chinh-sach-bao-mat-mazda" },
+  { title: "Chính sách Thanh toán", link: linkConstants.paymentPolicy },
+  { title: "Chính sách Bảo mật", link: linkConstants.privacyPolicy },
   {
     title: "Chính sách Giao nhận - Vận chuyển",
-    link: "/chinh-sach-giao-nhan-van-chuyen-mazda",
+    link: linkConstants.deliveryPolicy,
   },
 ];
 
