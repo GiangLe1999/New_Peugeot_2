@@ -61,7 +61,7 @@ const Header: FC<Props> = (props): JSX.Element => {
             />
           </Link>
 
-          <h2 className="text-lg font-bold">
+          <h2 className="text-lg font-bold max-[500px]:hidden">
             <Link href="/">MAZDA SÀI GÒN</Link>
           </h2>
 
@@ -92,8 +92,8 @@ const Header: FC<Props> = (props): JSX.Element => {
               key={index}
               href={item.link}
               className={`relative uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition ${
-                pathname === item.link && "bg-secondary"
-              } ${
+                !item.isParent && "max-[827px]:hidden"
+              } ${pathname === item.link && "bg-secondary"} ${
                 showCarMenu && item.title === carMenuTitle && "bg-secondary"
               } ${
                 showServiceMenu && item.title === serviceTitle && "bg-secondary"

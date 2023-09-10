@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Footer from "@/components/Layout/Footer";
 import StickyBtns from "@/components/Layout/StickyBtns";
+import MobileBottomNav from "@/components/Layout/MobileBottomNav";
 
 const mazda = localFont({
   src: [
@@ -42,6 +43,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <StickyBtns />
+        <MobileBottomNav />
       </body>
     </html>
   );

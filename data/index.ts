@@ -10,7 +10,13 @@ import {
   FaThumbsUp,
   FaShieldAlt,
   FaHeartbeat,
+  FaHome,
+  FaInfoCircle,
+  FaBlog,
 } from "react-icons/fa";
+
+import { BiSolidContact } from "react-icons/bi";
+
 import { HiReceiptTax } from "react-icons/hi";
 import { BsChatHeartFill, BsTagsFill, BsFillGiftFill } from "react-icons/bs";
 import { SiAdguard } from "react-icons/si";
@@ -30,14 +36,21 @@ import {
 } from "@/public/images/home";
 import { linkConstants } from "./constants";
 
-export const navItems: { title: string; link: string; isParent?: boolean }[] = [
+export const navItems: {
+  title: string;
+  link: string;
+  isParent?: boolean;
+  icon?: IconType;
+}[] = [
   {
     title: "trang chủ",
     link: linkConstants.home,
+    icon: FaHome,
   },
   {
     title: "giới thiệu",
     link: linkConstants.introduce,
+    icon: FaInfoCircle,
   },
   {
     title: "giá xe mazda",
@@ -57,10 +70,12 @@ export const navItems: { title: string; link: string; isParent?: boolean }[] = [
   {
     title: "tin tức",
     link: linkConstants.news,
+    icon: FaBlog,
   },
   {
     title: "liên hệ",
     link: linkConstants.contact,
+    icon: BiSolidContact,
   },
 ];
 

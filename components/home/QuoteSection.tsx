@@ -26,12 +26,12 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
 
               <div className="grid grid-cols-2 gap-10 text-white">
                 <BtnWithIcon
-                  href={linkConstants.finalPrice}
+                  to={linkConstants.finalPrice}
                   content="TÍNH GIÁ LĂN BÁNH"
                   customClasses="bg-primary"
                 />
                 <BtnWithIcon
-                  href={linkConstants.installment}
+                  to={linkConstants.installment}
                   content="THỦ TỤC TRẢ GÓP"
                   customClasses="bg-tertiary"
                 />
