@@ -2,6 +2,7 @@ import { FC } from "react";
 import BtnWithIcon from "../BtnWithIcon";
 
 import { FaEdit } from "react-icons/fa";
+import { linkConstants } from "@/data/constants";
 
 interface Props {
   content: string;
@@ -24,6 +25,7 @@ const PromotionSection: FC<Props> = ({ content, name }): JSX.Element => {
           content="NHẬN BÁO GIÁ NGAY"
           icon={FaEdit}
           iconSize={16}
+          to={linkConstants.requireQuotation}
         />
       </div>
     </div>

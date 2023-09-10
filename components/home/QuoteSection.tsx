@@ -1,6 +1,6 @@
 import { FC } from "react";
 import BtnWithIcon from "../BtnWithIcon";
-import NextImage from "../NextImage";
+import { linkConstants } from "@/data/constants";
 
 interface Props {}
 
@@ -19,19 +19,19 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
                 tại các tỉnh thành cũng như tại Tp. Hồ Chí Minh. Hiện tại, nếu
                 biết giá lăn bánh cụ thể , đi kèm khuyến mãi hiện hành ở thời
                 điểm quý khách đang xem như thể nào , xin mời quý khách liên hệ
-                0931.892.379 ( Ghi chú: Giá xe Lăn Bánh có thể thay đổi tùy vào
+                0962.334.807 ( Ghi chú: Giá xe Lăn Bánh có thể thay đổi tùy vào
                 khu vực, tất cả chi phí trên chưa bao gồm phí dịch vụ làm biển
                 số liên hệ để biết giá xe lăn bánh tại từng khu vực ).
               </p>
 
               <div className="grid grid-cols-2 gap-10 text-white">
                 <BtnWithIcon
-                  href="/tinh-phi-lan-banh"
-                  content="BẢNG TÍNH GIÁ LĂN BÁNH"
+                  href={linkConstants.finalPrice}
+                  content="TÍNH GIÁ LĂN BÁNH"
                   customClasses="bg-primary"
                 />
                 <BtnWithIcon
-                  href="/tinh-phi-lan-banh"
+                  href={linkConstants.installment}
                   content="THỦ TỤC TRẢ GÓP"
                   customClasses="bg-tertiary"
                 />

@@ -3,6 +3,7 @@ import NextImage from "../NextImage";
 import BtnWithIcon from "../BtnWithIcon";
 
 import { MdEmail, MdMail, MdPhone } from "react-icons/md";
+import { linkConstants } from "@/data/constants";
 
 interface Props {}
 
@@ -35,6 +36,7 @@ const SalerCard: FC<Props> = (props): JSX.Element => {
             content="BÁO GIÁ NHANH"
             icon={MdMail}
             iconSize={16}
+            to={linkConstants.requireQuotation}
           />
         </div>
       </div>

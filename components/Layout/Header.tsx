@@ -61,11 +61,13 @@ const Header: FC<Props> = (props): JSX.Element => {
             />
           </Link>
 
-          <h2 className="text-lg font-bold">MAZDA SÀI GÒN</h2>
+          <h2 className="text-lg font-bold">
+            <Link href="/">MAZDA SÀI GÒN</Link>
+          </h2>
 
           <a
             href="tel:0962334807"
-            className="flex items-center gap-2 font-medium"
+            className="flex items-center gap-2 font-medium hover:scale-[1.1] transition"
           >
             <div className="bg-primary rounded-full w-8 h-8 grid place-items-center">
               <BsHeadset />
