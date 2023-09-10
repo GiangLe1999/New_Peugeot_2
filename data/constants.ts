@@ -12,4 +12,8 @@ export const linkConstants = {
   appliance: "/tin-tuc/phu-tung-chinh-hang-mazda",
   periodWarranty: "/tin-tuc/bao-duong-xe-mazda-dinh-ky",
   fix: "/tin-tuc/dich-vu-sua-chua-mazda",
+  careCar: "/tin-tuc/dich-vu-cham-soc-xe-mazda",
+  careCustomer: "/tin-tuc/tong-dai-cham-soc-khach-hang-mazda",
+  mobileService: "/tin-tuc/cham-soc-xe-luu-dong-mazda",
+  bookService: "/tin-tuc/dat-hen-dich-vu-mazda",
 };

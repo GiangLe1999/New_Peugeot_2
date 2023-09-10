@@ -28,22 +28,25 @@ const serviceList = [
       { title: "Chính sách bảo hành", link: linkConstants.warranty },
       { title: "Bảo dưỡng định kỳ", link: linkConstants.periodWarranty },
       { title: "Dịch vụ sửa chữa", link: linkConstants.fix },
-      { title: "Dịch vụ chăm sóc xe", link: linkConstants.warranty },
+      { title: "Dịch vụ chăm sóc xe", link: linkConstants.careCar },
     ],
   },
 
   {
     icon: icon4,
     title: "ĐẶT HẸN DỊCH VỤ",
-    children: [{ title: "Chi tiết", link: linkConstants.warranty }],
+    children: [{ title: "Chi tiết", link: linkConstants.bookService }],
   },
 
   {
     icon: icon3,
     title: "CHĂM SÓC KHÁCH HÀNG",
     children: [
-      { title: "Tổng đài chăm sóc khách hàng", link: linkConstants.warranty },
-      { title: "Chăm sóc xe lưu động", link: linkConstants.warranty },
+      {
+        title: "Tổng đài chăm sóc khách hàng",
+        link: linkConstants.careCustomer,
+      },
+      { title: "Chăm sóc xe lưu động", link: linkConstants.mobileService },
     ],
   },
 ];
