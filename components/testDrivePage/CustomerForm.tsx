@@ -124,7 +124,7 @@ const CustomerForm: FC<Props> = ({
           text: isQuotation
             ? "Chúng tôi sẽ gửi báo giá đến anh (chị) trong thời gian sớm nhất."
             : "Chúng tôi sẽ liên hệ đến anh (chị) trong thời gian sớm nhất.",
-          confirmButtonColor: "#2b2b2b",
+          confirmButtonColor: "green",
         });
       } else {
         setLoading(false);

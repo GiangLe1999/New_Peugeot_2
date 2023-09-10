@@ -1,7 +1,6 @@
 import FirstBanner from "@/components/FirstBanner";
 import StyledAccordion from "@/components/StyledAccordion";
 import { deliveryData } from "@/data/delivery";
-import { privacyData } from "@/data/privacy";
 import { NextPage } from "next";
 
 interface Props {}

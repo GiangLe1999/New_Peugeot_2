@@ -35,18 +35,21 @@ export const deliveryData = [
     content: (
       <ul>
         <li>
-          <b>Nguyên tắc chung:</b>Công ty chỉ giao xe cho đúng người đã thực
-          hiện giao kết hợp đồng với Công ty, hoặc người được ủy quyền hợp pháp
-          bởi người này. Việc giao xe cho người được ủy quyền hợp pháp phát sinh
-          hiệu lực pháp lý như giao xe cho chính người giao kết hợp đồng. Trường
-          hợp người được ủy quyền tại thời điểm giao xe không xuất trình được
-          văn bản chứng minh tư cách nhận ủy quyền một cách hợp pháp thì Công ty
-          có quyền từ chối giao xe và thông báo cho người giao kết hợp đồng việc
-          giao xe không thành công. Trong mọi trường hợp Công ty sẽ bàn giao xe
-          cho Khách hàng theo đúng địa điểm được đề cập tại Hợp đồng.
+          <b>Nguyên tắc chung:</b>
         </li>
 
         <ul className="!list-none list-child-item">
+          <li>
+            - Công ty chỉ giao xe cho đúng người đã thực hiện giao kết hợp đồng
+            với Công ty, hoặc người được ủy quyền hợp pháp bởi người này. Việc
+            giao xe cho người được ủy quyền hợp pháp phát sinh hiệu lực pháp lý
+            như giao xe cho chính người giao kết hợp đồng. Trường hợp người được
+            ủy quyền tại thời điểm giao xe không xuất trình được văn bản chứng
+            minh tư cách nhận ủy quyền một cách hợp pháp thì Công ty có quyền từ
+            chối giao xe và thông báo cho người giao kết hợp đồng việc giao xe
+            không thành công. Trong mọi trường hợp Công ty sẽ bàn giao xe cho
+            Khách hàng theo đúng địa điểm được đề cập tại Hợp đồng.
+          </li>
           <li>
             - Trước khi tiến hành bàn giao xe nhân viên Tư vấn bán hàng của Công
             ty sẽ liên hệ trước với Khách hàng để xác nhận lại thời gian, địa
