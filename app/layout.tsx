@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Footer from "@/components/Layout/Footer";
 import StickyBtns from "@/components/Layout/StickyBtns";
 import MobileBottomNav from "@/components/Layout/MobileBottomNav";
+import StyledProgressBar from "@/components/ProgressBar";
 
 const mazda = localFont({
   src: [
@@ -37,14 +38,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
-      <body className={mazda.className}>
-        <Header />
-        {children}
-        <Footer />
-        <StickyBtns />
-        <MobileBottomNav />
-      </body>
-    </html>
+    <>
+      <html lang="vi">
+        <body className={mazda.className}>
+          <StyledProgressBar />
+          <Header />
+          {children}
+          <Footer />
+          <StickyBtns />
+          <MobileBottomNav />
+        </body>
+      </html>
+    </>
   );
 }

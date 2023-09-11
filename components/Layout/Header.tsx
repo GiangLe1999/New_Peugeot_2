@@ -145,6 +145,7 @@ const Header: FC<Props> = (props): JSX.Element => {
 
           <NavCarMenu
             showCarMenu={showCarMenu}
+            setShowCarMenu={setShowCarMenu}
             parentUnHoverHandler={parentUnHoverHandler}
           />
           <ServiceMenu showServiceMenu={showServiceMenu} />

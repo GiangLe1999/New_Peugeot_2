@@ -1,18 +1,21 @@
 "use client";
 
 import { navCarMenu } from "@/data";
-import { FC } from "react";
+import { FC, SetStateAction, Dispatch } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { AiFillCloseSquare } from "react-icons/ai";
 
 interface Props {
   showCarMenu: boolean;
+  setShowCarMenu: Dispatch<SetStateAction<boolean>>;
   parentUnHoverHandler: () => void;
 }
 
 const NavCarMenu: FC<Props> = ({
   showCarMenu,
   parentUnHoverHandler,
+  setShowCarMenu,
 }): JSX.Element => {
   return (
     <div
@@ -40,6 +43,14 @@ const NavCarMenu: FC<Props> = ({
           <p className="font-bold text-primary">Giá: Từ {car.price} triệu</p>
         </Link>
       ))}
+
+      <button
+        onClick={() => setShowCarMenu(false)}
+        className="text-primary absolute top-2 right-2 flex items-center gap-1 hover:scale-[1.1] transition"
+      >
+        <span className="underline font-bold">Đóng</span>
+        <AiFillCloseSquare size={25} />
+      </button>
     </div>
   );
 };
