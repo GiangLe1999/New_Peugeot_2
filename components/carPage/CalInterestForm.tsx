@@ -94,7 +94,7 @@ const CalInterestForm: FC<Props> = ({
             <input
               type="number"
               value={choseLength}
-              className="flex-1 border-none !p-0"
+              className="border-none !p-0"
               min={0}
               id="length"
               onChange={(e) => setChoseLength(e.target.value)}
@@ -115,7 +115,7 @@ const CalInterestForm: FC<Props> = ({
               value={choseInterest}
               min={0}
               onChange={(e) => setChoseInterest(e.target.value)}
-              className="flex-1 border-none !p-0"
+              className="border-none !p-0"
               id="interest"
             />
             <span className={unitClasses}>% / năm</span>

@@ -107,13 +107,13 @@ html {
 }
 
 .cal-price-form-input {
-  @apply flex items-center mb-5;
+  @apply flex items-center mb-5 gap-1 max-[458px]:flex-col max-[458px]:items-start;
 }
 
 .cal-price-form-input input,
 .cal-price-form-input select,
 .cal-price-form-input div {
-  @apply flex-1 border border-[#ccc] bg-[#f9fafb] outline-none rounded-md px-3 py-2;
+  @apply flex-1 border border-[#ccc] bg-[#f9fafb] outline-none rounded-md px-3 py-2 max-[458px]:w-full;
 }
 
 /* Car Post Content */

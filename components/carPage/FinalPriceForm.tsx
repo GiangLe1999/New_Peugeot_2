@@ -65,10 +65,9 @@ const FinalPriceFrom: FC<Props> = ({
         {/* Car name */}
         {isInstallmentPage && (
           <div className="cal-price-form-input">
-            <label htmlFor="carName" className="w-1/3">
-              Dòng xe :
-            </label>
+            <label htmlFor="carName">Dòng xe :</label>
             <select
+              className="flex-1"
               id="carName"
               value={choseCarName}
               onChange={(e) => setChoseCarName(e.target.value)}
