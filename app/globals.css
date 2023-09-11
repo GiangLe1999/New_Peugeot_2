@@ -57,11 +57,11 @@ html {
 }
 
 .post-heading-2 {
-  @apply border-b-[2px] border-primary leading-none py-[10px] mb-4;
+  @apply border-b-[2px] border-primary leading-none py-[10px] mb-4 max-[800px]:border-none;
 }
 
 .post-heading-2 span {
-  @apply bg-primary text-white uppercase px-3 py-[9px] text-2xl leading-none font-bold;
+  @apply bg-primary text-white uppercase px-3 py-[9px] text-2xl leading-none max-[650px]:text-lg max-[800px]:leading-8 font-bold;
 }
 
 .warning-input {
