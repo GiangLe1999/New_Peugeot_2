@@ -46,7 +46,7 @@ const page: NextPage<Props> = () => {
             </ul>
           </div>
 
-          <div className="relative w-full h-full rounded-md overflow-hidden">
+          <div className="introduce-section-img">
             <NextImage
               src="/images/gioi-thieu/mazda-sai-gon.jpg"
               alt="Mazda Sài Gòn"
@@ -54,15 +54,15 @@ const page: NextPage<Props> = () => {
           </div>
         </div>
 
-        <div className="introduce-section">
-          <div className="relative w-full h-full rounded-md overflow-hidden">
+        <div className="introduce-section introduce-reverse">
+          <div className="introduce-section-img left">
             <NextImage
               src="/images/gioi-thieu/mazda-sai-gon-co-so-vat-chat.jpg"
               alt="Mazda Sài Gòn"
             />
           </div>
 
-          <div>
+          <div className="right">
             <p>Tổng quản về</p>
             <h2>Cơ sở vật chất</h2>
             <ul>
@@ -122,7 +122,7 @@ const page: NextPage<Props> = () => {
             </ul>
           </div>
 
-          <div className="relative w-full h-full rounded-md overflow-hidden">
+          <div className="introduce-section-img">
             <NextImage
               src="/images/gioi-thieu/phong-kinh-doanh-mazda-sai-gon.png"
               alt="Mazda Sài Gòn"

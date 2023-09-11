@@ -261,7 +261,21 @@ html {
 
 /* Introduce page */
 .introduce-section {
-  @apply grid grid-cols-2 gap-12 text-textColor;
+  @apply grid grid-cols-2 gap-x-12 gap-y-6 text-textColor max-[1021px]:grid-cols-1;
+}
+
+@media screen and (max-width: 1021px) {
+  .introduce-reverse {
+    grid-template-areas: "right" "left";
+  }
+
+  .introduce-reverse .left {
+    grid-area: left;
+  }
+
+  .introduce-reverse .right {
+    grid-area: right;
+  }
 }
 
 .introduce-section p {
@@ -282,6 +296,10 @@ html {
 
 .introduce-section li span {
   @apply font-bold;
+}
+
+.introduce-section-img {
+  @apply relative w-full h-full rounded-md overflow-hidden max-[1021px]:aspect-video;
 }
 
 /* Scale 3d */
