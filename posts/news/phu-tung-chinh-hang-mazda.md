@@ -61,7 +61,7 @@ Cũng như công dụng của hầu hết các loại lọc, lọc dầu động
 
 Nên thay mới lọc dầu động cơ sau mỗi 10,000 km hoặc 6 tháng. Nếu không thay, dầu động cơ sẽ bị bẩn, dẫn đến làm nghẽn mạch dầu bôi trơn, gây nên những hư hỏng nghiêm trọng cho động cơ.
 
-## Gạt nước kính:
+## Gạt nước kính
 
 Với khí hậu nhiệt đới nắng nóng, thường xuyên có mưa, những tác nhân ăn mòn và nhiều loại ô nhiễm xuất hiện dần làm cao su gạt nước bị lão hóa, biến dạng khiến cần gạt nước làm việc kém hiệu quả, ảnh hưởng đến tầm nhìn của người cầm lái. Để điều này không xảy ra, quý khách hãy quan tâm đến việc vệ sinh bề mặt kính xe và  thay thế gạt nước định kỳ.
 

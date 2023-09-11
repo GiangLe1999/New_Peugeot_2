@@ -11,7 +11,7 @@ author: Giang Le Thanh
 
 Xã hội ngày càng phát triển, thời gian cho mọi dự định trong cuộc sống càng lúc bị thu hẹp, hiểu được nỗi băn khoăn đó, chúng tôi luôn khuyến khích khách hàng đặt lịch hẹn để tối ưu hóa thời gian của mình đồng thời đảm bảo các loại phụ tùng vật tư và nhân sự sẵn sàng đón tiếp chu đáo. Điều đó đồng nghĩa Mazda Việt Nam luôn trân trọng thời gian quý báu và cố gắng hết mình để đem lại nhiều thời gian hơn cho cuộc sống của quý khách. Bất cứ khi nào quý khách có nhu cầu chăm sóc bảo dưỡng hay sửa chữa cho chiếc xe Mazda yêu quý, hãy đặt hẹn trước với chúng tôi để trải nghiệm sự chu toàn đến từ đội ngũ nhân sự dịch vụ Mazda.
 
-## Đặt hẹn trực tuyến qua ứng dụng Mazda Service:
+## Đặt hẹn trực tuyến qua ứng dụng Mazda Service
 
 <div class="post-img-wrapper" style={{aspectRatio: 1.5}}>
 <Image src="https://res.cloudinary.com/dfhheac8o/image/upload/v1694306572/Mazda/Mazda%20News/dat-hen-dich-vu-mazda-qua-app_f9rolj.jpg" alt="Đặt hẹn trực tuyến qua ứng dụng Mazda Service" fill={true} />
@@ -24,7 +24,7 @@ Hãy tải ứng dụng Mazda Service ngay hôm nay và khám phá nhiều tiệ
 - App store (ios): [https://apps.apple.com/vn/app/mazda-service/id1460348393?l=vi](https://apps.apple.com/vn/app/mazda-service/id1460348393?l=vi "{rel='nofollow'}")
 - Google Play (Android): [https://bit.ly/2RHKRWC](https://bit.ly/2RHKRWC "{rel='nofollow'}")
 
-## Đặt hẹn trực tiếp:
+## Đặt hẹn trực tiếp
 
 Quý khách có thể đặt hẹn dịch vụ qua số Hotline Dịch vụ tại Đại lý mà quý khách thường xuyên đến để bảo dưỡng, sửa chữa. Ngoài ra, quý khách có thể liên hệ đến Tổng đài CSKH 1900 545 591, luôn có nhân viên chăm sóc khách hàng tiếp nhận các cuộc gọi của quý khách để hỗ trợ đặt hẹn dịch vụ tại bất kỳ Đại lý Mazda nào trên toàn quốc. Sau khi lịch hẹn được xác nhận, nhân viên chăm sóc khách hàng tại Đại lý sẽ liên hệ nhắc lại lịch hẹn để quý khách không bỏ lỡ thời gian đã hẹn làm dịch vụ.
 

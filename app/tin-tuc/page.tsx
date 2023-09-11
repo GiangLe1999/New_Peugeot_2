@@ -39,7 +39,7 @@ const AllNewsPage: NextPage<Props> = () => {
             <LoadingSpinner />
           </div>
         ) : (
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 max-[880px]:grid-cols-2 max-[600px]:grid-cols-1">
             {newsPosts.map((post, index) => (
               <NewsCard item={post} key={index} />
             ))}
