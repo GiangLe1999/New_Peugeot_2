@@ -7,7 +7,7 @@ const StyledProgressBar = () => {
     <>
       <ProgressBar
         height="4px"
-        color="#0298da"
+        color="#ffffff"
         options={{ showSpinner: false }}
         shallowRouting
       />
