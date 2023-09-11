@@ -176,7 +176,7 @@ const CustomerForm: FC<Props> = ({
           value={enteredName}
         />
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="customer-form-row">
           <FormInput
             id="phone"
             label="Số điện thoại *"
@@ -199,7 +199,7 @@ const CustomerForm: FC<Props> = ({
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="customer-form-row">
           <FormSelect
             data={carNames}
             id="carName"
@@ -225,7 +225,7 @@ const CustomerForm: FC<Props> = ({
         </div>
 
         {isContactForm && (
-          <div className="grid grid-cols-2 gap-4">
+          <div className="customer-form-row">
             <FormSelect
               data={provinces}
               id="section"

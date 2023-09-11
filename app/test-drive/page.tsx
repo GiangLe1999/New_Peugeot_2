@@ -23,7 +23,7 @@ const TestDrivePage = () => {
       />
 
       <div className="container my-12">
-        <div className="shadow-md grid grid-cols-2 border rounded-md overflow-hidden">
+        <div className="customer-form-wrapper">
           <div className="relative w-full h-full">
             <NextImage
               src="/images/test-drive/lai-thu-mazda.jpg"

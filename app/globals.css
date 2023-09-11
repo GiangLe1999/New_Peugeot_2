@@ -376,3 +376,13 @@ html {
 .list-child-item li {
   @apply list-none;
 }
+
+/* Customer form */
+
+.customer-form-wrapper {
+  @apply shadow-md grid grid-cols-2 border rounded-md overflow-hidden max-[1100px]:grid-cols-1;
+}
+
+.customer-form-row {
+  @apply grid grid-cols-2 gap-x-4 gap-y-6 max-[583px]:grid-cols-1;
+}
