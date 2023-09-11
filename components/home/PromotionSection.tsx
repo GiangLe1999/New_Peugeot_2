@@ -9,7 +9,7 @@ const PromotionSection: FC<Props> = (props): JSX.Element => {
     <section className="py-10 container">
       <SectionTitle title="KHUYẾN MÃI MAZDA" />
 
-      <div className="grid grid-cols-2 gap-12 py-8">
+      <div className="grid grid-cols-2 gap-x-12 gap-y-6 py-8 max-[738px]:grid-cols-1">
         {promotionItems.map((item, index) => (
           <div key={index}>
             <p className="text-primary text-base font-bold mb-1 flex items-center gap-1">

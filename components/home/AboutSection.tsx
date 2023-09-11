@@ -10,7 +10,7 @@ const AboutSection: FC<Props> = (props): JSX.Element => {
       <SectionTitle title="VỀ MAZDA" />
       <div className="container">
         {/* Cards */}
-        <div className="grid grid-cols-4 gap-5 py-8">
+        <div className="grid grid-cols-4 gap-5 py-8 max-[1000px]:grid-cols-2 max-[557px]:grid-cols-1">
           {aboutItems.map((item, index) => (
             <div
               key={index}
@@ -28,7 +28,7 @@ const AboutSection: FC<Props> = (props): JSX.Element => {
         </div>
 
         {/* Videos */}
-        <div className="grid grid-cols-3 gap-5 pb-6">
+        <div className="grid grid-cols-3 gap-5 pb-6 max-[600px]:grid-cols-1">
           <div className="video-wrapper">
             <iframe
               className="iframe"

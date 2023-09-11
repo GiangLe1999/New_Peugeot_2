@@ -14,7 +14,7 @@ const ReasonsSection: FC<Props> = (props): JSX.Element => {
       </p>
       <SectionTitle title="MAZDA SÀI GÒN" />
 
-      <div className="grid grid-cols-2 mt-8 gap-6">
+      <div className="grid grid-cols-2 mt-8 gap-6 max-[1100px]:grid-cols-1">
         <ul className="space-y-5">
           {reasonsToBuy.map((reason, index) => (
             <li key={index}>

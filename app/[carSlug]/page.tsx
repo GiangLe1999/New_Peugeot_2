@@ -30,9 +30,9 @@ const page: NextPage<Props> = async ({ params }) => {
   return (
     <div className="py-10">
       <div className="container">
-        <div className="flex gap-10">
+        <div className="flex gap-10 max-[1100px]:gap-0">
           <div className="flex-1 space-y-14">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 max-[725px]:grid-cols-1">
               <div className="grid place-items-center">
                 <CarImageGallery
                   colors={car.colors}

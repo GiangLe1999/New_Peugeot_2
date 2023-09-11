@@ -129,7 +129,7 @@ const CarPriceSection: FC<Props> = ({
         </>
       )}
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-6 max-[890px]:grid-cols-1">
         {/* Table 2 */}
         <FinalPriceForm
           lines={isInstallmentPage ? carLines : lines}

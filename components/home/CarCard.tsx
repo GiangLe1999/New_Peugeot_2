@@ -10,7 +10,7 @@ interface Props {
 
 const CarCard: FC<Props> = ({ car }): JSX.Element => {
   return (
-    <div className="shadow-md bg-white rounded-sm overflow-hidden">
+    <div className="shadow-md bg-white rounded-sm overflow-hidden border">
       <Link
         href={"/" + car.slug}
         className="relative w-full main-image-ratio block overflow-hidden"
@@ -34,7 +34,7 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
           </h4>
 
           <div className="price-block-decor">
-            <span>
+            <span className="-ml-2 max-[355px]:text-sm">
               {formatPrice(car.priceFrom)}
               <u>đ</u>
             </span>

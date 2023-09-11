@@ -21,6 +21,11 @@ const CustomerSwiper: FC<Props> = (props): JSX.Element => {
           clickable: true,
         }}
         modules={[Pagination]}
+        breakpoints={{
+          0: { slidesPerView: 2 },
+          760: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
         className="customerSwiper"
       >
         {arr.map((item) => (

@@ -9,7 +9,7 @@ interface Props {}
 
 const SalerCard: FC<Props> = (props): JSX.Element => {
   return (
-    <div className="w-[20%] sticky top-14 max-h-screen">
+    <div className="w-[20%] sticky top-14 max-h-screen max-[1100px]:w-0">
       <div className="bg-secondary rounded-md overflow-hidden">
         <div className="w-full aspect-square relative">
           <NextImage

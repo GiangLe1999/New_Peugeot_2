@@ -15,9 +15,9 @@ interface Props {}
 const Footer: FC<Props> = (): JSX.Element => {
   return (
     <footer className="bg-secondary border-t">
-      <div className="container flex flex-wrap gap-1 py-10">
+      <div className="container flex flex-wrap gap-1 py-10 max-[1017px]:gap-3">
         {/* Column1 */}
-        <div className="w-1/3 pr-3">
+        <div className="w-1/3 pr-3 max-[1017px]:w-[50%] max-[717px]:w-full">
           {/* General info */}
           <p className="footer-title">CÔNG TY TNHH PHÂN PHỐI THACO AUTO</p>
           <ul>
@@ -29,7 +29,9 @@ const Footer: FC<Props> = (): JSX.Element => {
           </ul>
 
           {/* Social */}
-          <p className="footer-title mt-12">Liên hệ với chúng tôi</p>
+          <p className="footer-title mt-12 max-[717px]:mt-6">
+            Liên hệ với chúng tôi
+          </p>
           <ul>
             {footerCol4.map((item, index) => (
               <li key={index} className="footer-item">
@@ -39,7 +41,7 @@ const Footer: FC<Props> = (): JSX.Element => {
               </li>
             ))}
           </ul>
-          <div className="flex item-center gap-2 mt-3">
+          <div className="flex item-center gap-2 my-3">
             <Link href="" target="_blank" rel="noopener noreferrer">
               <div className="footer-icon">
                 <NextImage
@@ -67,7 +69,7 @@ const Footer: FC<Props> = (): JSX.Element => {
         </div>
 
         {/* Column2 */}
-        <div className="w-[18%] px-3">
+        <div className="w-[18%] px-3 max-[717px]:w-[45%] max-[717px]:px-0">
           <p className="footer-title">Sản phẩm</p>
           <ul>
             {footerCol2.map((car, index) => (
@@ -79,7 +81,7 @@ const Footer: FC<Props> = (): JSX.Element => {
         </div>
 
         {/* Column3 */}
-        <div className="w-[20%] px-3">
+        <div className="w-[20%] px-3 max-[1017px]:w-[25%] max-[717px]:w-[45%] max-[717px]:px-0">
           <p className="footer-title">Dịch vụ</p>
           <ul>
             {footerCol3.map((item, index) => (
@@ -89,7 +91,7 @@ const Footer: FC<Props> = (): JSX.Element => {
             ))}
           </ul>
 
-          <p className="footer-title mt-20">Chính sách</p>
+          <p className="footer-title mt-12">Chính sách</p>
           <ul>
             {footerCol32.map((item, index) => (
               <li key={index} className="footer-item">
@@ -100,7 +102,7 @@ const Footer: FC<Props> = (): JSX.Element => {
         </div>
 
         {/* Column 4 */}
-        <div className="flex-1 pl-3">
+        <div className="flex-1">
           <p className="footer-title">Tư vấn nhanh</p>
           <FooterForm />
         </div>

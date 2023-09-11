@@ -9,7 +9,7 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
     <section className="bg-[#e7e7e7]">
       <div className="mazda-bg">
         <div className="container">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 max-[932px]:grid-cols-1">
             <div className="py-8 text-textColor space-y-6">
               <p className="text-center font-bold text-2xl">
                 BẢNG TÍNH GIÁ LĂN BÁNH
@@ -24,7 +24,7 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
                 số liên hệ để biết giá xe lăn bánh tại từng khu vực ).
               </p>
 
-              <div className="grid grid-cols-2 gap-10 text-white">
+              <div className="grid grid-cols-2 gap-x-10 gap-y-2 text-white max-[457px]:grid-cols-1">
                 <BtnWithIcon
                   to={linkConstants.finalPrice}
                   content="TÍNH GIÁ LĂN BÁNH"

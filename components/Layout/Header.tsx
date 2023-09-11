@@ -17,6 +17,8 @@ interface Props {}
 const buyCarTitle = "mua xe";
 const carMenuTitle = "giá xe mazda";
 const serviceTitle = "dịch vụ";
+const commonClasses =
+  "relative uppercase text-sm text-white px-4 max-[413px]:px-0 py-2 hover:bg-secondary rounded-sm transition";
 
 const Header: FC<Props> = (props): JSX.Element => {
   const pathname = usePathname();
@@ -84,36 +86,62 @@ const Header: FC<Props> = (props): JSX.Element => {
       {/* Sticky Header */}
       <div className="bg-primary text-center sticky top-0 z-50">
         <nav
-          className="container flex gap-2 items-center justify-center h-10 relative transition"
+          className="container flex gap-2 items-center justify-center h-10 relative transition max-[500px]:justify-between max-[500px]:gap-0"
           onMouseLeave={parentUnHoverHandler}
         >
-          {navItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.link}
-              className={`relative uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition ${
-                !item.isParent && "max-[827px]:hidden"
-              } ${pathname === item.link && "bg-secondary"} ${
-                showCarMenu && item.title === carMenuTitle && "bg-secondary"
-              } ${
-                showServiceMenu && item.title === serviceTitle && "bg-secondary"
-              }`}
-              onMouseEnter={() => parentHoverHandler(item.title)}
-            >
-              {item.isParent ? (
-                <span className="flex gap-2 items-center">
-                  {item.title}
-                  <BiChevronDown size={20} className="-mr-2" />
-                </span>
-              ) : (
-                item.title
-              )}
+          {navItems.map((item, index) => {
+            if (item.title === buyCarTitle) {
+              return (
+                <div
+                  key={index}
+                  className={`${commonClasses} ${
+                    pathname === item.link && "bg-secondary"
+                  }`}
+                  onMouseEnter={() => parentHoverHandler(item.title)}
+                >
+                  <span className="flex gap-2 items-center">
+                    {item.title}
+                    <BiChevronDown
+                      size={20}
+                      className="-mr-2 max-[413px]:hidden"
+                    />
+                  </span>
+                  {item.title === buyCarTitle && (
+                    <BuyCarMenu showBuyMenu={showBuyMenu} />
+                  )}
+                </div>
+              );
+            }
 
-              {item.title === buyCarTitle && (
-                <BuyCarMenu showBuyMenu={showBuyMenu} />
-              )}
-            </Link>
-          ))}
+            return (
+              <Link
+                key={index}
+                href={item.link}
+                className={`${commonClasses} ${
+                  !item.isParent && "max-[844px]:hidden"
+                } ${pathname === item.link && "bg-secondary"} ${
+                  showCarMenu && item.title === carMenuTitle && "bg-secondary"
+                } ${
+                  showServiceMenu &&
+                  item.title === serviceTitle &&
+                  "bg-secondary"
+                }`}
+                onMouseEnter={() => parentHoverHandler(item.title)}
+              >
+                {item.isParent ? (
+                  <span className="flex gap-2 items-center">
+                    {item.title}
+                    <BiChevronDown
+                      size={20}
+                      className="-mr-2 max-[413px]:hidden"
+                    />
+                  </span>
+                ) : (
+                  item.title
+                )}
+              </Link>
+            );
+          })}
 
           <NavCarMenu
             showCarMenu={showCarMenu}

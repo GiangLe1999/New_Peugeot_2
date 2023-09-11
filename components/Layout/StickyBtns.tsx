@@ -76,6 +76,7 @@ const StickyBtns: FC<Props> = (props): JSX.Element => {
               if (item.tel)
                 return (
                   <a
+                    key={index}
                     href={item.tel}
                     className={`${itemLinkClasses} hover:-translate-x-[177px]`}
                   >
@@ -85,6 +86,7 @@ const StickyBtns: FC<Props> = (props): JSX.Element => {
               if (!item.title)
                 return (
                   <button
+                    key={index}
                     onClick={() => setMaximized(false)}
                     className={`${itemClasses}`}
                   >
