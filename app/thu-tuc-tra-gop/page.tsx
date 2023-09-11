@@ -31,7 +31,7 @@ const page: NextPage<Props> = async () => {
           <h2 className="post-heading-2">
             <span>Thủ tục trả góp đối với doanh nghiệp & cá nhân</span>
           </h2>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-8 max-[920px]:grid-cols-1">
             <div className="installment-block">
               <h3>I. ĐỐI VỚI CÁ NHÂN</h3>
               <ol>
@@ -87,7 +87,7 @@ const page: NextPage<Props> = async () => {
           <h2 className="post-heading-2">
             <span>3 điểm cần lưu ý</span>
           </h2>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8 max-[1029px]:grid-cols-1">
             <div className="installment-block-sm">
               <p>
                 <SiGoogleoptimize size={30} color="#0298da" />
