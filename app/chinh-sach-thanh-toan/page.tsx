@@ -3,6 +3,15 @@ import StyledAccordion from "@/components/StyledAccordion";
 import { paymentData } from "@/data/payment";
 import { NextPage } from "next";
 
+export const generateMetadata = () => {
+  return {
+    title: "Chính sách thanh toán",
+    description:
+      "Thông tin mới nhất về chính sách thanh toán sản phẩm xe Mazda tại website chính thức của Mazda Sài Gòn.",
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/chinh-sach-thanh-toan`,
+  };
+};
+
 interface Props {}
 
 const page: NextPage<Props> = () => {

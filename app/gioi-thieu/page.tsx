@@ -2,6 +2,15 @@ import FirstBanner from "@/components/FirstBanner";
 import NextImage from "@/components/NextImage";
 import { NextPage } from "next";
 
+export const generateMetadata = () => {
+  return {
+    title: "Về chúng tôi",
+    description:
+      "Thông tin về Mazda Sài Gòn, về cơ sở vật chất, đội ngũ nhận viên. Tham khảo tại website chính thức của Mazda Sài Gòn.",
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/gioi-thieu`,
+  };
+};
+
 interface Props {}
 
 const page: NextPage<Props> = () => {

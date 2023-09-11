@@ -20,3 +20,9 @@ export const linkConstants = {
   privacyPolicy: "/chinh-sach-bao-mat",
   deliveryPolicy: "/chinh-sach-giao-nhan-van-chuyen",
 };
+
+export const pageConstants = {
+  siteTitle: "Mazda Sài Gòn",
+  siteDescription:
+    "Website chính thức của Mazda Sài Gòn cung cấp thông tin chính xác nhất về các tính năng, hình ảnh và thông số kỹ thuật của tất cả các xe ô tô, SUV, Sedan, Sport.",
+};

@@ -6,8 +6,19 @@ import PostsSection from "@/components/home/PostsSection";
 import PromotionSection from "@/components/home/PromotionSection";
 import QuoteSection from "@/components/home/QuoteSection";
 import ReasonsSection from "@/components/home/ReasonsSection";
+import { pageConstants } from "@/data/constants";
 import { getAllCarsData } from "@/lib/fetchData";
 import { CarType } from "@/types";
+
+export const generateMetadata = () => {
+  return {
+    title: "Xe Mazda 5 - 7 chỗ | Mazda Sài Gòn",
+    description: pageConstants.siteDescription,
+    alternates: {
+      canonical: process.env.NEXT_PUBLIC_BASE_URL,
+    },
+  };
+};
 
 export default async function Home() {
   const cars = (await getAllCarsData()) as CarType[];

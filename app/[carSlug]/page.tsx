@@ -9,6 +9,28 @@ import CarImageGallery from "@/components/carPage/CarImageGallery";
 import { CarType } from "@/types";
 import CarPriceSection from "@/components/carPage/CarPriceSection";
 
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { carSlug: string };
+}) => {
+  try {
+    const carData = await getCarData(params.carSlug);
+
+    return {
+      title: carData?.name.toUpperCase(),
+      description: `${carData?.name.toUpperCase()} có giá từ ${
+        carData?.priceFrom
+      } VNĐ. Xem thêm thông số kỹ thuật, và chương trình ưu đãi đặc biệt của ${carData?.name.toUpperCase()}.`,
+      alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.carSlug}`,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 interface Props {
   params: { carSlug: string };
 }

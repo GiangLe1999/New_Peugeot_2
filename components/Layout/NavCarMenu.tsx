@@ -19,7 +19,7 @@ const NavCarMenu: FC<Props> = ({
 }): JSX.Element => {
   return (
     <div
-      className={`absolute w-full top-full left-0 z-50 bg-white p-5 grid grid-cols-5 gap-3 rounded-sm shadow-md transition origin-top max-[822px]:grid-cols-4 max-[638px]:grid-cols-3 ${
+      className={`absolute w-full top-full left-0 z-50 bg-white p-5 grid grid-cols-5 gap-3 rounded-sm shadow-md transition origin-top max-[822px]:grid-cols-4 max-[638px]:grid-cols-3 max-[638px]:pt-8 ${
         showCarMenu ? "scale-3d-1" : "scale-3d-0"
       }`}
     >

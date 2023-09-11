@@ -5,6 +5,15 @@ import { NextPage } from "next";
 import { ImUserTie } from "react-icons/im";
 import { SiAddthis, SiGoogleoptimize } from "react-icons/si";
 
+export const generateMetadata = () => {
+  return {
+    title: "Thủ tục trả góp",
+    description:
+      "Tìm hiểu thông tin về thủ tục trả góp đối với sản phẩm xe Mazda một cách chính xác nhất tại Mazda Sài Gòn.",
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/thu-tuc-tra-gop`,
+  };
+};
+
 interface Props {}
 
 const page: NextPage<Props> = async () => {

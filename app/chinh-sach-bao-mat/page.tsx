@@ -3,6 +3,15 @@ import StyledAccordion from "@/components/StyledAccordion";
 import { privacyData } from "@/data/privacy";
 import { NextPage } from "next";
 
+export const generateMetadata = () => {
+  return {
+    title: "Chính sách bảo mật thông tin",
+    description:
+      "Thông tin mới nhất về chính sách bảo mật thông tin khách hàng tại website chính thức của Mazda Sài Gòn.",
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/chinh-sach-bao-mat`,
+  };
+};
+
 interface Props {}
 
 const page: NextPage<Props> = () => {

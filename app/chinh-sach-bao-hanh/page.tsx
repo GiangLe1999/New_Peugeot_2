@@ -5,6 +5,15 @@ import { NextPage } from "next";
 
 interface Props {}
 
+export const generateMetadata = () => {
+  return {
+    title: "Chính sách bảo hành xe Mazda 2023",
+    description:
+      "Thông tin mới nhất về chính sách bảo hành cho các dòng xe Mazda: Mazda 2, Mazda 3, Mazda CX-3, ... tại website chính thức của Mazda Sài Gòn.",
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/chinh-sach-bao-hanh`,
+  };
+};
+
 const page: NextPage<Props> = () => {
   return (
     <div>
