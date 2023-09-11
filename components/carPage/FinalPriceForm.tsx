@@ -3,8 +3,6 @@ import { formatPrice } from "@/lib/formatData";
 import { CarLineType } from "@/types";
 import { Dispatch, FC, SetStateAction } from "react";
 
-const rowClasses = "flex justify-between items-center";
-
 interface Props {
   lines?: CarLineType[];
   choseCarLine: string;
@@ -54,9 +52,7 @@ const FinalPriceFrom: FC<Props> = ({
       <form className="pt-4 pb-2 text-textColor">
         {/* Place */}
         <div className="cal-price-form-input">
-          <label htmlFor="place" className="w-1/3">
-            Chọn nơi :
-          </label>
+          <label htmlFor="place">Chọn nơi :</label>
           <select id="place" value="hcm">
             <option value="hcm">Hồ Chí Minh</option>
           </select>
@@ -84,9 +80,7 @@ const FinalPriceFrom: FC<Props> = ({
 
         {/* Car line */}
         <div className="cal-price-form-input">
-          <label htmlFor="carLine" className="w-1/3">
-            Phiên bản :
-          </label>
+          <label htmlFor="carLine">Phiên bản :</label>
           <select
             id="carLine"
             value={choseCarLine}
@@ -104,43 +98,43 @@ const FinalPriceFrom: FC<Props> = ({
 
       {choseCarLine ? (
         <>
-          <ul className="space-y-2 text-sm pb-3 border-b border-[#eee]">
-            <li className={rowClasses}>
+          <ul className="space-y-2 text-sm pb-3 border-b border-[#eee] components-price-list">
+            <li>
               Giá niêm yết :<span>{formatPrice(currentListPrice)} VNĐ</span>
             </li>
 
-            <li className={rowClasses}>
+            <li>
               Phí trước bạ :
               <span>{formatPrice(currentRegistrationFee)} VNĐ</span>
             </li>
 
-            <li className={rowClasses}>
+            <li>
               Phí đăng ký biển số xe :
               <span>{formatPrice(phiDkyBienso)} VNĐ</span>
             </li>
 
-            <li className={rowClasses}>
+            <li>
               Phí sử dụng đường bộ :<span>{formatPrice(phiDuongbo)} VNĐ</span>
             </li>
 
-            <li className={rowClasses}>
+            <li>
               Phí cấp giấy chứng nhận đăng kiểm :
               <span>{formatPrice(phiDkiem)} VNĐ</span>
             </li>
 
-            <li className={rowClasses}>
+            <li>
               Khoảng thu, chi hộ khách hàng :
               <span>{formatPrice(thuchiho)} VNĐ</span>
             </li>
 
-            <li className={rowClasses}>
+            <li>
               Phí dịch vụ đăng ký :<span>{formatPrice(phiDvu)} VNĐ</span>
             </li>
           </ul>
 
-          <p className={`${rowClasses} my-3`}>
+          <p className="flex-space-between my-3">
             Tổng dự toán
-            <span className="text-xl font-bold text-tertiary">
+            <span className="text-xl font-bold text-tertiary block text-right">
               {formatPrice(currentTotal)} VNĐ
             </span>
           </p>

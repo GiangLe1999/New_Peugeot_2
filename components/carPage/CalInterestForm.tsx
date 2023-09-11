@@ -23,7 +23,7 @@ const percentArr = [0, 10, 20, 30, 40, 50, 60, 70, 80];
 
 const unitClasses = "w-1/3 block text-xs text-right";
 
-const calRowClasses = "flex justify-between py-2 border-b border-[#eee]";
+const calRowClasses = "flex justify-between py-2 border-b border-[#eee] gap-2";
 
 const calRowPriceClasses = "text-lg font-bold text-tertiary";
 
@@ -67,9 +67,7 @@ const CalInterestForm: FC<Props> = ({
       <div className="pt-4 pb-5 text-textColor">
         {/* Place */}
         <div className="cal-price-form-input">
-          <label htmlFor="percent" className="w-1/3">
-            Số tiền vay :
-          </label>
+          <label htmlFor="percent">Số tiền vay :</label>
           <select
             id="percent"
             value={chosePercent}
@@ -86,9 +84,7 @@ const CalInterestForm: FC<Props> = ({
 
         {/* Number of years */}
         <div className="cal-price-form-input">
-          <label htmlFor="length" className="w-1/3">
-            Thời gian vay :
-          </label>
+          <label htmlFor="length">Thời gian vay :</label>
 
           <div className="flex items-center gap-1">
             <input
@@ -105,9 +101,7 @@ const CalInterestForm: FC<Props> = ({
 
         {/* Interest */}
         <div className="cal-price-form-input">
-          <label htmlFor="interest" className="w-1/3">
-            Lãi suất vay :
-          </label>
+          <label htmlFor="interest">Lãi suất vay :</label>
 
           <div className="flex items-center gap-1">
             <input
@@ -124,9 +118,7 @@ const CalInterestForm: FC<Props> = ({
 
         {/* Kind */}
         <div className="cal-price-form-input">
-          <label htmlFor="percent" className="w-1/3">
-            Loại hình vay :
-          </label>
+          <label htmlFor="percent">Loại hình vay :</label>
           <select
             id="percent"
             value={choseKind}

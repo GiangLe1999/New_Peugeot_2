@@ -19,7 +19,7 @@ const AccordionItem: FC<ItemsProps> = ({ header, ...rest }) => {
     <Item
       {...rest}
       header={({ state: { isEnter } }) => (
-        <div className="flex justify-between items-center w-full">
+        <div className="flex-space-between w-full">
           <span className="block font-bold uppercase text-black">{header}</span>
           <FiChevronDown
             className={`ml-auto transition-transform duration-200 ease-out w-3 h-3 ${
