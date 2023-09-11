@@ -366,7 +366,7 @@ html {
 }
 
 .szh-accordion__item ul {
-  @apply list-disc space-y-1 ml-4;
+  @apply list-disc space-y-1;
 }
 
 .szh-accordion__item ul li {

@@ -36,7 +36,7 @@ const QuotePage = () => {
       />
 
       <div className="container">
-        <div className="flex mt-8 mb-16 gap-7">
+        <div className="flex mt-8 mb-16 gap-7 max-[1000px]:flex-col">
           <Filter
             setCars={setCars}
             filterLoading={filterLoading}

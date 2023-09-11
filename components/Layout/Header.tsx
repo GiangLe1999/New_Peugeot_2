@@ -18,7 +18,7 @@ const buyCarTitle = "mua xe";
 const carMenuTitle = "giá xe mazda";
 const serviceTitle = "dịch vụ";
 const commonClasses =
-  "relative uppercase text-sm text-white px-4 max-[413px]:px-0 py-2 hover:bg-secondary rounded-sm transition";
+  "relative uppercase text-sm text-white px-4 py-2 hover:bg-secondary rounded-sm transition";
 
 const Header: FC<Props> = (props): JSX.Element => {
   const pathname = usePathname();
