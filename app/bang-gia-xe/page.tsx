@@ -8,12 +8,6 @@ import { CarType } from "@/types";
 import { Metadata } from "next";
 import { useEffect, useState } from "react";
 
-export const metadata: Metadata = {
-  title: "Bảng Giá Xe Mazda Mới Nhất 2023",
-  description:
-    "Tham khảo bảng giá mới nhất các dòng xe Mazda: Mazda 2, Mazda 3, Mazda CX-3, ... tại website chính thức của Mazda Sài Gòn.",
-};
-
 const QuotePage = () => {
   const [cars, setCars] = useState<CarType[]>([]);
   const [loading, setLoading] = useState(false);
