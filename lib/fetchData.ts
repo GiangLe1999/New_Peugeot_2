@@ -1,4 +1,4 @@
-import { frontType } from "./../app/tin-tuc/[postSlug]/page";
+import { frontType } from "../app/(public-pages)/tin-tuc/[postSlug]/page";
 import { CarType } from "@/types";
 import { cache } from "react";
 

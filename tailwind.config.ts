@@ -28,6 +28,10 @@ const config: Config = {
       boxShadow: {
         stickyBtns: "0px 0px 1px 1px rgba(192, 192, 192, 0.3)",
       },
+      transitionProperty: {
+        width: "width",
+        fadeIn: "visible opacity transform",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -1,53 +1,62 @@
-import mongoose from "mongoose";
+import { Schema, models, model } from "mongoose";
 
-const ContactSchema = new mongoose.Schema(
+export interface IContact {
+  name: string;
+  phone: string;
+  email: string;
+  car: string;
+  carLine: string;
+  service: string;
+  province: string;
+  content: string;
+  createdAt: string;
+  status: string;
+}
+
+const ContactSchema = new Schema<IContact>(
   {
     name: {
       type: String,
       required: true,
       trim: true,
     },
-
     phone: {
       type: String,
       required: true,
       trim: true,
     },
-
     email: {
       type: String,
       require: true,
       trim: true,
     },
-
-    carName: {
+    car: {
       type: String,
-      required: true,
     },
-
     carLine: {
       type: String,
-      required: true,
     },
-
-    section: {
-      type: String,
-      required: true,
-    },
-
     service: {
       type: String,
       required: true,
     },
-
+    province: {
+      type: String,
+      required: true,
+    },
     content: {
       type: String,
+    },
+    status: {
+      type: String,
+      default: "Chờ xử lý",
     },
   },
   { timestamps: true }
 );
 
-const Contact =
-  mongoose.models?.Contact || mongoose.model("Contact", ContactSchema);
+ContactSchema.index({ name: "text", phone: "text", email: "text" });
+
+const Contact = models.Contact || model("Contact", ContactSchema);
 
 export default Contact;

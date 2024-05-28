@@ -1,4 +1,4 @@
-import { CarLinesType } from "@/app/test-drive/page";
+import { CarLinesType } from "@/app/(public-pages)/test-drive/page";
 import { getAllCarsLinesData } from "@/lib/fetchData";
 import { useEffect, useState } from "react";
 

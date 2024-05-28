@@ -1,4 +1,4 @@
-import { frontType } from "@/app/tin-tuc/[postSlug]/page";
+import { frontType } from "@/app/(public-pages)/tin-tuc/[postSlug]/page";
 import { FC } from "react";
 import NextImage from "../NextImage";
 import Link from "next/link";

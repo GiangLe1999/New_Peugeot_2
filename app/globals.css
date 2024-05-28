@@ -386,3 +386,152 @@ html {
 .customer-form-row {
   @apply grid grid-cols-2 gap-x-4 gap-y-6 max-[583px]:grid-cols-1;
 }
+
+/* Login page */
+.admin-login-background {
+  background-image: url("/images/admin/login-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(55, 65, 81, 0.6);
+  @apply h-screen bg-blend-multiply;
+}
+
+.admin-main-gradient {
+  @apply bg-[linear-gradient(135deg,#c3224a_0%,#4a0d37_100%)];
+}
+
+.admin-page-container {
+  @apply p-6;
+}
+
+.admin-card {
+  @apply bg-white rounded-md text-gray-800 my-[30px];
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.admin-card-body {
+  @apply px-5 pt-4 pb-6;
+}
+
+/* Admin Button */
+.admin-primary-btn {
+  transition: background-image 0.5s ease-in;
+  @apply relative py-3 px-4 rounded admin-main-gradient text-white font-bold;
+}
+
+.admin-primary-btn:hover::before {
+  opacity: 1;
+}
+
+.admin-primary-btn span {
+  @apply relative z-[3];
+}
+
+.admin-primary-btn::before {
+  background-image: linear-gradient(315deg, #c3224a, #4a0d37);
+  @apply absolute content-[''] w-full h-full transition-opacity duration-500 ease-[ease-out] z-[2] opacity-0 left-0 top-0 rounded-[5px];
+}
+
+/* Admin Sidebar */
+.admin-sidebar-shadow {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.admin-item-shadow {
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42),
+    0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.admin-sidebar-item {
+  @apply flex items-center text-sm font-extralight py-3 pl-4 hover:bg-[#c8c8c833] transition duration-[350] hover:text-white rounded text-[#ffffffcc];
+}
+
+.admin-sidebar-background {
+  background-image: url("/images/admin/sidebar-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Admin table */
+.admin-table thead {
+  @apply bg-slate-50;
+}
+
+.admin-table th {
+  @apply py-3 border-b;
+}
+
+.admin-table td {
+  @apply py-3 pl-3;
+}
+
+.admin-table tr {
+  @apply even:bg-slate-50 border-b;
+}
+
+/* Modal */
+/* .react-responsive-modal-root .react-responsive-modal-overlay,
+.react-responsive-modal-root .react-responsive-modal-container,
+.react-responsive-modal-root .react-responsive-modal-modal {
+  animation-fill-mode: initial !important;
+} */
+
+.react-responsive-modal-modal {
+  @apply rounded-sm;
+}
+
+.react-responsive-modal-closeButton {
+  @apply fill-white;
+}
+
+.react-responsive-modal-modal {
+  @apply !p-0 !m-0;
+}
+
+.customModal {
+  @apply rounded-md w-1/2 py-0;
+}
+
+/* Text editor */
+.tox-tinymce {
+  @apply !border-[1px] !border-[#e5e7eb] !rounded-md !h-[600px] z-0;
+}
+
+.small-text-editor .tox-tinymce {
+  @apply !h-[400px] z-0;
+}
+
+/* Admin Form */
+.admin-form-input-label {
+  @apply text-sm text-slate-600 font-bold;
+}
+
+/* Content parsed from HTML */
+figure.image {
+  @apply my-4 w-full;
+}
+
+figure img {
+  @apply !w-full object-cover rounded-t-md;
+}
+
+figure.image figcaption {
+  @apply text-[#364a5b] text-sm !mt-0 text-center p-3 px-[10px] bg-[#e9e9e9] rounded-b-md;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 6px;
+}

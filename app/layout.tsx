@@ -1,12 +1,8 @@
-import Header from "@/components/Layout/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Footer from "@/components/Layout/Footer";
-import StickyBtns from "@/components/Layout/StickyBtns";
-import MobileBottomNav from "@/components/Layout/MobileBottomNav";
-import StyledProgressBar from "@/components/ProgressBar";
 import { pageConstants } from "@/data/constants";
+import ReactQueryProvider from "@/providers/react-query-provider";
 
 const mazda = localFont({
   src: [
@@ -45,12 +41,7 @@ export default function RootLayout({
     <>
       <html lang="vi">
         <body className={mazda.className}>
-          <StyledProgressBar />
-          <Header />
-          {children}
-          <Footer />
-          <StickyBtns />
-          <MobileBottomNav />
+          <ReactQueryProvider>{children}</ReactQueryProvider>
         </body>
       </html>
     </>
