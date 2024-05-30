@@ -9,7 +9,6 @@ import ReasonsSection from "@/components/home/ReasonsSection";
 import { pageConstants } from "@/data/constants";
 import { CarEntity } from "@/entities/car.entity";
 import { getAllCars } from "@/service/car.service";
-import { CarType } from "@/types";
 
 export const generateMetadata = () => {
   return {

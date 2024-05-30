@@ -1,32 +1,24 @@
-import { getCarData, getCarPostData } from "@/lib/fetchData";
 import { NextPage } from "next";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import ContentSection from "@/components/carPage/ContentSection";
 import CarPromotionSection from "@/components/carPage/CarPromotionSection";
 import SalerCard from "@/components/carPage/SalerCard";
 import CarImageGallery from "@/components/carPage/CarImageGallery";
-import { CarType } from "@/types";
 import CarPriceSection from "@/components/carPage/CarPriceSection";
 import { getCarBySlug } from "@/service/car.service";
 import { CarEntity } from "@/entities/car.entity";
 import { ICarColor } from "@/model/Car2";
 
-// export async function generateStaticParams() {
-//   const viProjects = await getViProjectsSlugVsId();
-//   const enProjects = await getEnProjectsSlugVsId();
+export async function generateStaticParams() {
+  const cars = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`).then(
+    (res) => res.json()
+  );
 
-//   const viProjectsSlug = viProjects.map((project: VI_Project) => ({
-//     locale: "vi",
-//     projectSlug: project.vi_slug,
-//   }));
-//   const enProjectsSlug = enProjects.map((project: EN_Project) => ({
-//     locale: "en",
-//     projectSlug: project.en_slug,
-//   }));
+  const carsSlugs = cars?.map((car: CarEntity) => ({
+    carSlug: car.slug,
+  }));
 
-//   return [...viProjectsSlug, ...enProjectsSlug];
-// }
+  return carsSlugs;
+}
 
 export const generateMetadata = async ({
   params,
@@ -67,10 +59,7 @@ const page: NextPage<Props> = async ({ params }) => {
                   price={car.priceFrom}
                 />
               </div>
-              <CarPromotionSection
-                content={car.saleContent}
-                name={car.name}
-              />
+              <CarPromotionSection content={car.saleContent} name={car.name} />
             </div>
 
             <CarPriceSection
