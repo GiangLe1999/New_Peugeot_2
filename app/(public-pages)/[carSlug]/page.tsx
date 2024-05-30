@@ -56,7 +56,7 @@ const page: NextPage<Props> = async ({ params }) => {
               <div className="grid place-items-center">
                 <CarImageGallery
                   colors={car?.colors as ICarColor[]}
-                  price={car.priceFrom}
+                  price={car?.priceFrom}
                 />
               </div>
               <CarPromotionSection content={car.saleContent} name={car.name} />
