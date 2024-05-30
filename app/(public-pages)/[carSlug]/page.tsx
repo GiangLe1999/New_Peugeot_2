@@ -7,6 +7,7 @@ import CarPriceSection from "@/components/carPage/CarPriceSection";
 import { getCarBySlug } from "@/service/car.service";
 import { CarEntity } from "@/entities/car.entity";
 import { ICarColor } from "@/model/Car2";
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const cars = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`).then(

@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { MdEditSquare } from "react-icons/md";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+export const dynamic = "force-dynamic";
 
 const Page = () => {
   const searchParams = useSearchParams();
