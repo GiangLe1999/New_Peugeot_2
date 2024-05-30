@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { pageConstants } from "@/data/constants";
 import ReactQueryProvider from "@/providers/react-query-provider";
+import { Toaster } from "react-hot-toast";
 
 const mazda = localFont({
   src: [
@@ -42,6 +43,7 @@ export default function RootLayout({
       <html lang="vi">
         <body className={mazda.className}>
           <ReactQueryProvider>{children}</ReactQueryProvider>
+          <Toaster position="bottom-center" reverseOrder={false} />
         </body>
       </html>
     </>

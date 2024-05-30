@@ -8,6 +8,25 @@ import SalerCard from "@/components/carPage/SalerCard";
 import CarImageGallery from "@/components/carPage/CarImageGallery";
 import { CarType } from "@/types";
 import CarPriceSection from "@/components/carPage/CarPriceSection";
+import { getCarBySlug } from "@/service/car.service";
+import { CarEntity } from "@/entities/car.entity";
+import { ICarColor } from "@/model/Car2";
+
+// export async function generateStaticParams() {
+//   const viProjects = await getViProjectsSlugVsId();
+//   const enProjects = await getEnProjectsSlugVsId();
+
+//   const viProjectsSlug = viProjects.map((project: VI_Project) => ({
+//     locale: "vi",
+//     projectSlug: project.vi_slug,
+//   }));
+//   const enProjectsSlug = enProjects.map((project: EN_Project) => ({
+//     locale: "en",
+//     projectSlug: project.en_slug,
+//   }));
+
+//   return [...viProjectsSlug, ...enProjectsSlug];
+// }
 
 export const generateMetadata = async ({
   params,
@@ -15,13 +34,11 @@ export const generateMetadata = async ({
   params: { carSlug: string };
 }) => {
   try {
-    const carData = await getCarData(params.carSlug);
+    const carData = (await getCarBySlug(params.carSlug)) as CarEntity;
 
     return {
-      title: carData?.name.toUpperCase(),
-      description: `${carData?.name.toUpperCase()} có giá từ ${
-        carData?.priceFrom
-      } VNĐ. Xem thêm thông số kỹ thuật, và chương trình ưu đãi đặc biệt của ${carData?.name.toUpperCase()}.`,
+      title: carData?.name,
+      description: `${carData?.name} có giá từ ${carData?.priceFrom} VNĐ. Xem thêm thông số kỹ thuật, và chương trình ưu đãi đặc biệt của ${carData?.name}.`,
       alternates: {
         canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.carSlug}`,
       },
@@ -36,18 +53,7 @@ interface Props {
 }
 
 const page: NextPage<Props> = async ({ params }) => {
-  const car = (await getCarData(params.carSlug)) as CarType;
-
-  const mdContent = (await getCarPostData(params.carSlug)) as {
-    content: string;
-    data: { promotion: string };
-  } as any;
-
-  const promotionContent = mdContent.data.promotion as any;
-
-  const serializedContent = (await serialize(
-    mdContent.content
-  )) as MDXRemoteSerializeResult;
+  const car = (await getCarBySlug(params.carSlug)) as CarEntity;
 
   return (
     <div className="py-10">
@@ -57,11 +63,14 @@ const page: NextPage<Props> = async ({ params }) => {
             <div className="grid grid-cols-2 gap-8 max-[725px]:grid-cols-1">
               <div className="grid place-items-center">
                 <CarImageGallery
-                  colors={car.colors}
-                  price={car.priceFromText}
+                  colors={car?.colors as ICarColor[]}
+                  price={car.priceFrom}
                 />
               </div>
-              <CarPromotionSection content={promotionContent} name={car.name} />
+              <CarPromotionSection
+                content={car.saleContent}
+                name={car.name}
+              />
             </div>
 
             <CarPriceSection
@@ -70,7 +79,7 @@ const page: NextPage<Props> = async ({ params }) => {
               registration={car.registration}
             />
 
-            <ContentSection content={serializedContent} />
+            <ContentSection content={car.content} />
           </div>
 
           <SalerCard />

@@ -1,10 +1,10 @@
 import { FC } from "react";
 import SectionTitle from "./SectionTitle";
-import { CarType } from "@/types";
 import CarCard from "./CarCard";
+import { CarEntity } from "@/entities/car.entity";
 
 interface Props {
-  cars: CarType[];
+  cars: CarEntity[];
 }
 
 const CarsSection: FC<Props> = ({ cars }): JSX.Element => {

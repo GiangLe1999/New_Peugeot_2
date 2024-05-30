@@ -3,9 +3,10 @@ import Link from "next/link";
 import { FC } from "react";
 import NextImage from "../NextImage";
 import { formatPrice } from "@/lib/formatData";
+import { CarEntity } from "@/entities/car.entity";
 
 interface Props {
-  car: CarType;
+  car: CarEntity;
 }
 
 const CarCard: FC<Props> = ({ car }): JSX.Element => {
@@ -16,7 +17,7 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
         className="relative w-full main-image-ratio block overflow-hidden"
       >
         <NextImage
-          src={car.avatar}
+          src={car.avatar.url}
           alt={car.name}
           className="hover:scale-105"
         />
@@ -35,18 +36,18 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
 
           <div className="price-block-decor">
             <span className="-ml-2 max-[355px]:text-sm">
-              {formatPrice(car.priceFrom)}
+              {formatPrice(car?.priceFrom)}
               <u>đ</u>
             </span>
           </div>
         </div>
 
         <ul className="pt-4 pb-6 ml-8 text-[#555555] text-sm list-disc space-y-2 car-main-infos">
-          <li>Kiểu dáng: {car.mainInfo.kind}</li>
-          <li>Số chỗ: {car.mainInfo.seats}</li>
-          <li>Hộp số: {car.mainInfo.gear}</li>
-          <li>Động cơ: {car.mainInfo.engine}</li>
-          <li>Nhiên liệu: {car.mainInfo.fuel}</li>
+          <li>Kiểu dáng: {car.category}</li>
+          <li>Số chỗ: {car.seats}</li>
+          <li>Hộp số: {car.gear}</li>
+          <li>Động cơ: {car.engine}</li>
+          <li>Nhiên liệu: {car.fuel}</li>
         </ul>
       </div>
     </div>

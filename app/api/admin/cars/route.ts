@@ -5,9 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET(req: Request) {
   try {
     await dbConnect();
-    const cars = await Car.find()
-      .select("name avatar priceFrom slug category seats fuel engine gear")
-      .lean();
+    const cars = await Car.find().select("name priceFrom slug").lean();
     return NextResponse.json(cars, { status: 200 });
   } catch (error: any) {
     return NextResponse.json(

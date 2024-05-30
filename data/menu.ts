@@ -33,3 +33,19 @@ export const adminSidebarItems: {
     icon: MdEditSquare,
   },
 ];
+
+export const carCategories = [
+  { label: "Hatchback", value: "Hatchback" },
+  { label: "Sedan & Hatchback", value: "Sedan & Hatchback" },
+  { label: "Coupe (xe thể thao)", value: "Coupe (xe thể thao)" },
+  { label: "Sedan", value: "Sedan" },
+  { label: "SUV (xe thể thao đa dụng)", value: "SUV (xe thể thao đa dụng)" },
+  { label: "Pickup (xe bán tải)", value: "Pickup (xe bán tải)" },
+];
+export const carTiers = [
+  { label: "Hạng A", value: "Hạng A" },
+  { label: "Hạng B", value: "Hạng B" },
+  { label: "Hạng C", value: "Hạng C" },
+  { label: "Hạng D", value: "Hạng D" },
+  { label: "Hạng E", value: "Hạng E" },
+];

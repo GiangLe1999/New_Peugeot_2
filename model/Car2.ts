@@ -4,9 +4,10 @@ import { Schema, models, model } from "mongoose";
 export enum carCategory {
   none = "",
   hatchback = "Hatchback",
-  sedan = "Sedan",
-  suv = "SUV",
-  hybrid = "HYBRID",
+  sedan_hatckback = "Sedan & Hatchback",
+  couple = "Coupe (xe thể thao)",
+  suv = "SUV (xe thể thao đa dụng)",
+  pickup = "Pickup (xe bán tải)",
 }
 
 export enum carTier {
@@ -21,7 +22,6 @@ export enum carTier {
 export interface ICarColor {
   color: string;
   colorImg: IDatabaseImage;
-  colorText: string;
 }
 
 export interface ICarLine {
@@ -32,7 +32,6 @@ export interface ICarLine {
 
 export interface ICar {
   name: string;
-  slogan: string;
   priceFrom: number;
   slug: string;
   category: carCategory;
@@ -58,12 +57,6 @@ const CarSchema: Schema<ICar> = new Schema(
       trim: true,
     },
 
-    slogan: {
-      type: String,
-      trim: true,
-      required: true,
-    },
-
     priceFrom: {
       type: Number,
       required: true,
@@ -79,7 +72,14 @@ const CarSchema: Schema<ICar> = new Schema(
     category: {
       type: String,
       required: true,
-      enum: ["Hatchback", "Sedan", "SUV", "HYBRID"],
+      enum: [
+        "Hatchback",
+        "Sedan & Hatchback",
+        "Sedan",
+        "Coupe (xe thể thao)",
+        "SUV (xe thể thao đa dụng)",
+        "Pickup (xe bán tải)",
+      ],
     },
 
     tier: {
@@ -100,15 +100,17 @@ const CarSchema: Schema<ICar> = new Schema(
 
     gear: { type: String, required: true },
 
-    colors: [
-      {
-        type: {
-          color: String,
-          colorImg: { public_id: String, url: String },
-          colorText: String,
+    colors: {
+      type: [
+        {
+          type: {
+            color: String,
+            colorImg: { public_id: String, url: String },
+          },
         },
-      },
-    ],
+      ],
+      default: [],
+    },
 
     carLines: [
       {
@@ -130,6 +132,6 @@ const CarSchema: Schema<ICar> = new Schema(
 
 CarSchema.index({ name: "text" });
 
-const Car = models?.Car || model("Car", CarSchema);
+const Car = models?.Car2 || model("Car2", CarSchema);
 
 export default Car;

@@ -27,9 +27,11 @@ export const linkConstants = {
   edit_article: "/admin/articles/edit",
   dashboard: "/admin/dashboard",
   profile: "/admin/profile",
-  admin_cars: "/admin/cars",
   login: "/login",
   signup: "/signup",
+  admin_cars: "/admin/cars",
+  create_car: "/admin/cars/create",
+  edit_car: "/admin/cars/edit",
 };
 
 export const pageConstants = {

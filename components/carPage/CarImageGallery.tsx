@@ -4,10 +4,12 @@ import React, { FC } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContainNextImage from "../ContainNextImage";
+import { ICarColor } from "@/model/Car2";
+import { formatPrice } from "@/lib/formatData";
 
 interface Props {
-  colors: { color: string; colorImg: string }[];
-  price: string;
+  colors: ICarColor[];
+  price: number;
 }
 
 const CarImageGallery: FC<Props> = ({ colors, price }): JSX.Element => {
@@ -33,12 +35,12 @@ const CarImageGallery: FC<Props> = ({ colors, price }): JSX.Element => {
       >
         {carImages.map((image, index) => (
           <div
-            key={image}
+            key={image.url}
             className="relative w-full cursor-pointer main-image-ratio"
           >
             <ContainNextImage
-              key={image}
-              src={image}
+              key={image.url}
+              src={image.url}
               alt={`${image} preview`}
               priority={index === 0}
             />
@@ -46,8 +48,9 @@ const CarImageGallery: FC<Props> = ({ colors, price }): JSX.Element => {
         ))}
       </Carousel>
 
-      <p className="text-2xl text-primary font-bold text-center uppercase leading-none">
-        Giá từ: {price}
+      <p className="text-2xl text-primary font-bold text-center leading-none">
+        Giá từ: {formatPrice(price)}
+        <u className="text-base relative -top-2">đ</u>
       </p>
     </div>
   );

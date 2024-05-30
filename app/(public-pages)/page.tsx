@@ -7,7 +7,8 @@ import PromotionSection from "@/components/home/PromotionSection";
 import QuoteSection from "@/components/home/QuoteSection";
 import ReasonsSection from "@/components/home/ReasonsSection";
 import { pageConstants } from "@/data/constants";
-import { getAllCarsData } from "@/lib/fetchData";
+import { CarEntity } from "@/entities/car.entity";
+import { getAllCars } from "@/service/car.service";
 import { CarType } from "@/types";
 
 export const generateMetadata = () => {
@@ -21,7 +22,7 @@ export const generateMetadata = () => {
 };
 
 export default async function Home() {
-  const cars = (await getAllCarsData()) as CarType[];
+  const cars = (await getAllCars()) as CarEntity[];
 
   return (
     <main>
