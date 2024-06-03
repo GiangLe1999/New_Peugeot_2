@@ -2,6 +2,7 @@ import FirstBanner from "@/components/FirstBanner";
 import CarPriceSection from "@/components/carPage/CarPriceSection";
 import { carNames } from "@/data";
 import { NextPage } from "next";
+export const dynamic = "force-dynamic";
 
 interface Props {}
 

@@ -2,6 +2,7 @@ import FirstBanner from "@/components/FirstBanner";
 import ContactForm from "@/components/contactPage/ContactForm";
 import { NextPage } from "next";
 import { BsDot } from "react-icons/bs";
+export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => {
   return {

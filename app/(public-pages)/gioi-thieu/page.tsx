@@ -1,6 +1,7 @@
 import FirstBanner from "@/components/FirstBanner";
 import NextImage from "@/components/NextImage";
 import { NextPage } from "next";
+export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => {
   return {
