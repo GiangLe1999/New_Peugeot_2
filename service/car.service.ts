@@ -55,3 +55,12 @@ export const getCarByCategory = async () => {
     console.log(error);
   }
 };
+
+export const getCarLinesByCar = async () => {
+  try {
+    const { data } = await axiosInstance("/api/cars/carlines");
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -1,12 +1,12 @@
 import { CarLinesType } from "@/app/(public-pages)/test-drive/page";
-import { getAllCarsLinesData } from "@/lib/fetchData";
+import { getCarLinesByCar } from "@/service/car.service";
 import { useEffect, useState } from "react";
 
 export const useFetchCarLines = () => {
   const [carLines, setCarLines] = useState<CarLinesType[]>([]);
 
   const fetchDataHandler = async () => {
-    const carLines = (await getAllCarsLinesData()) as CarLinesType[];
+    const carLines = (await getCarLinesByCar()) as CarLinesType[];
     setCarLines(carLines);
   };
 
