@@ -19,7 +19,8 @@ const TestDrivePage = () => {
       <FirstBanner
         heading="ĐĂNG KÝ LÁI THỬ"
         subHeading="Đăng ký và nhận bảng báo giá mới nhất cho dòng xe mà bạn quan tâm."
-        bgImg="/images/test-drive/first-banner.jpg"
+        bgImg="/images/lien-he/first-banner.jpg"
+        bgClasses="!bg-[50%_50%] !bg-cover"
       />
 
       <div className="container my-12">

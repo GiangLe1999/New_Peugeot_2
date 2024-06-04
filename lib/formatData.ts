@@ -16,7 +16,7 @@ export const formatLongDate = (ms: number | string) => {
     weekday: "long",
     year: "numeric",
     month: "2-digit",
-    day: "numeric",
+    day: "2-digit",
   };
 
   return date.toLocaleDateString("vi", options);

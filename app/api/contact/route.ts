@@ -1,5 +1,7 @@
 import dbConnect from "@/lib/db";
 import Contact from "@/model/Contact";
+import Notification from "@/model/Notification";
+import pusherInstance from "@/utils/pusher.config";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -32,7 +34,7 @@ export async function POST(req: Request) {
       name,
       phone,
       email,
-      carName,
+      car: carName,
       carLine,
       content,
       province: section,
@@ -40,6 +42,11 @@ export async function POST(req: Request) {
     });
 
     await contact.save();
+
+    await Notification.create({
+      detail: contact._id,
+    });
+    pusherInstance.trigger("admin-notifications", "new-contact", contact);
 
     return NextResponse.json(contact, {
       status: 201,

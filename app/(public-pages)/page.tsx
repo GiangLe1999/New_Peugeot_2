@@ -1,3 +1,4 @@
+import HomeQuickConsultModal from "@/components/Layout/home-quick-consult-modal";
 import AboutSection from "@/components/home/AboutSection";
 import CarsSection from "@/components/home/CarsSection";
 import MainOptions from "@/components/home/MainOptions";
@@ -6,9 +7,11 @@ import PostsSection from "@/components/home/PostsSection";
 import PromotionSection from "@/components/home/PromotionSection";
 import QuoteSection from "@/components/home/QuoteSection";
 import ReasonsSection from "@/components/home/ReasonsSection";
+import SupportBuyersSection from "@/components/home/SupportBuyersSection";
 import { pageConstants } from "@/data/constants";
 import { CarEntity } from "@/entities/car.entity";
 import { getAllCars } from "@/service/car.service";
+import GoogleMaps from "@/components/home/GoogleMaps";
 
 export const generateMetadata = () => {
   return {
@@ -24,18 +27,24 @@ export default async function Home() {
   const cars = (await getAllCars()) as CarEntity[];
 
   return (
-    <main>
-      <MainSwiper />
+    <>
+      <main>
+        <MainSwiper />
 
-      <div className="mt-4">
-        <MainOptions />
-        <PromotionSection />
-        <CarsSection cars={cars} />
-        <ReasonsSection />
-        <AboutSection />
-        <PostsSection />
-        <QuoteSection />
-      </div>
-    </main>
+        <div className="mt-4">
+          <MainOptions />
+          <PromotionSection />
+          <CarsSection cars={cars} />
+          <SupportBuyersSection />
+          <ReasonsSection />
+          <AboutSection />
+          <QuoteSection />
+          <PostsSection />
+          <GoogleMaps />
+        </div>
+      </main>
+
+      <HomeQuickConsultModal />
+    </>
   );
 }

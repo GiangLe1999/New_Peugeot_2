@@ -1,6 +1,7 @@
 import { frontType } from "../app/(public-pages)/tin-tuc/[postSlug]/page";
 import { CarType } from "@/types";
 import { cache } from "react";
+import axiosInstance from "./axios";
 
 export const getAllCarsFullData = async () => {
   try {
@@ -122,6 +123,87 @@ export const getAllNewsPostsData = async () => {
     }
 
     return res.json() as Promise<frontType[]>;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAnalyticsStatistics = async () => {
+  try {
+    const [res1, res2, res3, res4] = await Promise.all([
+      fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/article-views`
+      ),
+      fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/nums-of-form`
+      ),
+      fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/web-views`
+      ),
+      fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/web-views/yesterday`
+      ),
+    ]);
+
+    if (!res1.ok || !res2.ok || !res3.ok || !res4.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const articleTotalViews = await res1.json();
+    const numsOfForms = await res2.json();
+    const totalViews = await res3.json();
+    const todayViews = await res4.json();
+
+    return { articleTotalViews, numsOfForms, totalViews, todayViews };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+interface GetAllContactsParams {
+  keyword: string;
+  startDate: Date;
+  endDate: Date;
+  carLines?: string[];
+  carNames?: string[];
+  provinces?: string[];
+  statuses?: string[];
+  limit: number;
+  currentPage: number;
+}
+
+export const getAllContacts = async (bodyRequest: GetAllContactsParams) => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/contacts`,
+      {
+        method: "POST",
+        body: JSON.stringify(bodyRequest),
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateContactStatus = async ({
+  contactId,
+  newStatus,
+}: {
+  contactId: string;
+  newStatus: string;
+}) => {
+  try {
+    await axiosInstance.put("/api/contact", {
+      contactId,
+      newStatus,
+    });
   } catch (error) {
     console.log(error);
   }

@@ -1,7 +1,7 @@
 "use client";
 
-// import AnalyticsBlocks from "@/components/admin-dashboard-page/AnalyticsBlocks";
-// import ContactListTable from "@/components/admin-dashboard-page/ContactListTable";
+import AnalyticsBlocks from "@/components/admin-dashboard-page/AnalyticsBlocks";
+import ContactListTable from "@/components/admin-dashboard-page/ContactListTable";
 import { NextPage } from "next";
 
 interface Props {}
@@ -9,9 +9,8 @@ interface Props {}
 const DashboardPage: NextPage<Props> = () => {
   return (
     <div className="admin-page-container">
-      test
-      {/* <AnalyticsBlocks />
-      <ContactListTable /> */}
+      <AnalyticsBlocks />
+      <ContactListTable />
     </div>
   );
 };
