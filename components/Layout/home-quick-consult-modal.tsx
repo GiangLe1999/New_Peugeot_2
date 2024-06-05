@@ -6,12 +6,18 @@ import "react-responsive-modal/styles.css";
 
 import NextImage from "../NextImage";
 import Swal from "sweetalert2";
-import { carNames } from "@/data";
 import { ImSpinner3 } from "react-icons/im";
+import { useQuery } from "@tanstack/react-query";
+import { getAllCarsNameVsSlug } from "@/service/car.service";
 
 interface Props {}
 
 const HomeQuickConsultModal: FC<Props> = (props): JSX.Element => {
+  const { data: cars, isPending } = useQuery({
+    queryKey: ["get-car-names-for-modal"],
+    queryFn: getAllCarsNameVsSlug,
+  });
+
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -103,7 +109,7 @@ const HomeQuickConsultModal: FC<Props> = (props): JSX.Element => {
       onClose={() => setShow(false)}
       center
       classNames={{
-        modal: "customModal",
+        modal: "customModal !max-w-initial !w-[80vw]",
       }}
     >
       <form
@@ -164,15 +170,12 @@ const HomeQuickConsultModal: FC<Props> = (props): JSX.Element => {
               className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
               value={choseCar}
               onChange={(e) => setChoseCar(e.target.value)}
+              disabled={isPending}
             >
               <option value="">-- Chọn dòng xe -- </option>
-              {carNames.map((car, index) => (
-                <option
-                  value={car.toUpperCase()}
-                  key={index}
-                  className="uppercase"
-                >
-                  {car.toUpperCase()}
+              {cars?.map((car: any, index: number) => (
+                <option value={car.name} key={index} className="uppercase">
+                  {car.name}
                 </option>
               ))}
             </select>

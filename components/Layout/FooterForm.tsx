@@ -1,6 +1,7 @@
 "use client";
 
-import { carNames } from "@/data";
+import { getAllCarsNameVsSlug } from "@/service/car.service";
+import { useQuery } from "@tanstack/react-query";
 import { FC, FormEvent, useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import Swal from "sweetalert2";
@@ -8,6 +9,11 @@ import Swal from "sweetalert2";
 interface Props {}
 
 const FooterForm: FC<Props> = (props): JSX.Element => {
+  const { data: cars, isPending } = useQuery({
+    queryKey: ["get-car-names-for-modal"],
+    queryFn: getAllCarsNameVsSlug,
+  });
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [choseCar, setChoseCar] = useState("");
@@ -109,11 +115,12 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
           className="form-input"
           value={choseCar}
           onChange={(e) => setChoseCar(e.target.value)}
+          disabled={isPending}
         >
           <option value="">-- Chọn dòng xe -- </option>
-          {carNames.map((car, index) => (
-            <option value={car.toUpperCase()} key={index} className="uppercase">
-              {car.toUpperCase()}
+          {cars?.map((car: any, index: number) => (
+            <option value={car.name} key={index} className="uppercase">
+              {car.name}
             </option>
           ))}
         </select>

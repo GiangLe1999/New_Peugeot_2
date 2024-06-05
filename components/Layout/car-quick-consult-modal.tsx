@@ -118,7 +118,7 @@ const CarQuickConsultModal: FC<Props> = ({ carSlug }): JSX.Element => {
       onClose={() => setShow(false)}
       center
       classNames={{
-        modal: "customModal",
+        modal: "customModal !max-w-initial !w-[80vw]",
       }}
     >
       <form

@@ -31,7 +31,7 @@ const Filter: FC<Props> = ({
       ],
     },
     { header: "fuel", items: ["Xăng", "Dầu"] },
-    { header: "seats", items: ["5", "7"] },
+    { header: "seats", items: ["5", "6", "7"] },
     {
       header: "kind",
       items: [

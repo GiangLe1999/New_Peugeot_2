@@ -13,10 +13,12 @@ const QuotePage = () => {
   const [loading, setLoading] = useState(false);
   const [filterLoading, setFilterLoading] = useState(false);
 
+  console.log(cars);
+
   useEffect(() => {
     setLoading(true);
     try {
-      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars?getAll=true`)
+      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`)
         .then((res) => res.json())
         .then((data) => {
           setLoading(false);
@@ -34,7 +36,8 @@ const QuotePage = () => {
         <FirstBanner
           heading="BẢNG GIÁ"
           subHeading="Bảng giá chi tiết tất cả các dòng xe của Mazda"
-          bgImg="/images/bao-gia/first-banner.jpg"
+          bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
+          bgClasses="!bg-cover"
         />
 
         <div className="container">

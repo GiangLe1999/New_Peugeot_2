@@ -1,9 +1,7 @@
 "use client";
 
 import FirstBanner from "@/components/FirstBanner";
-import NextImage from "@/components/NextImage";
-import CustomerForm from "@/components/testDrivePage/CustomerForm";
-import { useFetchCarLines } from "@/hooks/useFetchCarLines";
+import QuickConsultForm from "@/components/Layout/quick-consult-form";
 import { CarLineType } from "@/types";
 
 export type CarLinesType = {
@@ -12,8 +10,6 @@ export type CarLinesType = {
 };
 
 const RequireQuotationPage = () => {
-  const carLines = useFetchCarLines();
-
   return (
     <div>
       <FirstBanner
@@ -24,16 +20,7 @@ const RequireQuotationPage = () => {
       />
 
       <div className="container my-12">
-        <div className="customer-form-wrapper">
-          <div className="relative w-full h-full">
-            <NextImage
-              src="/images/bao-gia/form-image-1.jpg"
-              alt="Lái thử Mazda"
-            />
-          </div>
-
-          <CustomerForm carLines={carLines} isQuotation />
-        </div>
+        <QuickConsultForm />
       </div>
     </div>
   );
