@@ -22,7 +22,7 @@ const ContentSection: FC<Props> = ({ content }): JSX.Element => {
   };
 
   return (
-    <div className="prose postContent overflow-hidden">
+    <div id="car-content" className="prose postContent overflow-hidden">
       {parse(content || "", options)}
     </div>
   );

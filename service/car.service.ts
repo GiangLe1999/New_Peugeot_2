@@ -29,6 +29,15 @@ export const getAllCarsName = async () => {
   }
 };
 
+export const getAllCarsNameVsSlug = async () => {
+  try {
+    const { data } = await axiosInstance("/api/cars/name-vs-slug");
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getCarBySlug = async (slug: string) => {
   try {
     const { data }: { data: GetCarBySlugOutput } = await axiosInstance(

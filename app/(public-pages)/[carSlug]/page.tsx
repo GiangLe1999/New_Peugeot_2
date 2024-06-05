@@ -7,6 +7,7 @@ import CarPriceSection from "@/components/carPage/CarPriceSection";
 import { getCarBySlug } from "@/service/car.service";
 import { CarEntity } from "@/entities/car.entity";
 import { ICarColor } from "@/model/Car2";
+import CarQuickConsultModal from "@/components/Layout/car-quick-consult-modal";
 export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
@@ -49,33 +50,39 @@ const page: NextPage<Props> = async ({ params }) => {
   const car = (await getCarBySlug(params.carSlug)) as CarEntity;
 
   return (
-    <div className="py-10">
-      <div className="container">
-        <div className="flex gap-10 max-[1100px]:gap-0">
-          <div className="flex-1 space-y-14">
-            <div className="grid grid-cols-2 gap-8 max-[725px]:grid-cols-1">
-              <div className="grid place-items-center">
-                <CarImageGallery
-                  colors={car?.colors as ICarColor[]}
-                  price={car?.priceFrom}
+    <>
+      <div className="py-10">
+        <div className="container">
+          <div className="flex gap-10 max-[1100px]:gap-0">
+            <div className="flex-1 space-y-14">
+              <div className="grid grid-cols-2 gap-8 max-[725px]:grid-cols-1">
+                <div className="grid place-items-center">
+                  <CarImageGallery
+                    colors={car?.colors as ICarColor[]}
+                    price={car?.priceFrom}
+                  />
+                </div>
+                <CarPromotionSection
+                  content={car.saleContent}
+                  name={car.name}
                 />
               </div>
-              <CarPromotionSection content={car.saleContent} name={car.name} />
+
+              <CarPriceSection
+                name={car.name}
+                lines={car.carLines}
+                registration={car.registration}
+              />
+
+              <ContentSection content={car.content} />
             </div>
 
-            <CarPriceSection
-              name={car.name}
-              lines={car.carLines}
-              registration={car.registration}
-            />
-
-            <ContentSection content={car.content} />
+            <SalerCard />
           </div>
-
-          <SalerCard />
         </div>
       </div>
-    </div>
+      <CarQuickConsultModal carSlug={params.carSlug} />
+    </>
   );
 };
 
