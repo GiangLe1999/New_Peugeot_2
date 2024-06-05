@@ -1,5 +1,5 @@
 import dbConnect from "@/lib/db";
-import Contact from "@/model/Contact";
+import QuickConsult from "@/model/QuickConsult";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -11,8 +11,6 @@ export async function POST(req: Request) {
       startDate,
       endDate,
       carNames,
-      carLines,
-      provinces,
       statuses,
       limit,
       currentPage,
@@ -22,7 +20,6 @@ export async function POST(req: Request) {
     if (keyword) {
       findByKeyword = [
         { name: { $regex: keyword, $options: "i" } },
-        { phone: { $regex: keyword, $options: "i" } },
         { email: { $regex: keyword, $options: "i" } },
       ];
     }
@@ -51,28 +48,28 @@ export async function POST(req: Request) {
         !endDate && { createdAt: { $gte: realStartDateString } }),
       ...(endDate && !startDate && { createdAt: { $lte: realEndDateString } }),
       ...(carNames && { car: { $in: carNames } }),
-      ...(carLines && { carLine: { $in: carLines } }),
-      ...(provinces && { province: { $in: provinces } }),
       ...(statuses && { status: { $in: statuses } }),
     };
 
-    const contacts = await Contact.find(queryObj)
+    console.log(queryObj);
+
+    const quickConsults = await QuickConsult.find(queryObj)
       .sort({ createdAt: -1 })
       .skip(limit * (currentPage - 1))
       .limit(limit)
       .lean();
 
-    const totalDocuments = await Contact.countDocuments(queryObj);
+    const totalDocuments = await QuickConsult.countDocuments(queryObj);
 
     const totalPages = limit > 0 ? Math.ceil(totalDocuments / limit) : 1;
 
     return NextResponse.json(
       {
-        data: contacts,
+        data: quickConsults,
         totalDocuments,
         totalPages,
         status: 200,
-        msg: "Get contacts successfully",
+        msg: "Get quick consults successfully",
       },
       { status: 200 }
     );

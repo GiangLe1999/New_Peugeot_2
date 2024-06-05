@@ -2,6 +2,7 @@ import { frontType } from "../app/(public-pages)/tin-tuc/[postSlug]/page";
 import { CarType } from "@/types";
 import { cache } from "react";
 import axiosInstance from "./axios";
+import axios from "axios";
 
 export const getAllCarsFullData = async () => {
   try {
@@ -174,8 +175,21 @@ interface GetAllContactsParams {
 
 export const getAllContacts = async (bodyRequest: GetAllContactsParams) => {
   try {
+    const { data } = await axiosInstance.post(
+      "/api/admin/analytics/contacts",
+      bodyRequest
+    );
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAllQuickConsults = async (bodyRequest: any) => {
+  try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/contacts`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/analytics/quick-consults`,
       {
         method: "POST",
         body: JSON.stringify(bodyRequest),
@@ -200,8 +214,25 @@ export const updateContactStatus = async ({
   newStatus: string;
 }) => {
   try {
-    await axiosInstance.put("/api/contact", {
+    await axiosInstance.put("/api/admin/contact", {
       contactId,
+      newStatus,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateQuickConsultStatus = async ({
+  quickConsultId,
+  newStatus,
+}: {
+  quickConsultId: string;
+  newStatus: string;
+}) => {
+  try {
+    await axiosInstance.put("/api/admin/quick-consult", {
+      quickConsultId,
       newStatus,
     });
   } catch (error) {

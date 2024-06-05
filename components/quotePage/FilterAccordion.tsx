@@ -137,7 +137,11 @@ const FilterAccordion: FC<Props> = ({
       {/* `transitionTimeout` prop should be equal to the transition duration in CSS */}
       <Accordion transition allowMultiple transitionTimeout={300}>
         {data.map((group, index) => (
-          <AccordionItem header={group.header as FieldNameType} key={index}>
+          <AccordionItem
+            header={group.header as FieldNameType}
+            key={index}
+            initialEntered
+          >
             <ul className={index === 0 ? "uppercase" : "capitalize"}>
               {group.items?.map((item, i) => (
                 <label

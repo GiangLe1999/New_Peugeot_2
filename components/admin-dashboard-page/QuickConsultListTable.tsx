@@ -1,17 +1,16 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
-import AdminCardTitle from "../admin-card-title";
 import { FaFileWaveform } from "react-icons/fa6";
 import { useQuery } from "@tanstack/react-query";
-import { getAllContacts } from "@/lib/fetchData";
-import { ContactEntity } from "@/entities/contact.entity";
+import { getAllQuickConsults } from "@/lib/fetchData";
 import { formatShortDate } from "@/lib/formatData";
-import ContactListTableHeader from "./ContactListTableHeader";
-import ContactListTableFooter from "./ContactListTableFooter";
+import QuickConsultListTableHeader from "./QuickConsultListTableHeader";
+import QuickConsultListTableFooter from "./QuickConsultListTableFooter";
 import ContactStatus from "./ContactStatus";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import QuickConsultStatus from "./QuickConsultStatus";
 
 type DateRangeStateType = {
   startDate: Date;
@@ -54,7 +53,7 @@ export const initialFilter: initialFilterObj = {
   statuses: [],
 };
 
-const ContactListTable: FC<Props> = (props): JSX.Element => {
+const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
   const [isClient, setIsClient] = useState(false);
 
   const [keyword, setKeyword] = useState("");
@@ -73,7 +72,7 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
 
   const { data, isPending } = useQuery({
     queryKey: [
-      `admin-contacts`,
+      `admin-quick-consults`,
       keyword,
       startDate,
       endDate,
@@ -82,13 +81,11 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
       currentPage,
     ],
     queryFn: () =>
-      getAllContacts({
+      getAllQuickConsults({
         keyword,
         startDate,
         endDate,
-        ...(filter.carLines.length > 0 && { carLines: filter.carLines }),
         ...(filter.carNames.length > 0 && { carNames: filter.carNames }),
-        ...(filter.provinces.length > 0 && { provinces: filter.provinces }),
         ...(filter.statuses.length > 0 && { statuses: filter.statuses }),
         limit,
         currentPage,
@@ -100,10 +97,9 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
   }, []);
 
   return (
-    <div className="admin-card pt-6">
-      <h2 className="font-bold text-xl mx-6">Khách hàng cần liên hệ</h2>
-
-      <ContactListTableHeader
+    <div className="admin-card">
+      <h2 className="mt-8 mx-6 font-bold text-xl">Khách hàng cần báo giá</h2>
+      <QuickConsultListTableHeader
         keyword={keyword}
         setKeyword={setKeyword}
         dateRange={dateRange}
@@ -118,56 +114,39 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
             <tr>
               <th className="text-center border border-l-0">STT</th>
               <th className="border text-left pl-3">Họ & Tên</th>
-              <th className="border text-left pl-3">Email</th>
               <th className="border text-left pl-3">SĐT</th>
               <th className="border text-left pl-3">Dòng xe</th>
-              <th className="border text-left pl-3">Phiên bản</th>
-              <th className="border text-left pl-3">Tỉnh / thành</th>
-              <th className="border text-left pl-3">Nhu cầu</th>
-              <th className="border text-left pl-3">Tin nhắn</th>
               <th className="border text-left pl-3">Ngày</th>
               <th className="border text-left pl-3">Trạng thái</th>
             </tr>
           </thead>
           {isPending ? (
             <tbody>
-              {[...Array(15).keys()].map((item) => (
+              {[...Array(6).keys()].map((item) => (
                 <tr key={item}>
                   <td colSpan={11}>
-                    <Skeleton className="w-full h-[70px] pr-4" />
+                    <Skeleton className="w-full h-[50px]" />
                   </td>
                 </tr>
               ))}
             </tbody>
           ) : (
             <tbody>
-              {data?.data?.map((contact: ContactEntity, index: number) => (
+              {data?.data?.map((quickConsult: any, index: number) => (
                 <tr key={index}>
                   <td className="text-center border border-l-0 !pl-0">
                     {index + 1 + limit * (currentPage - 1)}
                   </td>
-                  <td className="border">{contact.name}</td>
-                  <td className="border">{contact.email}</td>
-                  <td className="border">{contact.phone}</td>
-                  <td className="border">{contact.car}</td>
-                  <td className="border max-w-[250px] pr-2">
-                    {contact.carLine}
-                  </td>
-                  <td className="border">{contact.province}</td>
-                  <td className="border">{contact.service}</td>
-                  <td
-                    className="border max-w-[300px] pr-2"
-                    style={{ wordWrap: "anywhere" as any }}
-                  >
-                    {contact.content}
-                  </td>
+                  <td className="border">{quickConsult.name}</td>
+                  <td className="border">{quickConsult.phone}</td>
+                  <td className="border">{quickConsult.carName}</td>
                   <td className="border">
-                    {formatShortDate(contact.createdAt)}
+                    {formatShortDate(quickConsult.createdAt)}
                   </td>
                   <td className="border border-r-0">
-                    <ContactStatus
-                      initialStatus={contact.status}
-                      contactId={contact._id}
+                    <QuickConsultStatus
+                      initialStatus={quickConsult.status}
+                      quickConsultId={quickConsult._id}
                       keyword={keyword}
                       startDate={startDate}
                       endDate={endDate}
@@ -183,7 +162,7 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
         </table>
       )}
 
-      <ContactListTableFooter
+      <QuickConsultListTableFooter
         limit={limit}
         setLimit={setLimit}
         currentPage={currentPage}
@@ -195,4 +174,4 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
   );
 };
 
-export default ContactListTable;
+export default QuickConsultListTable;

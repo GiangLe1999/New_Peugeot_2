@@ -14,13 +14,13 @@ import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import CustomModal from "../custom-modal";
-import FilterContactForm from "./FilterContactForm";
 import {
   initialDateRange,
   initialFilter,
   initialFilterObj,
 } from "./ContactListTable";
 import { exportToExcel } from "@/utils/exportExcelFile";
+import FilterQuickConsultForm from "./FilterQuickConsultForm";
 
 const debounce = <F extends (...args: any[]) => any>(
   func: F,
@@ -58,7 +58,7 @@ interface Props {
   setFilter: Dispatch<SetStateAction<initialFilterObj>>;
 }
 
-const ContactListTableHeader: FC<Props> = ({
+const QuickConsultListTableHeader: FC<Props> = ({
   keyword,
   setKeyword,
   dateRange,
@@ -74,8 +74,6 @@ const ContactListTableHeader: FC<Props> = ({
   const debouncedSetKeyword = useRef(debounce(setKeyword, 500)).current;
 
   const carNamesRef = useRef(null);
-  const carLinesRef = useRef(null);
-  const provincesRef = useRef(null);
   const statusesRef = useRef(null);
 
   useEffect(() => {
@@ -83,16 +81,6 @@ const ContactListTableHeader: FC<Props> = ({
       if (carNamesRef.current == null)
         carNamesRef.current = [
           ...new Set(data.map((contact: any) => contact.car)),
-        ] as any;
-
-      if (carLinesRef.current == null)
-        carLinesRef.current = [
-          ...new Set(data.map((contact: any) => contact.carLine)),
-        ] as any;
-
-      if (provincesRef.current == null)
-        provincesRef.current = [
-          ...new Set(data.map((contact: any) => contact.province)),
         ] as any;
 
       if (statusesRef.current == null)
@@ -134,7 +122,7 @@ const ContactListTableHeader: FC<Props> = ({
 
   const exportExcelReportHandler = async () => {
     try {
-      exportToExcel(data, "KhanhHangCanLienHe");
+      exportToExcel(data, "KhachHangCanBaoGia");
     } catch (error) {
       console.log(error);
     }
@@ -216,10 +204,8 @@ const ContactListTableHeader: FC<Props> = ({
         onClose={() => setShowFilter(false)}
         open={showFilter}
       >
-        <FilterContactForm
+        <FilterQuickConsultForm
           carNames={carNamesRef.current}
-          carLines={carLinesRef.current}
-          provinces={provincesRef.current}
           statuses={statusesRef.current}
           filter={filter}
           setFilter={setFilter}
@@ -229,4 +215,4 @@ const ContactListTableHeader: FC<Props> = ({
   );
 };
 
-export default ContactListTableHeader;
+export default QuickConsultListTableHeader;

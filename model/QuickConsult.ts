@@ -18,9 +18,16 @@ const QuickConsultSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+
+    status: {
+      type: String,
+      default: "Chờ xử lý",
+    },
   },
   { timestamps: true }
 );
+
+QuickConsultSchema.index({ name: "text", phone: "text" });
 
 const QuickConsult =
   mongoose.models?.QuickConsult ||

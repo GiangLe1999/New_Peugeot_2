@@ -82,7 +82,7 @@ const AdminNotification: FC<Props> = ({
     <>
       <div
         key={detail._id}
-        className={`relative px-4 mx-4 text-left mt-3 rounded-md flex gap-2 p-3 text-xs cursor-pointer ${
+        className={`relative mx-2 text-left mt-3 rounded-md flex gap-2 p-3 text-xs cursor-pointer ${
           !read && "bg-[#f5faff]"
         }`}
         onClick={(e) => showDetailModalHandler(e, read)}
