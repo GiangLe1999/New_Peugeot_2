@@ -1,6 +1,6 @@
 import { QueryType } from "@/components/quotePage/FilterAccordion";
 import dbConnect from "@/lib/db";
-import Car from "@/model/Car";
+import Car from "@/model/Car2";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -15,16 +15,16 @@ export async function POST(req: Request) {
   }
 
   if (fuel.length) {
-    carQuery["mainInfo.fuel"] = fuel;
+    carQuery.fuel = fuel;
   }
 
   if (seats.length) {
     const newSeats = seats.map((seat) => Number(seat));
-    carQuery["mainInfo.seats"] = newSeats;
+    carQuery.seats = newSeats;
   }
 
   if (kind.length) {
-    carQuery["mainInfo.kind"] = kind;
+    carQuery.category = kind;
   }
 
   if (price.length) {

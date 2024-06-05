@@ -1,6 +1,5 @@
 "use client";
 
-import { CarType } from "@/types";
 import { FC } from "react";
 import NextImage from "../NextImage";
 import { formatPrice } from "@/lib/formatData";
@@ -9,7 +8,7 @@ import BtnWithIcon from "../BtnWithIcon";
 import { linkConstants } from "@/data/constants";
 
 interface Props {
-  cars: CarType[];
+  cars: any[];
 }
 
 const CarList: FC<Props> = ({ cars }): JSX.Element => {
@@ -27,14 +26,14 @@ const CarList: FC<Props> = ({ cars }): JSX.Element => {
                 className="relative w-[30%] main-image-ratio max-[779px]:w-[80%] max-[545px]:w-full"
               >
                 <NextImage
-                  src={car.avatar}
+                  src={car.avatar?.url}
                   alt={car.name}
                   className="hover:scale-[1.05]"
                 />
               </Link>
 
               <div className="flex-1 space-y-8 max-[779px]:w-full">
-                {car.carLines.map((line, index) => (
+                {car?.carLines?.map((line: any, index: number) => (
                   <div
                     className="flex items-center gap-x-8 gap-y-3 max-[1000px]:text-base max-[615px]:text-sm text-xs max-[545px]:flex-col max-[545px]:text-base"
                     key={index}

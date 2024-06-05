@@ -3,15 +3,16 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import FilterAccordion from "@/components/quotePage/FilterAccordion";
 import { CarType } from "@/types";
-import { carNames } from "@/data";
 
 interface Props {
+  initialCars: any;
   setCars: Dispatch<SetStateAction<CarType[]>>;
   setFilterLoading: Dispatch<SetStateAction<boolean>>;
   filterLoading: boolean;
 }
 
 const Filter: FC<Props> = ({
+  initialCars,
   setCars,
   setFilterLoading,
   filterLoading,
@@ -19,7 +20,7 @@ const Filter: FC<Props> = ({
   const accordionData = [
     {
       header: "line",
-      items: carNames,
+      items: initialCars?.map((car: any) => car.name),
     },
     {
       header: "price",

@@ -139,7 +139,7 @@ const FilterAccordion: FC<Props> = ({
         {data.map((group, index) => (
           <AccordionItem header={group.header as FieldNameType} key={index}>
             <ul className={index === 0 ? "uppercase" : "capitalize"}>
-              {group.items.map((item, i) => (
+              {group.items?.map((item, i) => (
                 <label
                   key={i}
                   className="flex items-center gap-2 py-2 text-sm cursor-pointer truncate"

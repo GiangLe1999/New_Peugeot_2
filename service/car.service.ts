@@ -11,6 +11,17 @@ export const getAllCars = async () => {
   }
 };
 
+export const getAllCarsForFilter = async () => {
+  try {
+    const { data }: GetAllCarsOutput = await axiosInstance(
+      "/api/cars/cars-for-filter"
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getAllCarsForAdmin = async () => {
   try {
     const { data }: GetAllCarsOutput = await axiosInstance("/api/admin/cars");

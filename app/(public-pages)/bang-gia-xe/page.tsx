@@ -4,31 +4,23 @@ import FirstBanner from "@/components/FirstBanner";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import CarList from "@/components/quotePage/CarList";
 import Filter from "@/components/quotePage/Filter";
-import { CarType } from "@/types";
+import { getAllCarsForFilter } from "@/service/car.service";
+import { useQuery } from "@tanstack/react-query";
 import { Metadata } from "next";
 import { useEffect, useState } from "react";
 
 const QuotePage = () => {
-  const [cars, setCars] = useState<CarType[]>([]);
-  const [loading, setLoading] = useState(false);
+  const { data, isPending } = useQuery({
+    queryKey: ["get-all-cars-for-filter"],
+    queryFn: getAllCarsForFilter,
+  });
+
+  const [cars, setCars] = useState<any[]>([]);
   const [filterLoading, setFilterLoading] = useState(false);
 
-  console.log(cars);
-
   useEffect(() => {
-    setLoading(true);
-    try {
-      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`)
-        .then((res) => res.json())
-        .then((data) => {
-          setLoading(false);
-          setCars(data);
-        });
-    } catch (error) {
-      setLoading(false);
-      console.log(error);
-    }
-  }, []);
+    if (data?.length) setCars(data);
+  }, [data?.length]);
 
   return (
     <>
@@ -43,11 +35,12 @@ const QuotePage = () => {
         <div className="container">
           <div className="flex mt-8 mb-16 gap-7 max-[1000px]:flex-col">
             <Filter
+              initialCars={data}
               setCars={setCars}
               filterLoading={filterLoading}
               setFilterLoading={setFilterLoading}
             />
-            {loading || filterLoading ? (
+            {isPending || filterLoading ? (
               <div className="flex-1">
                 <LoadingSpinner />
               </div>
