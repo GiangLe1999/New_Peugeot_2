@@ -101,16 +101,16 @@ const AdminNotification: FC<Props> = ({
           className="w-9 h-9 rounded-full"
         />
         <div className="ml-2 normal-case font-normal flex-1">
-          <span className="font-bold hover:text-blue">{detail.name}</span>{" "}
+          <span className="font-bold hover:text-blue">{detail?.name}</span>{" "}
           <span>
-            đã gửi form liên hệ về dịch vụ <b>{detail.service}</b>
+            đã gửi form liên hệ về dịch vụ <b>{detail?.service}</b>
           </span>
           <p className="text-gb mt-1 first-letter:uppercase text-[#939dae]">
             <TimeAgo date={detail.createdAt} formatter={formatter} />
           </p>
           <div className="border rounded-md mt-3 cursor-pointer px-4 py-3">
             <div className="line-clamp-2 text-gray-500 text-[11px]">
-              {detail.content}
+              {detail.content || "Không có nội dung"}
             </div>
           </div>
         </div>

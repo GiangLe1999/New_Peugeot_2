@@ -182,7 +182,7 @@ const CarQuickConsultModal: FC<Props> = ({ carSlug }): JSX.Element => {
               disabled={isPending}
             >
               {cars?.map((car: any, index: number) => (
-                <option value={car.name} key={index} className="uppercase">
+                <option value={car.name} key={index}>
                   {car.name}
                 </option>
               ))}

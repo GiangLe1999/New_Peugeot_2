@@ -97,7 +97,7 @@ const AdminNotifications: FC<Props> = (props): JSX.Element => {
           className="w-[465px] absolute bg-white rounded-md shadow-md border z-10 top-7 right-0 overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700 pt-4"
         >
           <div className="flex items-center justify-between px-4">
-            <span>Liên hệ ({unreadNotis?.length || 0}) </span>
+            <span>Liên hệ mới ({unreadNotis?.length || 0}) </span>
             <button
               className="text-xs text-[#939dae]"
               onClick={markReadAllHandler}

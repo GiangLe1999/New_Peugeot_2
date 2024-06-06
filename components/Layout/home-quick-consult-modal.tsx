@@ -174,7 +174,7 @@ const HomeQuickConsultModal: FC<Props> = (props): JSX.Element => {
             >
               <option value="">-- Chọn dòng xe -- </option>
               {cars?.map((car: any, index: number) => (
-                <option value={car.name} key={index} className="uppercase">
+                <option value={car.name} key={index}>
                   {car.name}
                 </option>
               ))}
