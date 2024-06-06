@@ -131,10 +131,10 @@ const ContactListTable: FC<Props> = (props): JSX.Element => {
           </thead>
           {isPending ? (
             <tbody>
-              {[...Array(15).keys()].map((item) => (
+              {[...Array(8).keys()].map((item) => (
                 <tr key={item}>
                   <td colSpan={11}>
-                    <Skeleton className="w-full h-[70px] pr-4" />
+                    <Skeleton className="w-full h-[50px] pr-4" />
                   </td>
                 </tr>
               ))}

@@ -186,6 +186,19 @@ export const getAllContacts = async (bodyRequest: GetAllContactsParams) => {
   }
 };
 
+export const getAllTestDrives = async (bodyRequest: any) => {
+  try {
+    const { data } = await axiosInstance.post(
+      "/api/admin/analytics/test-drives",
+      bodyRequest
+    );
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getAllQuickConsults = async (bodyRequest: any) => {
   try {
     const res = await fetch(
@@ -233,6 +246,23 @@ export const updateQuickConsultStatus = async ({
   try {
     await axiosInstance.put("/api/admin/quick-consult", {
       quickConsultId,
+      newStatus,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateTestDriveStatus = async ({
+  testDriveId,
+  newStatus,
+}: {
+  testDriveId: string;
+  newStatus: string;
+}) => {
+  try {
+    await axiosInstance.put("/api/admin/test-drive", {
+      testDriveId,
       newStatus,
     });
   } catch (error) {

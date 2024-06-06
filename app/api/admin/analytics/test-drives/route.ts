@@ -1,5 +1,5 @@
 import dbConnect from "@/lib/db";
-import QuickConsult from "@/model/QuickConsult";
+import TestDriver from "@/model/TestDriver";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -11,6 +11,7 @@ export async function POST(req: Request) {
       startDate,
       endDate,
       carNames,
+      carLines,
       statuses,
       limit,
       currentPage,
@@ -20,6 +21,7 @@ export async function POST(req: Request) {
     if (keyword) {
       findByKeyword = [
         { name: { $regex: keyword, $options: "i" } },
+        { phone: { $regex: keyword, $options: "i" } },
         { email: { $regex: keyword, $options: "i" } },
       ];
     }
@@ -48,26 +50,27 @@ export async function POST(req: Request) {
         !endDate && { createdAt: { $gte: realStartDateString } }),
       ...(endDate && !startDate && { createdAt: { $lte: realEndDateString } }),
       ...(carNames && { carName: { $in: carNames } }),
+      ...(carLines && { carLine: { $in: carLines } }),
       ...(statuses && { status: { $in: statuses } }),
     };
 
-    const quickConsults = await QuickConsult.find(queryObj)
+    const contacts = await TestDriver.find(queryObj)
       .sort({ createdAt: -1 })
       .skip(limit * (currentPage - 1))
       .limit(limit)
       .lean();
 
-    const totalDocuments = await QuickConsult.countDocuments(queryObj);
+    const totalDocuments = await TestDriver.countDocuments(queryObj);
 
     const totalPages = limit > 0 ? Math.ceil(totalDocuments / limit) : 1;
 
     return NextResponse.json(
       {
-        data: quickConsults,
+        data: contacts,
         totalDocuments,
         totalPages,
         status: 200,
-        msg: "Get quick consults successfully",
+        msg: "Get test drives successfully",
       },
       { status: 200 }
     );

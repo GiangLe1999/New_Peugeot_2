@@ -20,7 +20,7 @@ import {
   initialFilterObj,
 } from "./ContactListTable";
 import { exportToExcel } from "@/utils/exportExcelFile";
-import FilterQuickConsultForm from "./FilterQuickConsultForm";
+import FilterTestDriveForm from "./FilterTestDriveForm";
 
 const debounce = <F extends (...args: any[]) => any>(
   func: F,
@@ -54,11 +54,11 @@ interface Props {
     >
   >;
   data: any;
-  filter: initialFilterObj;
-  setFilter: Dispatch<SetStateAction<initialFilterObj>>;
+  filter: any;
+  setFilter: Dispatch<SetStateAction<any>>;
 }
 
-const QuickConsultListTableHeader: FC<Props> = ({
+const TestDriveListTableHeader: FC<Props> = ({
   keyword,
   setKeyword,
   dateRange,
@@ -74,18 +74,24 @@ const QuickConsultListTableHeader: FC<Props> = ({
   const debouncedSetKeyword = useRef(debounce(setKeyword, 500)).current;
 
   const carNamesRef = useRef(null);
+  const carLinesRef = useRef(null);
   const statusesRef = useRef(null);
 
   useEffect(() => {
     if (data.length) {
       if (carNamesRef.current == null)
         carNamesRef.current = [
-          ...new Set(data.map((quickConsult: any) => quickConsult.carName)),
+          ...new Set(data.map((contact: any) => contact.carName)),
+        ] as any;
+
+      if (carLinesRef.current == null)
+        carLinesRef.current = [
+          ...new Set(data.map((contact: any) => contact.carLine)),
         ] as any;
 
       if (statusesRef.current == null)
         statusesRef.current = [
-          ...new Set(data.map((quickConsult: any) => quickConsult.status)),
+          ...new Set(data.map((contact: any) => contact.status)),
         ] as any;
     }
   }, [data.length]);
@@ -122,7 +128,7 @@ const QuickConsultListTableHeader: FC<Props> = ({
 
   const exportExcelReportHandler = async () => {
     try {
-      exportToExcel(data, "KhachHangCanBaoGia");
+      exportToExcel(data, "KhachHangLaiThu");
     } catch (error) {
       console.log(error);
     }
@@ -141,7 +147,7 @@ const QuickConsultListTableHeader: FC<Props> = ({
               value={inputValue}
               type="text"
               className="flex-1 placeholder:text-neutral-400 h-full inline-block pr-2 outline-none"
-              placeholder="Tìm kiếm theo tên, hoặc SĐT..."
+              placeholder="Tìm kiếm theo tên, email hoặc SĐT..."
             />
           </div>
 
@@ -204,8 +210,9 @@ const QuickConsultListTableHeader: FC<Props> = ({
         onClose={() => setShowFilter(false)}
         open={showFilter}
       >
-        <FilterQuickConsultForm
+        <FilterTestDriveForm
           carNames={carNamesRef.current}
+          carLines={carLinesRef.current}
           statuses={statusesRef.current}
           filter={filter}
           setFilter={setFilter}
@@ -215,4 +222,4 @@ const QuickConsultListTableHeader: FC<Props> = ({
   );
 };
 
-export default QuickConsultListTableHeader;
+export default TestDriveListTableHeader;

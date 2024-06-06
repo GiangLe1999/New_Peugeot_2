@@ -54,7 +54,7 @@ const AdminNotifications: FC<Props> = (props): JSX.Element => {
     });
 
     const channel = pusher.subscribe("admin-notifications");
-    channel.bind("new-contact", (data: any) => {
+    channel.bind("new-customer", (data: any) => {
       refetch();
     });
 
@@ -110,16 +110,16 @@ const AdminNotifications: FC<Props> = (props): JSX.Element => {
             {data?.data.map(
               ({
                 _id,
-                detail,
                 read,
+                ...rest
               }: {
                 _id: string;
-                detail: ContactEntity;
+                detail: any;
                 read: boolean;
               }) => (
                 <AdminNotification
                   key={_id}
-                  detail={detail}
+                  detail={rest}
                   read={read}
                   notiId={_id}
                 />

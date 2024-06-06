@@ -44,9 +44,16 @@ export async function POST(req: Request) {
     await contact.save();
 
     await Notification.create({
-      detail: contact._id,
+      name,
+      phone,
+      email,
+      carName,
+      carLine,
+      content,
+      service,
+      province: section,
     });
-    pusherInstance.trigger("admin-notifications", "new-contact", contact);
+    pusherInstance.trigger("admin-notifications", "new-customer", contact);
 
     return NextResponse.json(contact, {
       status: 201,

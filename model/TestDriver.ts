@@ -33,6 +33,11 @@ const TestDriverSchema = new mongoose.Schema(
     content: {
       type: String,
     },
+
+    status: {
+      type: String,
+      default: "Chờ xử lý",
+    },
   },
   { timestamps: true }
 );

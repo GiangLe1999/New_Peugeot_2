@@ -1,6 +1,5 @@
 "use client";
 
-import { ContactEntity } from "@/entities/contact.entity";
 import { FC, useState } from "react";
 import TimeAgo from "react-timeago";
 // @ts-ignore
@@ -16,7 +15,7 @@ import toast from "react-hot-toast";
 const formatter = buildFormatter(vietnameseStrings);
 
 interface Props {
-  detail: ContactEntity;
+  detail: any;
   read: boolean;
   notiId: string;
 }
@@ -78,6 +77,8 @@ const AdminNotification: FC<Props> = ({
     setShowDetailModal(false);
   };
 
+  console.log(detail);
+
   return (
     <>
       <div
@@ -123,41 +124,41 @@ const AdminNotification: FC<Props> = ({
           <div className="grid grid-cols-2 gap-x-4 gap-y-3">
             <div className="flex gap-2">
               <span className="font-bold">Tên khách hàng:</span>
-              <span>{detail.name}</span>
+              <span>{detail?.name || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold">Email:</span>
-              <span>{detail.email}</span>
+              <span>{detail?.email || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold">SĐT:</span>
-              <span>{detail.phone}</span>
+              <span>{detail?.phone || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold">Loại dịch vụ:</span>
-              <span>{detail.service}</span>
+              <span>{detail?.service || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold">Dòng xe:</span>
-              <span>{detail.car}</span>
+              <span>{detail?.carName || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold line-clamp-1">Phiên bản:</span>
-              <span>{detail.carLine}</span>
+              <span>{detail?.carLine || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold line-clamp-1">Tỉnh / thành:</span>
-              <span>{detail.province}</span>
+              <span>{detail?.province || "Không yêu cầu trường này"}</span>
             </div>
             <div className="flex gap-2">
               <span className="font-bold line-clamp-1">Thời gian:</span>
-              <span>{formatShortDate(detail.createdAt)}</span>
+              <span>{formatShortDate(detail?.createdAt)}</span>
             </div>
           </div>
 
           <div className="mt-3">
             <span className="font-bold">Nội dung:</span>{" "}
-            <span>{detail.content}</span>
+            <span>{detail?.content || "Không có nội dung"}</span>
           </div>
         </div>
       </CustomModal>

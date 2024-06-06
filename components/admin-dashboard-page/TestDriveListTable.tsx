@@ -1,16 +1,15 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
-import { FaFileWaveform } from "react-icons/fa6";
 import { useQuery } from "@tanstack/react-query";
-import { getAllQuickConsults } from "@/lib/fetchData";
+import { getAllTestDrives } from "@/lib/fetchData";
+import { ContactEntity } from "@/entities/contact.entity";
 import { formatShortDate } from "@/lib/formatData";
-import QuickConsultListTableHeader from "./QuickConsultListTableHeader";
-import QuickConsultListTableFooter from "./QuickConsultListTableFooter";
-import ContactStatus from "./ContactStatus";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import QuickConsultStatus from "./QuickConsultStatus";
+import TestDriveListTableFooter from "./TestDriveListTableFooter";
+import TestDriveListTableHeader from "./TestDriveListTableHeader";
+import TestDriveStatus from "./TestDriveStatus";
 
 type DateRangeStateType = {
   startDate: Date;
@@ -42,18 +41,16 @@ export const initialDateRange = [
 export interface initialFilterObj {
   carNames: string[];
   carLines: string[];
-  provinces: string[];
   statuses: string[];
 }
 
 export const initialFilter: initialFilterObj = {
   carNames: [],
   carLines: [],
-  provinces: [],
   statuses: [],
 };
 
-const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
+const TestDriveListTable: FC<Props> = (props): JSX.Element => {
   const [isClient, setIsClient] = useState(false);
 
   const [keyword, setKeyword] = useState("");
@@ -72,7 +69,7 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
 
   const { data, isPending } = useQuery({
     queryKey: [
-      `admin-quick-consults`,
+      `admin-test-drives`,
       keyword,
       startDate,
       endDate,
@@ -81,10 +78,11 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
       currentPage,
     ],
     queryFn: () =>
-      getAllQuickConsults({
+      getAllTestDrives({
         keyword,
         startDate,
         endDate,
+        ...(filter.carLines.length > 0 && { carLines: filter.carLines }),
         ...(filter.carNames.length > 0 && { carNames: filter.carNames }),
         ...(filter.statuses.length > 0 && { statuses: filter.statuses }),
         limit,
@@ -98,8 +96,9 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
 
   return (
     <div className="admin-card pt-6">
-      <h2 className="mx-6 font-bold text-xl">Khách hàng cần báo giá</h2>
-      <QuickConsultListTableHeader
+      <h2 className="font-bold text-xl mx-6">Khách hàng muốn lái thử</h2>
+
+      <TestDriveListTableHeader
         keyword={keyword}
         setKeyword={setKeyword}
         dateRange={dateRange}
@@ -114,8 +113,11 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
             <tr>
               <th className="text-center border border-l-0">STT</th>
               <th className="border text-left pl-3">Họ & Tên</th>
+              <th className="border text-left pl-3">Email</th>
               <th className="border text-left pl-3">SĐT</th>
               <th className="border text-left pl-3">Dòng xe</th>
+              <th className="border text-left pl-3">Phiên bản</th>
+              <th className="border text-left pl-3">Tin nhắn</th>
               <th className="border text-left pl-3">Ngày</th>
               <th className="border text-left pl-3">Trạng thái</th>
             </tr>
@@ -125,28 +127,38 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
               {[...Array(8).keys()].map((item) => (
                 <tr key={item}>
                   <td colSpan={11}>
-                    <Skeleton className="w-full h-[50px]" />
+                    <Skeleton className="w-full h-[50px] pr-4" />
                   </td>
                 </tr>
               ))}
             </tbody>
           ) : (
             <tbody>
-              {data?.data?.map((quickConsult: any, index: number) => (
+              {data?.data?.map((testDrive: any, index: number) => (
                 <tr key={index}>
                   <td className="text-center border border-l-0 !pl-0">
                     {index + 1 + limit * (currentPage - 1)}
                   </td>
-                  <td className="border">{quickConsult.name}</td>
-                  <td className="border">{quickConsult.phone}</td>
-                  <td className="border">{quickConsult.carName}</td>
+                  <td className="border">{testDrive.name}</td>
+                  <td className="border">{testDrive.email}</td>
+                  <td className="border">{testDrive.phone}</td>
+                  <td className="border">{testDrive.carName}</td>
+                  <td className="border max-w-[250px] pr-2">
+                    {testDrive.carLine}
+                  </td>
+                  <td
+                    className="border max-w-[300px] pr-2"
+                    style={{ wordWrap: "anywhere" as any }}
+                  >
+                    {testDrive.content}
+                  </td>
                   <td className="border">
-                    {formatShortDate(quickConsult.createdAt)}
+                    {formatShortDate(testDrive.createdAt)}
                   </td>
                   <td className="border border-r-0">
-                    <QuickConsultStatus
-                      initialStatus={quickConsult.status}
-                      quickConsultId={quickConsult._id}
+                    <TestDriveStatus
+                      initialStatus={testDrive.status}
+                      testDriveId={testDrive._id}
                       keyword={keyword}
                       startDate={startDate}
                       endDate={endDate}
@@ -162,7 +174,7 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
         </table>
       )}
 
-      <QuickConsultListTableFooter
+      <TestDriveListTableFooter
         limit={limit}
         setLimit={setLimit}
         currentPage={currentPage}
@@ -174,4 +186,4 @@ const QuickConsultListTable: FC<Props> = (props): JSX.Element => {
   );
 };
 
-export default QuickConsultListTable;
+export default TestDriveListTable;

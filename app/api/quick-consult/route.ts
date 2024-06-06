@@ -1,5 +1,7 @@
 import dbConnect from "@/lib/db";
+import Notification from "@/model/Notification";
 import QuickConsult from "@/model/QuickConsult";
+import pusherInstance from "@/utils/pusher.config";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -22,6 +24,14 @@ export async function POST(req: Request) {
   });
 
   await quickConsult.save();
+
+  await Notification.create({
+    name,
+    phone,
+    carName: choseCar,
+    service: "Báo giá",
+  });
+  pusherInstance.trigger("admin-notifications", "new-customer", {});
 
   return NextResponse.json(quickConsult, {
     status: 201,

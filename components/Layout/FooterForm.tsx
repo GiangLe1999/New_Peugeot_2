@@ -117,9 +117,9 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
           onChange={(e) => setChoseCar(e.target.value)}
           disabled={isPending}
         >
-          <option value="">-- Chọn dòng xe -- </option>
+          <option value="">-- Chọn dòng xe --</option>
           {cars?.map((car: any, index: number) => (
-            <option value={car.name} key={index} className="uppercase">
+            <option value={car.name} key={index}>
               {car.name}
             </option>
           ))}

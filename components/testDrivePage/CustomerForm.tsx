@@ -33,12 +33,12 @@ const CustomerForm: FC<Props> = ({
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const carNames = carLines.map((item) => item.name.toUpperCase());
+  const carNames = carLines.map((item) => item.name);
 
   let carLinesNames = [];
   if (choseCarName) {
     carLinesNames = carLines
-      .find((item) => item.name.toUpperCase() === choseCarName)
+      .find((item) => item.name === choseCarName)
       ?.carLines.map((item2) => item2.name) as any[];
   }
 
