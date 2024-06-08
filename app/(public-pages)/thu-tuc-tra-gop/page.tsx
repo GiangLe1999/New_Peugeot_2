@@ -17,7 +17,9 @@ export const generateMetadata = () => {
 interface Props {}
 
 const page: NextPage<Props> = async () => {
-  const carNameArr = (await getAllCarsNameVsSlug()).map((car: any) => car.name);
+  const carNameArr = (await getAllCarsNameVsSlug())?.map(
+    (car: any) => car.name
+  );
 
   return (
     <div>

@@ -2,6 +2,7 @@ import FirstBanner from "@/components/FirstBanner";
 import StyledAccordion from "@/components/StyledAccordion";
 import { paymentData } from "@/data/payment";
 import { NextPage } from "next";
+export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => {
   return {
