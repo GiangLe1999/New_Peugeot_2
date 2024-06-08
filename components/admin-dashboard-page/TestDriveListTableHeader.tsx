@@ -136,9 +136,9 @@ const TestDriveListTableHeader: FC<Props> = ({
 
   return (
     <>
-      <div className="admin-card-body mt-2 flex justify-between text-sm">
-        <div className="flex items-center gap-5">
-          <div className="flex items-center bg-white w-[400px] rounded-md border h-11">
+      <div className="admin-card-body mt-2 flex justify-between gap-4 flex-wrap text-sm">
+        <div className="flex items-center gap-5 flex-wrap">
+          <div className="flex items-center bg-white w-full md:w-[400px] rounded-md border h-11">
             <button className="h-full aspect-square grid place-items-center">
               <ImSearch size={20} color="#5c606a" />
             </button>
@@ -146,13 +146,13 @@ const TestDriveListTableHeader: FC<Props> = ({
               onChange={handleInputChange}
               value={inputValue}
               type="text"
-              className="flex-1 placeholder:text-neutral-400 h-full inline-block pr-2 outline-none"
+              className="flex-1 placeholder:text-neutral-400 h-10 inline-block pr-2 outline-none"
               placeholder="Tìm kiếm theo tên, email hoặc SĐT..."
             />
           </div>
 
           <div
-            className={`relative h-full aspect-square grid place-items-center rounded-md border transition ${
+            className={`relative h-11 aspect-square grid place-items-center rounded-md border transition ${
               showDatePicker ? "bg-[#5c606a]" : ""
             }`}
           >
@@ -183,7 +183,7 @@ const TestDriveListTableHeader: FC<Props> = ({
           </div>
 
           <button
-            className="h-full aspect-square grid place-items-center rounded-md border"
+            className="h-11 aspect-square grid place-items-center rounded-md border"
             onClick={() => setShowFilter(true)}
           >
             <TiFilter size={28} color="#5c606a" />
@@ -191,7 +191,7 @@ const TestDriveListTableHeader: FC<Props> = ({
 
           <button
             onClick={resetHandler}
-            className="admin-main-gradient gap-1 h-full rounded-md border px-3 w-fit shrink-0 text-white font-bold"
+            className="admin-main-gradient gap-1 h-11 rounded-md border px-3 w-fit shrink-0 text-white font-bold"
           >
             Reset bộ lọc
           </button>

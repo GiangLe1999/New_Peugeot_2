@@ -48,7 +48,7 @@ const ContactListTableFooter: FC<Props> = ({
 
   return (
     <div className="admin-card-body mt-6 flex justify-end text-sm">
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-8 flex-wrap">
         <div className="flex items-center gap-2">
           Số hàng mỗi trang
           <select

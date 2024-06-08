@@ -23,12 +23,12 @@ const serviceList = [
 
   {
     icon: icon1,
-    title: "DỊCH VỤ SAU BÁN HÀNG",
+    title: "THÔNG TIN",
     children: [
-      { title: "Chính sách bảo hành", link: linkConstants.warranty },
-      { title: "Bảo dưỡng định kỳ", link: linkConstants.periodWarranty },
-      { title: "Dịch vụ sửa chữa", link: linkConstants.fix },
-      { title: "Dịch vụ chăm sóc xe", link: linkConstants.careCar },
+      { title: "Bảng giá chi tiết", link: linkConstants.finalPrice },
+      { title: "Tính phí lăn bánh", link: linkConstants.quote },
+      { title: "Thủ tục trả góp", link: linkConstants.installment },
+      { title: "Đăng ký lái thử", link: linkConstants.testDrive },
     ],
   },
 

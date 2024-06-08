@@ -14,12 +14,12 @@ const ProfilePage: NextPage<Props> = async () => {
   return (
     <div className="admin-page-container space-y-10">
       <UserProfileCard user={user} />
-      <div className="flex gap-6">
-        <div className="w-1/2">
+      <div className="md:flex gap-6">
+        <div className="md:w-1/2 w-full">
           <UserPasswordCard userId={user._id as string} />
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 md:mt-0 mt-20">
           <UserInfoCard userId={user._id as string} />
         </div>
       </div>

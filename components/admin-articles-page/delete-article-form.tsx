@@ -59,8 +59,12 @@ const DeleteArticleForm: FC<Props> = ({
 
   return (
     <div className="admin-card-body">
-      <p className="font-bold text-xl text-center mt-2 mb-3">
-        Bạn chắc chắn muốn xóa bài viết {deletedArticle.name}?
+      <p className="text-center mt-2 mb-3">
+        Bạn chắc chắn muốn xóa bài viết{" "}
+        <span className="font-bold text-primary underline">
+          {deletedArticle.name}
+        </span>
+        ?
       </p>
 
       <div className="text-center mt-4">

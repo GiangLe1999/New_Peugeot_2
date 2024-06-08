@@ -7,7 +7,9 @@ interface Props {
 
 const AdminChilren: FC<Props> = ({ children, isExpand }): JSX.Element => {
   return (
-    <div className={`${isExpand ? "ml-[260px]" : "ml-[80px]"}`}>{children}</div>
+    <div className={`${isExpand ? "md:ml-[260px]" : "md:ml-[80px]"} ml-0`}>
+      {children}
+    </div>
   );
 };
 

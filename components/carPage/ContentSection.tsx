@@ -12,8 +12,12 @@ const ContentSection: FC<Props> = ({ content }): JSX.Element => {
   const options: HTMLReactParserOptions = {
     replace(domNode) {
       if (domNode instanceof Element && domNode.name === "img") {
+        const width = Number(domNode.attribs.width);
+        const height = Number(domNode.attribs.height);
+        const aspectRatio = width / height;
+
         return (
-          <div className="w-full aspect-[3/2] relative">
+          <div className="w-full aspect-[3/2] relative" style={{ aspectRatio }}>
             <NextImage src={domNode.attribs.src} alt={domNode.attribs.alt} />
           </div>
         );

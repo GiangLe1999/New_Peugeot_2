@@ -113,7 +113,7 @@ const TestDriveStatus: FC<Props> = ({
         open={showModal}
       >
         <div className="admin-card-body">
-          <div className="grid grid-cols-3 gap-3 mt-3">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-3 mt-3">
             {statuses.map((status) => (
               <div key={status} className="flex items-center">
                 <input

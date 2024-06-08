@@ -21,7 +21,7 @@ const AnalyticsBlocks: FC<Props> = (props): JSX.Element => {
   });
 
   return (
-    <div className="grid grid-cols-4 gap-10 mt-14">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-20 mt-14">
       <AnalyticsBlock
         icon={IoBarChart}
         iconSize={28}

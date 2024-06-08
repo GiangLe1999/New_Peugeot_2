@@ -82,7 +82,7 @@ const Footer: FC<Props> = (): JSX.Element => {
 
         {/* Column3 */}
         <div className="w-[20%] px-3 max-[1017px]:w-[25%] max-[717px]:w-[45%] max-[717px]:px-0">
-          <p className="footer-title">Dịch vụ</p>
+          <p className="footer-title">Thông tin</p>
           <ul>
             {footerCol3.map((item, index) => (
               <li key={index} className="footer-item">

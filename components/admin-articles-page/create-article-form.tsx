@@ -114,11 +114,12 @@ const CreateArticleForm: FC<Props> = ({ author }): JSX.Element => {
             icon={TiArrowBack}
             iconSize={22}
             onClick={() => router.back()}
+            customClasses="md:w-fit w-full"
           />
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="flex-1">
-          <div className="grid grid-cols-2 gap-6 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <label
               htmlFor="thumbnail"
               className="mt-2 relative w-full aspect-video rounded-md flex flex-col justify-center items-center border border-dashed border-admin_primary cursor-pointer"

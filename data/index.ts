@@ -13,6 +13,7 @@ import {
   FaHome,
   FaInfoCircle,
   FaBlog,
+  FaCar,
 } from "react-icons/fa";
 
 import { BiSolidContact } from "react-icons/bi";
@@ -76,6 +77,33 @@ export const navItems: {
     title: "liên hệ",
     link: linkConstants.contact,
     icon: BiSolidContact,
+  },
+];
+
+export const adminNavItems: {
+  title: string;
+  link: string;
+  icon?: IconType;
+}[] = [
+  {
+    title: "Dashboard",
+    link: linkConstants.dashboard,
+    icon: FaHome,
+  },
+  {
+    title: "List xe",
+    link: linkConstants.admin_cars,
+    icon: FaCar,
+  },
+  {
+    title: "Profile",
+    link: linkConstants.profile,
+    icon: FaInfoCircle,
+  },
+  {
+    title: "Bài viết",
+    link: linkConstants.admin_articles,
+    icon: FaBlog,
   },
 ];
 
@@ -281,10 +309,10 @@ export const footerCol2: footerItemType[] = [
 ];
 
 export const footerCol3: footerItemType[] = [
-  { title: "Dịch vụ sau bán hàng", link: linkConstants.periodWarranty },
-  { title: "Phụ tùng - phụ kiện", link: linkConstants.appliance },
-  { title: "Chăm sóc khách hàng", link: linkConstants.careCustomer },
-  { title: "Đặt hẹn dịch vụ", link: linkConstants.bookService },
+  { title: "Bảng giá chi tiết", link: linkConstants.finalPrice },
+  { title: "Tính phí lăn bánh", link: linkConstants.quote },
+  { title: "Thủ tục trả góp", link: linkConstants.installment },
+  { title: "Đăng ký lái thử", link: linkConstants.testDrive },
 ];
 
 export const footerCol32: footerItemType[] = [

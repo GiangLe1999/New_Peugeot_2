@@ -107,73 +107,90 @@ const TestDriveListTable: FC<Props> = (props): JSX.Element => {
         filter={filter}
         setFilter={setFilter}
       />
-      {isClient && (
-        <table className="admin-table w-full text-sm">
-          <thead>
-            <tr>
-              <th className="text-center border border-l-0">STT</th>
-              <th className="border text-left pl-3">Họ & Tên</th>
-              <th className="border text-left pl-3">Email</th>
-              <th className="border text-left pl-3">SĐT</th>
-              <th className="border text-left pl-3">Dòng xe</th>
-              <th className="border text-left pl-3">Phiên bản</th>
-              <th className="border text-left pl-3">Tin nhắn</th>
-              <th className="border text-left pl-3">Ngày</th>
-              <th className="border text-left pl-3">Trạng thái</th>
-            </tr>
-          </thead>
-          {isPending ? (
-            <tbody>
-              {[...Array(8).keys()].map((item) => (
-                <tr key={item}>
-                  <td colSpan={11}>
-                    <Skeleton className="w-full h-[50px] pr-4" />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          ) : (
-            <tbody>
-              {data?.data?.map((testDrive: any, index: number) => (
-                <tr key={index}>
-                  <td className="text-center border border-l-0 !pl-0">
-                    {index + 1 + limit * (currentPage - 1)}
-                  </td>
-                  <td className="border">{testDrive.name}</td>
-                  <td className="border">{testDrive.email}</td>
-                  <td className="border">{testDrive.phone}</td>
-                  <td className="border">{testDrive.carName}</td>
-                  <td className="border max-w-[250px] pr-2">
-                    {testDrive.carLine}
-                  </td>
-                  <td
-                    className="border max-w-[300px] pr-2"
-                    style={{ wordWrap: "anywhere" as any }}
-                  >
-                    {testDrive.content}
-                  </td>
-                  <td className="border">
-                    {formatShortDate(testDrive.createdAt)}
-                  </td>
-                  <td className="border border-r-0">
-                    <TestDriveStatus
-                      initialStatus={testDrive.status}
-                      testDriveId={testDrive._id}
-                      keyword={keyword}
-                      startDate={startDate}
-                      endDate={endDate}
-                      filter={filter}
-                      limit={limit}
-                      currentPage={currentPage}
-                    />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          )}
-        </table>
-      )}
-
+      <div className="overflow-x-scroll no-scrollbar">
+        {isClient && (
+          <table className="admin-table w-full text-sm">
+            <thead>
+              <tr>
+                <th className="text-center border border-l-0">STT</th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Họ & Tên
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Email
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  SĐT
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Dòng xe
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Phiên bản
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Tin nhắn
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Ngày
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Trạng thái
+                </th>
+              </tr>
+            </thead>
+            {isPending ? (
+              <tbody>
+                {[...Array(8).keys()].map((item) => (
+                  <tr key={item}>
+                    <td colSpan={11}>
+                      <Skeleton className="w-full h-[50px] pr-4" />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            ) : (
+              <tbody>
+                {data?.data?.map((testDrive: any, index: number) => (
+                  <tr key={index}>
+                    <td className="text-center border border-l-0 !pl-0">
+                      {index + 1 + limit * (currentPage - 1)}
+                    </td>
+                    <td className="border">{testDrive.name}</td>
+                    <td className="border">{testDrive.email}</td>
+                    <td className="border">{testDrive.phone}</td>
+                    <td className="border">{testDrive.carName}</td>
+                    <td className="border max-w-[250px] pr-2">
+                      {testDrive.carLine}
+                    </td>
+                    <td
+                      className="border max-w-[300px] pr-2"
+                      style={{ wordWrap: "anywhere" as any }}
+                    >
+                      {testDrive.content}
+                    </td>
+                    <td className="border">
+                      {formatShortDate(testDrive.createdAt)}
+                    </td>
+                    <td className="border border-r-0">
+                      <TestDriveStatus
+                        initialStatus={testDrive.status}
+                        testDriveId={testDrive._id}
+                        keyword={keyword}
+                        startDate={startDate}
+                        endDate={endDate}
+                        filter={filter}
+                        limit={limit}
+                        currentPage={currentPage}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            )}
+          </table>
+        )}
+      </div>
       <TestDriveListTableFooter
         limit={limit}
         setLimit={setLimit}

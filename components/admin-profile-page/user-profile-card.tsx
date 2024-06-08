@@ -171,7 +171,7 @@ const UserProfileCard: FC<Props> = ({ user }): JSX.Element => {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6">
                 <FormInput
                   id="name"
                   label="Tên đầy đủ"
@@ -189,7 +189,7 @@ const UserProfileCard: FC<Props> = ({ user }): JSX.Element => {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6">
                 <FormInput
                   id="facebook"
                   label="Link Facebook"
@@ -205,7 +205,7 @@ const UserProfileCard: FC<Props> = ({ user }): JSX.Element => {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6">
                 <FormInput
                   id="youtube"
                   label="Link Youtube"
