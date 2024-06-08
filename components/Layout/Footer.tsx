@@ -19,7 +19,7 @@ const Footer: FC<Props> = (): JSX.Element => {
         {/* Column1 */}
         <div className="w-1/3 pr-3 max-[1017px]:w-[50%] max-[717px]:w-full">
           {/* General info */}
-          <p className="footer-title">CÔNG TY TNHH PHÂN PHỐI THACO AUTO</p>
+          <p className="footer-title">MAZDA THỦ ĐỨC - THÀNH LONG</p>
           <ul>
             {footerCol1.map((item, index) => (
               <li className="footer-item hover:font-normal" key={index}>
@@ -111,7 +111,7 @@ const Footer: FC<Props> = (): JSX.Element => {
       <div className="border-t border-[#999999] py-1">
         <div className="container text-[#999999] text-xs flex items-center justify-between">
           <span className="uppercase my-2 text-center">
-            © 2023 Mazda Việt Nam - All rights reserved
+            © 2023 Mazda Thủ Đức - Thành Long - All rights reserved
           </span>
 
           <span>

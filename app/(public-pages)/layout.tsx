@@ -2,6 +2,7 @@ import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
 import MobileBottomNav from "@/components/Layout/MobileBottomNav";
 import StickyBtns from "@/components/Layout/StickyBtns";
+import ContactBtns from "@/components/Layout/contact-btns";
 import StyledProgressBar from "@/components/ProgressBar";
 import { FC, ReactNode } from "react";
 
@@ -16,7 +17,7 @@ const layout: FC<Props> = ({ children }): JSX.Element => {
       <Header />
       {children}
       <StickyBtns />
-      {/* <ContactBtns /> */}
+      <ContactBtns />
       <Footer />
       <MobileBottomNav />
     </>

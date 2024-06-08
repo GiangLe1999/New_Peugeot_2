@@ -158,9 +158,9 @@ const CustomerForm: FC<Props> = ({
           </>
         )}
         {isQuotation ? (
-          <>MAZDA SÀI GÒN SẼ GỬI BÁO GIÁ ĐẾN BẠN SỚM NHẤT CÓ THỂ</>
+          <>MAZDA THỦ ĐỨC SẼ GỬI BÁO GIÁ ĐẾN BẠN SỚM NHẤT CÓ THỂ</>
         ) : (
-          <>MAZDA SÀI GÒN SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
+          <>MAZDA THỦ ĐỨC SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
         )}
       </p>
 
@@ -280,7 +280,7 @@ const CustomerForm: FC<Props> = ({
               htmlFor="confirm1"
               className={`cursor-pointer ${!isContactForm && "mt-4"}`}
             >
-              Tôi xác nhận rằng Mazda Sài Gòn có thể gửi cho tôi thêm thông tin
+              Tôi xác nhận rằng Mazda THỦ ĐỨC có thể gửi cho tôi thêm thông tin
               về các sản phẩm hoặc dịch vụ của Mazda. *
             </label>
           </div>

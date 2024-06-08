@@ -192,6 +192,7 @@ type homeOptionType = {
   title: string;
   link: string;
   icon: IconType;
+  des: string;
 };
 
 export const homeOptions: homeOptionType[] = [
@@ -199,21 +200,25 @@ export const homeOptions: homeOptionType[] = [
     title: "yêu cầu báo giá",
     link: linkConstants.requireQuotation,
     icon: FaEnvelopeOpenText,
+    des: "Đăng ký để nhận báo giá mới nhất cho các <strong>dòng xe Mazda</strong>",
   },
   {
     title: "tính phí lăn bánh",
     link: linkConstants.finalPrice,
     icon: FaCalculator,
+    des: "Giá các phiên bản xe Mazda cùng các khoản phí chi tiết tại <strong>Mazda Thủ Đức</strong>",
   },
   {
     title: "mua xe trả góp",
     link: linkConstants.installment,
     icon: FaChartPie,
+    des: "Trả góp đến <strong>85% giá trị xe</strong>, lãi suất chỉ <strong>0,6%/tháng</strong>",
   },
   {
     title: "đăng ký lái thử",
     link: linkConstants.testDrive,
     icon: FaCarAlt,
+    des: "Đến với <strong>Mazda Thủ Đức</strong> để được lái thử những mẫu xe Mazda mới nhất",
   },
 ];
 
@@ -229,7 +234,7 @@ export const promotionItems: promotionItemType[] = [
     icon: HiReceiptTax,
     title: "ƯU ĐÃI ĐẾN 100% PHÍ TRƯỚC BẠ",
     subtitle:
-      "Mazda Việt Nam triển khai chương trình đặc biệt với gói hỗ trợ tương đương 100% lệ phí trước bạ cho khách hàng mua Mazda2, Mazda3, Mazda CX-5 cùng nhiều ưu đãi lớn dành cho các phiên bản Mazda khác.",
+      "Mazda Thủ Đức triển khai chương trình đặc biệt với gói hỗ trợ tương đương 100% lệ phí trước bạ cho khách hàng mua Mazda2, Mazda3, Mazda CX-5 cùng nhiều ưu đãi lớn dành cho các phiên bản Mazda khác.",
     desc: "Mức hỗ trợ cao nhất của Mazda sẽ nằm ở các mẫu SUV cao cấp như <b>Mazda CX-8</b>, <b>Mazda CX-5</b> và <b>Mazda 6</b>. Theo đó, mẫu xe 5 chỗ thực thụ đến từ thương hiệu Nhật Bản, Mazda 6 được hỗ trợ cao nhất đến <b class='text-primary'>110 triệu đồng</b> cho bản <b>Signature</b>. Mức giá <b>Mazda 6</b> sau khi giảm chỉ còn <b class='text-primary'>849 triệu đồng</b>, cùng ưu đãi vay mua xe hấp dẫn, khách hàng chỉ cần trả trước từ <b>200 triệu đồng.</b>",
   },
   {
@@ -247,7 +252,7 @@ export const reasonsToBuy: itemType[] = [
   {
     icon: BsTagsFill,
     title: "GIÁ CẢ ƯU ĐÃI - GIAO XE SỚM",
-    desc: "Mazda Sài Gòn luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất trong 1 ngày.",
+    desc: "Mazda Thủ Đức luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất trong 1 ngày.",
   },
   {
     icon: SiAdguard,
@@ -290,9 +295,9 @@ export const aboutItems: itemType[] = [
 ];
 
 export const footerCol1: string[] = [
-  "Giấy CNĐKDN: 400077880 Ngày cấp 27/10/2010",
-  "Cơ quan cấp: Cơ quan cấp: Phòng đăng ký kinh doanh Sở kế hoạch và đầu tư tỉnh Quảng Nam",
-  "Địa chỉ : Thôn 4, Xã Tam Hiệp, Huyện Núi Thành, Tỉnh Quảng Nam, Việt Nam",
+  "Chuyên cung cấp dòng xe Mazda các loại",
+  "Xe 4 chỗ Mazda 2, 5 chỗ Mazda 3 và Mazda 6, 5 chỗ gầm cao CX-5, 7 chỗ CX-8, bán tải BT-50",
+  "Địa chỉ : 127 Quốc Lộ 13, Khu phố 1, Thủ Đức, Ho Chi Minh City, Vietnam",
 ];
 
 type footerItemType = { title: string; link: string };
@@ -325,10 +330,10 @@ export const footerCol32: footerItemType[] = [
 ];
 
 export const footerCol4: { title: string; link: string; icon: IconType }[] = [
-  { title: "Hotline: 0962334807", link: "tel:0962334807", icon: MdPhone },
+  { title: "Hotline: 0333122512", link: "tel:0333122512", icon: MdPhone },
   {
-    title: "cskh@thaco.com.vn",
-    link: "mailto:cskh@thaco.com.vn",
+    title: "hualong02072000@gmail.com",
+    link: "mailto:hualong02072000@gmail.com",
     icon: MdMail,
   },
 ];

@@ -7,7 +7,7 @@ export const generateMetadata = () => {
   return {
     title: "Chính sách giao nhận & vận chuyển",
     description:
-      "Thông tin mới nhất về chính sách giao nhận & vận chuyển đối với sản phẩm xe Mazda tại website chính thức của Mazda Sài Gòn.",
+      "Thông tin mới nhất về chính sách giao nhận & vận chuyển đối với sản phẩm xe Mazda tại website chính thức của Mazda Thủ Đức.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/chinh-sach-giao-nhan-van-chuyen`,
   };
 };

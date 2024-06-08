@@ -10,7 +10,7 @@ export const generateMetadata = () => {
   return {
     title: "Tính phí lăn bánh Ô tô Mazda 2023",
     description:
-      "Cách tính và bảng tính phí lăn bánh Ô tô Mazda chính xác nhất 2023.Tham khảo tại Website Mazda Sài Gòn.",
+      "Cách tính và bảng tính phí lăn bánh Ô tô Mazda chính xác nhất 2023.Tham khảo tại Website Mazda Thủ Đức.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/tinh-phi-lan-banh`,
   };
 };

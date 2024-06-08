@@ -22,6 +22,18 @@ const config: Config = {
           },
         },
       },
+      keyframes: {
+        wiggle: {
+          "35%": { transform: "rotate(17deg)" },
+          "55%": { transform: "rotate(-17deg)" },
+          "65%": { transform: "rotate(17deg)" },
+          "75%": { transform: "rotate(-17deg)" },
+          "100%": { transform: "rotate(0)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite 1s",
+      },
       aspectRatio: {
         "22 / 10": "22 / 10",
       },

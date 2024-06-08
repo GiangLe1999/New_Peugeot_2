@@ -20,11 +20,11 @@ const SupportBuyersSection: FC<Props> = (props): JSX.Element => {
           </h4>
         </div>
         <a
-          href="tel:0962334807"
+          href="tel:0333122512"
           className="flex items-center gap-x-2 py-2 px-4 bg-white text-primary sm:text-2xl text-lg font-bold !gap-2 !rounded-md sm:w-fit w-full"
         >
           <FaPhoneAlt />
-          0962334807
+          0333122512
         </a>
       </div>
     </section>

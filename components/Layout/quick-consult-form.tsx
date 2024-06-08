@@ -116,7 +116,7 @@ const QuickConsultForm: FC<Props> = (props): JSX.Element => {
           <input
             type="number"
             id="phone"
-            placeholder="0962334807"
+            placeholder="0333122512"
             className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}

@@ -33,7 +33,7 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
                 <BtnWithIcon
                   to={linkConstants.installment}
                   content="THỦ TỤC TRẢ GÓP"
-                  customClasses="bg-tertiary"
+                  customClasses="!bg-secondary"
                 />
               </div>
             </div>

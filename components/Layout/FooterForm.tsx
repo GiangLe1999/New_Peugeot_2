@@ -99,7 +99,7 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
         <input
           type="number"
           id="phone"
-          placeholder="0962334807"
+          placeholder="0333122512"
           className="form-input"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}

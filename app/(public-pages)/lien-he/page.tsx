@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => {
   return {
-    title: "Liên hệ với Mazda Sài Gòn",
+    title: "Liên hệ với Mazda Thủ Đức",
     description:
-      "Liên hệ ngay với Mazda Sài Gòn để đặt lịch lái thử hoặc nhận báo giá mới nhất cho các dòng xe Mazda.",
+      "Liên hệ ngay với Mazda Thủ Đức để đặt lịch lái thử hoặc nhận báo giá mới nhất cho các dòng xe Mazda.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/lien-he`,
   };
 };
@@ -24,13 +24,13 @@ const infos = [
   },
   {
     title: "Số điện thoại",
-    link: "tel:0962334807",
-    content: "096.2334.807 (Mr.Giang)",
+    link: "tel:0333122512",
+    content: "033.3122.512 (Mr.Giang)",
   },
   {
     title: "Email",
-    link: "mailto:legiangbmt09@gmail.com",
-    content: "legiangbmt09@gmail.com",
+    link: "mailto:hualong02072000@gmail.com",
+    content: "hualong02072000@gmail.com",
   },
   {
     title: "Website",
@@ -44,7 +44,7 @@ const ContactPage: NextPage<Props> = () => {
     <div className="text-textColor">
       <FirstBanner
         heading="LIÊN HỆ CHÚNG TÔI"
-        subHeading="Hoặc ghé thăm trực tiếp đại lý Mazda Sài Gòn"
+        subHeading="Hoặc ghé thăm trực tiếp đại lý Mazda Thủ Đức"
         bgImg="/images/lien-he/first-banner.jpg"
         bgClasses="!bg-[50%_50%] !bg-cover"
       />
@@ -56,7 +56,7 @@ const ContactPage: NextPage<Props> = () => {
         <div className="grid grid-cols-2 gap-9 max-[846px]:grid-cols-1">
           <div className="space-y-11">
             <div>
-              <h1 className={titleClasses}>Mazda Sài Gòn</h1>
+              <h1 className={titleClasses}>Mazda Thủ Đức</h1>
               <ul>
                 {infos.map((info, index) => (
                   <li key={index} className="flex items-center gap-2 py-2">

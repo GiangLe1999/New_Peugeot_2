@@ -64,11 +64,11 @@ const Header: FC<Props> = (props): JSX.Element => {
           </Link>
 
           <h2 className="text-lg font-bold max-[500px]:hidden">
-            <Link href="/">MAZDA SÀI GÒN</Link>
+            <Link href="/">MAZDA THỦ ĐỨC</Link>
           </h2>
 
           <a
-            href="tel:0962334807"
+            href="tel:0333122512"
             className="flex items-center gap-2 font-medium hover:scale-[1.1] transition"
           >
             <div className="bg-primary rounded-full w-8 h-8 grid place-items-center">
@@ -77,7 +77,7 @@ const Header: FC<Props> = (props): JSX.Element => {
 
             <div className="text-xs">
               <p>HOTLINE</p>
-              <p>096.2334.807</p>
+              <p>033.3122.512</p>
             </div>
           </a>
         </div>

@@ -14,7 +14,7 @@ const CarsSection: FC<Props> = ({ cars }): JSX.Element => {
         <p className="text-textColor text-center font-bold text-sm">
           DÒNG XE KINH DOANH TẠI
         </p>
-        <SectionTitle title="MAZDA SÀI GÒN" />
+        <SectionTitle title="MAZDA THỦ ĐỨC" />
 
         <div className="grid grid-cols-3 gap-4 py-8 max-[982px]:grid-cols-2 max-[680px]:grid-cols-1">
           {cars?.map((car) => (
