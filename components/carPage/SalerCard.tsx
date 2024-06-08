@@ -26,7 +26,7 @@ const SalerCard: FC<Props> = (props): JSX.Element => {
           <BtnWithIcon
             href="tel:0333122512"
             customClasses="bg-primary w-full mb-4 font-bold text-sm"
-            content="0962.334.807"
+            content="0333122512"
             icon={MdPhone}
             iconSize={16}
           />
