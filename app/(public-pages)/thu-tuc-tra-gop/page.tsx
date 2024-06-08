@@ -1,6 +1,6 @@
 import FirstBanner from "@/components/FirstBanner";
 import CarPriceSection from "@/components/carPage/CarPriceSection";
-import { carNames } from "@/data";
+import { getAllCarsNameVsSlug } from "@/service/car.service";
 import { NextPage } from "next";
 import { ImUserTie } from "react-icons/im";
 import { SiAddthis, SiGoogleoptimize } from "react-icons/si";
@@ -17,6 +17,8 @@ export const generateMetadata = () => {
 interface Props {}
 
 const page: NextPage<Props> = async () => {
+  const carNameArr = (await getAllCarsNameVsSlug()).map((car: any) => car.name);
+
   return (
     <div>
       <FirstBanner
@@ -152,7 +154,7 @@ const page: NextPage<Props> = async () => {
           </h2>
           <CarPriceSection
             name={"new mazda 2"}
-            carNameArr={carNames}
+            carNameArr={carNameArr}
             isInstallmentPage
           />
         </div>

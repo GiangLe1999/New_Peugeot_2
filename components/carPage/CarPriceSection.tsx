@@ -48,11 +48,13 @@ const CarPriceSection: FC<Props> = ({
   if (isInstallmentPage && choseCarName) {
     carLines = allCarLines.find((item) => item.name === choseCarName)
       ?.carLines as CarLineType[];
-    currentLine = carLines.find(
+    currentLine = carLines?.find(
       (line) => line.name === choseCarLine
     ) as CarLineType;
     currentListPrice = currentLine?.price;
   }
+
+  console.log(choseCarName);
 
   const borrowedMoney = (Number(chosePercent) * currentListPrice) / 100 || 0;
 

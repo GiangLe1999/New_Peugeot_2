@@ -1,6 +1,6 @@
 import FirstBanner from "@/components/FirstBanner";
 import CarPriceSection from "@/components/carPage/CarPriceSection";
-import { carNames } from "@/data";
+import { getAllCarsNameVsSlug } from "@/service/car.service";
 import { NextPage } from "next";
 export const dynamic = "force-dynamic";
 
@@ -15,7 +15,9 @@ export const generateMetadata = () => {
   };
 };
 
-const page: NextPage<Props> = () => {
+const page: NextPage<Props> = async () => {
+  const carNameArr = (await getAllCarsNameVsSlug()).map((car: any) => car.name);
+
   return (
     <div>
       <FirstBanner
@@ -28,7 +30,7 @@ const page: NextPage<Props> = () => {
       <div className="container py-12">
         <CarPriceSection
           name={"new mazda 2"}
-          carNameArr={carNames}
+          carNameArr={carNameArr}
           isInstallmentPage
         />
       </div>

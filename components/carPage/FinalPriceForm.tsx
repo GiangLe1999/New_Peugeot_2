@@ -71,7 +71,7 @@ const FinalPriceFrom: FC<Props> = ({
               <option value="">Chọn dòng xe</option>
               {carNameArr?.map((name, index) => (
                 <option value={name} key={index}>
-                  {name.toUpperCase()}
+                  {name}
                 </option>
               ))}
             </select>
@@ -85,6 +85,8 @@ const FinalPriceFrom: FC<Props> = ({
             id="carLine"
             value={choseCarLine}
             onChange={(e) => setChoseCarLine(e.target.value)}
+            disabled={carNameArr?.length === 0}
+            className="disabled:opacity-50"
           >
             <option value="">Chọn phiên bản</option>
             {lines?.map((line, index) => (
