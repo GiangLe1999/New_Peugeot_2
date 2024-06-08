@@ -42,14 +42,18 @@ const Footer: FC<Props> = (): JSX.Element => {
             ))}
           </ul>
           <div className="flex item-center gap-2 my-3">
-            <Link href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/profile.php?id=100086421081221&locale=vi_VN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/facebook.jpg"
                   alt="Mazda Facebook"
                 />
               </div>
-            </Link>
+            </a>
 
             <Link href="" target="_blank" rel="noopener noreferrer">
               <div className="footer-icon">
