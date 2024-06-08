@@ -15,7 +15,7 @@ interface Props {
 const AdminHeader: FC<Props> = ({ isExpand, setIsExpand }): JSX.Element => {
   return (
     <div className={`${isExpand ? "md:ml-[260px]" : "md:ml-[80px]"} ml-0`}>
-      <header className="px-6 py-3 flex items-center flex-wrap gap-x-2 gap-y-6 md:justify-between justify-end">
+      <header className="px-6 py-3 flex items-center flex-wrap gap-x-2 gap-y-6 md:justify-between justify-start">
         <button
           onClick={() => setIsExpand(!isExpand)}
           className="w-10 h-10 md:grid hidden admin-item-shadow  place-items-center border-admin_gray_text rounded-full bg-white text-admin_gray_text"
@@ -27,7 +27,7 @@ const AdminHeader: FC<Props> = ({ isExpand, setIsExpand }): JSX.Element => {
           )}
         </button>
 
-        <div className="flex items-center flex-wrap gap-4">
+        <div className="flex md:items-center flex-wrap gap-4 md:flex-row flex-col">
           <Link href="/" className="flex gap-1 uppercase text-sm font-bold">
             <IoMdHome size={20} className="-mt-[2px]" />
             Đến Trang Chủ

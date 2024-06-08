@@ -77,8 +77,6 @@ const AdminNotification: FC<Props> = ({
     setShowDetailModal(false);
   };
 
-  console.log(detail);
-
   return (
     <>
       <div
@@ -121,7 +119,7 @@ const AdminNotification: FC<Props> = ({
         open={showDetailModal}
       >
         <div className="admin-card-body">
-          <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-3">
             <div className="flex gap-2">
               <span className="font-bold">Tên khách hàng:</span>
               <span>{detail?.name || "Không yêu cầu trường này"}</span>
