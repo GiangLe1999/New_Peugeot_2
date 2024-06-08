@@ -1,4 +1,3 @@
-import { frontType } from "../app/(public-pages)/tin-tuc/[postSlug]/page";
 import { CarType } from "@/types";
 import { cache } from "react";
 import axiosInstance from "./axios";
@@ -91,39 +90,6 @@ export const getCarPostData = async (slug: string) => {
       content: string;
       data: { promotion: string };
     }>;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const getNewsPostData = async (slug: string) => {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/news/${slug}`
-    );
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return res.json() as Promise<{
-      content: string;
-      data: frontType;
-    }>;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const getAllNewsPostsData = async () => {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/news`);
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return res.json() as Promise<frontType[]>;
   } catch (error) {
     console.log(error);
   }

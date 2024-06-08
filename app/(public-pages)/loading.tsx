@@ -4,9 +4,9 @@ interface Props {}
 
 const Loading: NextPage<Props> = (props) => {
   return (
-    <div className="flex items-center justify-center w-full h-[100vh] text-primary dark:text-gray-100">
+    <div className="flex items-center justify-center w-full h-[100vh] text-primary">
       <div>
-        <h1 className="text-xl md:text-5xl font-bold flex items-center">
+        <h1 className="text-xl md:text-4xl font-bold flex items-center">
           L
           <svg
             stroke="currentColor"
