@@ -85,6 +85,24 @@ export const getArticleBySlugForUser = async (slug: string) => {
   }
 };
 
+export const getRelatedArticles = async ({
+  currentId,
+  currentCate,
+}: {
+  currentId: string;
+  currentCate: string;
+}) => {
+  try {
+    const { data } = await axiosInstance(
+      `/api/article/related?currentId=${currentId}&currentCate=${currentCate}`
+    );
+
+    return data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getArticlesByCategory = async ({
   cateName,
   currentPage,
@@ -97,23 +115,6 @@ export const getArticlesByCategory = async ({
       await axiosInstance("/api/articles/by-category", {
         params: { category: cateName, page: currentPage },
       });
-
-    return data.data;
-  } catch (error) {}
-};
-
-export const getRelatedArticles = async ({
-  cateName,
-  postSlug,
-}: {
-  cateName: string;
-  postSlug: string;
-}) => {
-  try {
-    const { data }: { data: GetAllArticlesOutput } = await axiosInstance(
-      "/api/articles/related",
-      { params: { category: cateName, slug: postSlug } }
-    );
 
     return data.data;
   } catch (error) {}

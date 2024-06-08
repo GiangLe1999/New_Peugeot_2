@@ -6,6 +6,7 @@ import { linkConstants } from "@/data/constants";
 import { getArticleBySlugForUser } from "@/service/article.service";
 import { formatLongDate } from "@/lib/formatData";
 import { ArticleEntity } from "@/entities/article.entity";
+import RelatedArticles from "@/components/newsPage/RelatedArticles";
 
 interface Props {
   params: { postSlug: string };
@@ -34,6 +35,8 @@ const page: NextPage<Props> = async ({ params }) => {
       <h1 className="font-bold text-2xl text-primary mb-8">{data?.name}</h1>
       <div className="border-[1px] border-dashed mb-8"></div>
       <NewsContent content={data?.content} />
+
+      <RelatedArticles currentId={data?._id} currentCate={data?.category} />
     </div>
   );
 };

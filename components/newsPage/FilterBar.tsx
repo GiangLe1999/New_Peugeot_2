@@ -62,7 +62,7 @@ const FilterBar: FC<Props> = ({
         <div className="lg:flex justify-between items-center w-full">
           <ul
             id="parent"
-            className="relative lg:flex grid grid-cols-3 p-2.5 border rounded-full shadow-[0_7px_20px_0_hsla(240,5%,41%,0.2)]"
+            className="relative lg:flex grid grid-cols-4 p-2.5 border rounded-full shadow-[0_7px_20px_0_hsla(240,5%,41%,0.2)]"
           >
             <div
               className={`z-10 absolute top-2 bottom-2 bg-primary  rounded-full transition-left duration-300`}
@@ -82,7 +82,7 @@ const FilterBar: FC<Props> = ({
                     setCurrentPage(1);
                   }}
                 >
-                  {cate.title}
+                  <span className="line-clamp-1">{cate.title}</span>
                 </button>
               </li>
             ))}
