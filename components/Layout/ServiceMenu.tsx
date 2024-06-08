@@ -16,8 +16,14 @@ const serviceList = [
     icon: icon2,
     title: "PHỤ TÙNG - PHỤ KIỆN",
     children: [
-      { title: "Phụ tùng chính hãng", link: linkConstants.appliance },
-      { title: "Phụ kiện chính hãng", link: linkConstants.appliance },
+      {
+        title: "Phụ tùng chính hãng",
+        link: "/tin-tuc/bao-duong-xe-mazda-dinh-ky",
+      },
+      {
+        title: "Phụ kiện chính hãng",
+        link: "/tin-tuc/bao-duong-xe-mazda-dinh-ky",
+      },
     ],
   },
 
@@ -25,8 +31,8 @@ const serviceList = [
     icon: icon1,
     title: "THÔNG TIN",
     children: [
-      { title: "Bảng giá chi tiết", link: linkConstants.finalPrice },
-      { title: "Tính phí lăn bánh", link: linkConstants.quote },
+      { title: "Bảng giá chi tiết", link: linkConstants.quote },
+      { title: "Tính phí lăn bánh", link: linkConstants.finalPrice },
       { title: "Thủ tục trả góp", link: linkConstants.installment },
       { title: "Đăng ký lái thử", link: linkConstants.testDrive },
     ],

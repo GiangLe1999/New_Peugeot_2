@@ -314,8 +314,8 @@ export const footerCol2: footerItemType[] = [
 ];
 
 export const footerCol3: footerItemType[] = [
-  { title: "Bảng giá chi tiết", link: linkConstants.finalPrice },
-  { title: "Tính phí lăn bánh", link: linkConstants.quote },
+  { title: "Bảng giá chi tiết", link: linkConstants.quote },
+  { title: "Tính phí lăn bánh", link: linkConstants.finalPrice },
   { title: "Thủ tục trả góp", link: linkConstants.installment },
   { title: "Đăng ký lái thử", link: linkConstants.testDrive },
 ];
