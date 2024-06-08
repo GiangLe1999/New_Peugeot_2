@@ -1,36 +1,20 @@
-import { getNewsPostData } from "@/lib/fetchData";
 import { NextPage } from "next";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import NewsContent from "@/components/newsPage/NewsContent";
 import Link from "next/link";
 import { IoReturnUpBackSharp } from "react-icons/io5";
 import { linkConstants } from "@/data/constants";
+import { getArticleBySlugForUser } from "@/service/article.service";
+import { formatLongDate } from "@/lib/formatData";
+import { ArticleEntity } from "@/entities/article.entity";
 
 interface Props {
   params: { postSlug: string };
 }
 
-export type frontType = {
-  title: string;
-  description: string;
-  avt: string;
-  date: string;
-  author: string;
-  slug: string;
-};
-
 const page: NextPage<Props> = async ({ params }) => {
-  const mdContent = (await getNewsPostData(params.postSlug)) as {
-    content: string;
-    data: frontType;
-  } as any;
-
-  const { date, author } = mdContent.data as any;
-
-  const serializedContent = (await serialize(
-    mdContent.content
-  )) as MDXRemoteSerializeResult;
+  const data = (await getArticleBySlugForUser(
+    params.postSlug
+  )) as ArticleEntity;
 
   return (
     <div className="container my-12 text-textColor">
@@ -42,10 +26,14 @@ const page: NextPage<Props> = async ({ params }) => {
       </Link>
 
       <p className="mb-4">
-        Đăng vào ngày <span className="font-bold">{date}</span> bởi{" "}
-        <span className="font-bold uppercase">{author}</span>
+        Đăng vào ngày{" "}
+        <span className="font-bold">{formatLongDate(data?.createdAt)}</span> bởi{" "}
+        <span className="font-bold uppercase">{data?.author.name}</span>
       </p>
-      <NewsContent content={serializedContent} />
+
+      <h1 className="font-bold text-2xl text-primary mb-8">{data?.name}</h1>
+      <div className="border-[1px] border-dashed mb-8"></div>
+      <NewsContent content={data?.content} />
     </div>
   );
 };

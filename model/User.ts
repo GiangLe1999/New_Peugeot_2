@@ -51,7 +51,6 @@ const UserSchema: Schema<IUser> = new Schema(
 
     role: {
       type: String,
-      // enum: Object.values(userRole),
       default: userRole.user,
       required: true,
     },
@@ -74,11 +73,6 @@ const UserSchema: Schema<IUser> = new Schema(
 
     linkedin: {
       type: String,
-    },
-
-    books: {
-      type: [Schema.Types.ObjectId],
-      ref: "Book",
     },
 
     articles: {

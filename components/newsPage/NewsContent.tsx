@@ -1,19 +1,40 @@
 "use client";
 
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { FC } from "react";
-import Image from "next/image";
+import parse, { Element, HTMLReactParserOptions } from "html-react-parser";
+import NextImage from "../NextImage";
 
 interface Props {
-  content: MDXRemoteSerializeResult;
+  content: string | undefined;
 }
 
-const components = { Image };
-
 const NewsContent: FC<Props> = ({ content }): JSX.Element => {
+  const options: HTMLReactParserOptions = {
+    replace(domNode) {
+      if (domNode instanceof Element && domNode.name === "img") {
+        const width = Number(domNode.attribs.width);
+        const height = Number(domNode.attribs.height);
+        const aspectRatio = width / height;
+
+        return (
+          <div
+            className="w-full relative rounded-md shadow-md"
+            style={{ aspectRatio }}
+          >
+            <NextImage
+              className="my-0 rounded-md"
+              src={domNode.attribs.src}
+              alt={domNode.attribs.alt}
+            />
+          </div>
+        );
+      }
+    },
+  };
+
   return (
-    <div className="prose postContent overflow-hidden">
-      <MDXRemote {...content} components={components} />
+    <div id="car-content" className="prose news-content overflow-hidden">
+      {parse(content || "", options)}
     </div>
   );
 };

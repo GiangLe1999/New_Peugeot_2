@@ -535,3 +535,16 @@ figure.image figcaption {
   background-color: #999;
   border-radius: 6px;
 }
+
+/* Paginagation */
+.pagination .page-link {
+  @apply !rounded-lg grid !text-[#333] font-semibold text-sm !border-transparent !py-[10px] max-[500px]:!py-2 !px-4  max-[330px]:!px-2 shadow-md max-[500px]:!text-xs border;
+}
+
+.pagination .page-item.active .page-link {
+  @apply bg-primary border-primary !text-white !px-4 max-[330px]:!px-2;
+}
+
+.pagination .page-item.disabled .page-link {
+  @apply !text-[#9f9f9f];
+}

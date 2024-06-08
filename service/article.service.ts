@@ -17,6 +17,36 @@ export const getAllArticlesForAdmin = async () => {
   }
 };
 
+export const getAllArticlesForUsers = async ({
+  selectedCate,
+  currentPage,
+}: {
+  selectedCate: string;
+  currentPage: number;
+}) => {
+  try {
+    const { data }: { data: GetAllArticlesOutput } = await axiosInstance(
+      `/api/articles/filter-by-category?cate=${selectedCate}&page=${currentPage}`
+    );
+
+    return data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getArticlesByKeyword = async (keyword: string) => {
+  try {
+    const { data } = await axiosInstance(
+      `/api/articles/search-by-keyword?keyword=${keyword}`
+    );
+
+    return data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getArticleBySlug = async (slug: string) => {
   try {
     const { data }: { data: GetArticleBySlugOutput } = await axiosInstance(
@@ -35,6 +65,18 @@ export const getArticleBySlugForAdmin = async (slug: string) => {
     const { data }: { data: GetArticleBySlugOutput } = await axiosInstance(
       "/api/article/for-admin",
       { params: { slug } }
+    );
+
+    return data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getArticleBySlugForUser = async (slug: string) => {
+  try {
+    const { data }: { data: GetArticleBySlugOutput } = await axiosInstance(
+      `/api/article/for-user?slug=${slug}`
     );
 
     return data.data;

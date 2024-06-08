@@ -60,7 +60,7 @@ const articleSchema: Schema<IArticle> = new Schema(
 
     author: {
       type: Schema.Types.ObjectId,
-      ref: "Author",
+      ref: "User",
     },
 
     content: {

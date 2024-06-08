@@ -1,6 +1,7 @@
 import dbConnect from "@/lib/db";
 import Contact from "@/model/Contact";
 import QuickConsult from "@/model/QuickConsult";
+import TestDriver from "@/model/TestDriver";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
@@ -8,21 +9,33 @@ export const dynamic = "force-dynamic";
 export async function GET(req: Request) {
   const currentDate = new Date();
 
-  const startDate = new Date(currentDate);
-  startDate.setHours(0, 0, 0, 0);
+  const realStartDate = currentDate;
+  realStartDate.setHours(0, 0, 0, 0);
+  const realStartDateString =
+    realStartDate.toISOString().split("T")[0] + "T00:00:00.000Z";
 
-  const endDate = new Date(currentDate);
-  endDate.setHours(23, 59, 59, 999);
+  const realEndDate = currentDate;
+  realEndDate.setHours(23, 59, 59, 999);
+  const realEndDateString =
+    realEndDate.toISOString().split("T")[0] + "T23:59:59.999Z";
 
   try {
     await dbConnect();
 
-    const [numsOfContacts, numsOfQuickConsults] = await Promise.all([
-      Contact.count({ createdAt: { $gte: startDate, $lte: endDate } }),
-      QuickConsult.count({ createdAt: { $gte: startDate, $lte: endDate } }),
-    ]);
+    const [numsOfContacts, numsOfQuickConsults, numsOfTestDrives] =
+      await Promise.all([
+        Contact.count({
+          createdAt: { $gte: realStartDateString, $lte: realEndDateString },
+        }),
+        QuickConsult.count({
+          createdAt: { $gte: realStartDateString, $lte: realEndDateString },
+        }),
+        TestDriver.count({
+          createdAt: { $gte: realStartDateString, $lte: realEndDateString },
+        }),
+      ]);
 
-    const data = numsOfContacts + numsOfQuickConsults;
+    const data = numsOfContacts + numsOfQuickConsults + numsOfTestDrives;
 
     return NextResponse.json(
       {
