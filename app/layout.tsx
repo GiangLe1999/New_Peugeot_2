@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { pageConstants } from "@/data/constants";
 import ReactQueryProvider from "@/providers/react-query-provider";
 import { Toaster } from "react-hot-toast";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const mazda = localFont({
   src: [
@@ -45,6 +46,7 @@ export default function RootLayout({
           <ReactQueryProvider>{children}</ReactQueryProvider>
           <Toaster position="bottom-center" reverseOrder={false} />
         </body>
+        <GoogleAnalytics />
       </html>
     </>
   );
