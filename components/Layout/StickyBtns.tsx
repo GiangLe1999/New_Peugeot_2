@@ -71,7 +71,7 @@ const StickyBtns: FC<Props> = (props): JSX.Element => {
     <div className="fixed right-0 top-[30%] w-11 bg-white z-[9999] shadow-stickyBtns">
       {maximized ? (
         <div>
-          <ul>
+          <div>
             {StickyBtnsData.map((item, index) => {
               if (item.tel)
                 return (
@@ -89,6 +89,8 @@ const StickyBtns: FC<Props> = (props): JSX.Element => {
                     key={index}
                     onClick={() => setMaximized(false)}
                     className={`${itemClasses}`}
+                    role="button"
+                    aria-label="Close button"
                   >
                     {item.icon({ size: 18 })}
                   </button>
@@ -114,7 +116,7 @@ const StickyBtns: FC<Props> = (props): JSX.Element => {
                 </Link>
               );
             })}
-          </ul>
+          </div>
         </div>
       ) : (
         <div

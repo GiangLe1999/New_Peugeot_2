@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { FC } from "react";
@@ -24,6 +25,7 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
           target="_blank"
           rel="noopener noreferrer"
           className="relative w-[42px] h-[42px] z-50 grid place-items-center group"
+          aria-label="Zalo contact button"
         >
           <img
             src="/images/home/zalo-icon.jpg"
@@ -37,6 +39,7 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
       <a
         href="mailto:hualong02072000@gmail.com"
         className={`${common} bg-[#714497]`}
+        aria-label="Gmail contact button"
       >
         <IoIosMail color="white" size={22} className="animate-wiggle" />
         <span className={`${tooltipCommon} bg-[#714497]`}>
@@ -49,12 +52,17 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
         target="_blank"
         rel="noopener noreferrer"
         className={`${common} bg-[#395693]`}
+        aria-label="Facebook fanpage button"
       >
         <FaFacebookF color="white" size={20} className="animate-wiggle z-30" />
         <span className={`${tooltipCommon} bg-[#395693]`}>Facebook</span>
       </a>
 
-      <a href="tel:0333122512" className={`${common} bg-red-700`}>
+      <a
+        href="tel:0333122512"
+        className={`${common} bg-red-700`}
+        aria-label="Facebook fanpage button"
+      >
         <BsHeadset color="white" size={22} className="animate-wiggle z-30" />
         <span className={`${tooltipCommon} bg-red-700`}>0333122512</span>
       </a>
@@ -62,6 +70,7 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
       <Link
         href={linkConstants.quote}
         className={`${common} bg-pink-700 cursor-pointer`}
+        aria-label="Link to quot page button"
       >
         <BsFillEnvelopeCheckFill
           color="white"

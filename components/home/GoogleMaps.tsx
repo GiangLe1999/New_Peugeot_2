@@ -10,6 +10,7 @@ const GoogleMaps: FC<Props> = (props): JSX.Element => {
       loading="lazy"
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
+      title="Vị trí Mazda Thủ Đức - Thành Long"
     ></iframe>
   );
 };
