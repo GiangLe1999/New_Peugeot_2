@@ -38,7 +38,7 @@ const BigArticleCard: FC<Props> = ({ article }): JSX.Element => {
           </div>
 
           <div className="xl:mt-0 mt-4">
-            <p className="text-gray-400 text-xs mb-2">
+            <p className="text-gray-600 text-xs mb-2">
               <span className="flex items-center gap-[3px]">
                 <LuClock className="w-4 h-4" />
                 Ngày xuất bản :{"  "}

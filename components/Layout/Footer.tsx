@@ -124,7 +124,7 @@ const Footer: FC<Props> = (): JSX.Element => {
               href="https://github.com/GiangLe1999"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary"
+              className="text-white font-bold underline"
             >
               Giang Le
             </a>

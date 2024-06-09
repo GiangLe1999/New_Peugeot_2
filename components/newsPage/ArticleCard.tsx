@@ -33,7 +33,7 @@ const ArticleCard: FC<Props> = ({ article }) => {
             {article?.description}
           </p>
 
-          <p className="text-gray-400 text-xs mt-4 mb-2">
+          <p className="text-gray-600 text-xs mt-4 mb-2">
             <span className="flex items-center gap-[3px]">
               <LuClock className="w-4 h-4" />
               Ngày xuất bản :{"  "}
