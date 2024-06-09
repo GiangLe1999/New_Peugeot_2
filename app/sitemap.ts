@@ -3,7 +3,6 @@ import dbConnect from "@/lib/db";
 import Article from "@/model/Article";
 import Car from "@/model/Car2";
 import { MetadataRoute } from "next";
-export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL as string;
@@ -20,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const articleLinks = articles?.map((article: any) => ({
     url: `${baseURL}/tin-tuc/${article.slug}`,
-    lastModified: new Date(article.date),
+    lastModified: new Date(article.updatedAt),
   }));
 
   return [
