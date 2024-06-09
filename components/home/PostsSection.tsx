@@ -24,38 +24,36 @@ const PostsSection: FC<Props> = (props): JSX.Element => {
     <section className="py-10 container">
       <SectionTitle title="Tin Tức & Sự Kiện" />
 
-      <ReactQueryProvider>
-        <div className="mt-10">
-          <Swiper
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              617: {
-                slidesPerView: 2,
-              },
-              944: {
-                slidesPerView: 3,
-              },
-            }}
-            loop={true}
-            spaceBetween={30}
-            navigation={true}
-            modules={[Navigation, Autoplay]}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
-            className="homeSwiper !aspect-auto"
-          >
-            {(data as any)?.result.map((article: any, index: number) => (
-              <SwiperSlide key={index}>
-                <ArticleCard article={article} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </ReactQueryProvider>
+      <div className="mt-10">
+        <Swiper
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            617: {
+              slidesPerView: 2,
+            },
+            944: {
+              slidesPerView: 3,
+            },
+          }}
+          loop={true}
+          spaceBetween={30}
+          navigation={true}
+          modules={[Navigation, Autoplay]}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          className="homeSwiper !aspect-auto"
+        >
+          {(data as any)?.result.map((article: any, index: number) => (
+            <SwiperSlide key={index}>
+              <ArticleCard article={article} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 };

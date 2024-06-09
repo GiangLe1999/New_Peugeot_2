@@ -235,7 +235,7 @@ export const promotionItems: promotionItemType[] = [
     title: "ƯU ĐÃI ĐẾN 100% PHÍ TRƯỚC BẠ",
     subtitle:
       "Mazda Thủ Đức triển khai chương trình đặc biệt với gói hỗ trợ tương đương 100% lệ phí trước bạ cho khách hàng mua Mazda2, Mazda3, Mazda CX-5 cùng nhiều ưu đãi lớn dành cho các phiên bản Mazda khác.",
-    desc: "Mức hỗ trợ cao nhất của Mazda sẽ nằm ở các mẫu SUV cao cấp như <b>Mazda CX-8</b>, <b>Mazda CX-5</b> và <b>Mazda 6</b>. Theo đó, mẫu xe 5 chỗ thực thụ đến từ thương hiệu Nhật Bản, Mazda 6 được hỗ trợ cao nhất đến <b class='text-primary'>110 triệu đồng</b> cho bản <b>Signature</b>. Mức giá <b>Mazda 6</b> sau khi giảm chỉ còn <b class='text-primary'>849 triệu đồng</b>, cùng ưu đãi vay mua xe hấp dẫn, khách hàng chỉ cần trả trước từ <b>200 triệu đồng.</b>",
+    desc: "Mức hỗ trợ cao nhất của Mazda sẽ nằm ở các mẫu SUV cao cấp như <b>Mazda CX-8</b>, <b>Mazda CX-5</b> và <b>Mazda 6</b>. Theo đó, mẫu xe 5 chỗ thực thụ đến từ thương hiệu Nhật Bản, Mazda 6 được hỗ trợ cao nhất đến <b class='text-primary'>110 triệu đồng</b> cho bản <b>Signature</b>. Mức giá <b>Mazda 6</b> sau khi giảm chỉ còn <b class='text-primary'>769 triệu đồng</b>, cùng ưu đãi vay mua xe hấp dẫn, khách hàng chỉ cần trả trước từ <b>200 triệu đồng.</b>",
   },
   {
     icon: FaUsersCog,
