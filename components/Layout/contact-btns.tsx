@@ -30,7 +30,7 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
           <img
             src="/images/home/zalo-icon.jpg"
             alt="Zalo icon"
-            className="animate-wiggle"
+            className="animate-wiggle w-10 h-10"
           />
           <span className={`${tooltipCommon} bg-[#4267f4]`}>LH Zalo</span>
         </a>
