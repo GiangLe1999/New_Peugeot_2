@@ -3,6 +3,7 @@ import dbConnect from "@/lib/db";
 import Article from "@/model/Article";
 import Car from "@/model/Car2";
 import { MetadataRoute } from "next";
+export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL as string;
@@ -61,6 +62,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseURL}${linkConstants.finalPrice}`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseURL}${linkConstants.deliveryPolicy}`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseURL}${linkConstants.paymentPolicy}`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseURL}${linkConstants.privacyPolicy}`,
       lastModified: new Date(),
     },
     ...carLinks,
