@@ -28,7 +28,7 @@ const AboutSection: FC<Props> = (props): JSX.Element => {
         </div>
 
         {/* Videos */}
-        <div className="grid grid-cols-3 gap-5 pb-6 max-[600px]:grid-cols-1">
+        {/* <div className="grid grid-cols-3 gap-5 pb-6 max-[600px]:grid-cols-1">
           <div className="video-wrapper">
             <iframe
               loading="lazy"
@@ -59,7 +59,7 @@ const AboutSection: FC<Props> = (props): JSX.Element => {
               className="w-full h-full"
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

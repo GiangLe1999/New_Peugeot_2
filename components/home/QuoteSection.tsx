@@ -15,7 +15,7 @@ const QuoteSection: FC<Props> = (props): JSX.Element => {
                 BẢNG TÍNH GIÁ LĂN BÁNH
               </p>
               <p className="text-justify">
-                Xin chào Quý Khách , đây là bảng dự toán chi phí giá xe lăn bánh
+                Xin chào Quý Khách ,đây là bảng dự toán chi phí giá xe lăn bánh
                 tại các tỉnh thành cũng như tại Tp. Hồ Chí Minh. Hiện tại, nếu
                 biết giá lăn bánh cụ thể , đi kèm khuyến mãi hiện hành ở thời
                 điểm quý khách đang xem như thể nào , xin mời quý khách liên hệ
