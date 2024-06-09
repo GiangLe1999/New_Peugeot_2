@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articles = await Article.find().select("slug updatedAt");
 
   const articleLinks = articles.map((article: any) => ({
-    url: `${baseURL}/tin-tuc${article.slug}`,
+    url: `${baseURL}/tin-tuc/${article.slug}`,
     lastModified: new Date(article.date),
   }));
 

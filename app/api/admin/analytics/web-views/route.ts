@@ -33,7 +33,7 @@ export async function GET(req: Request) {
     // Send the analytics data in the response
     return NextResponse.json(
       {
-        data: response.rows[0].metricValues[0].value,
+        data: response?.rows?.[0]?.metricValues?.[0]?.value,
         status: 200,
         msg: "Get analytics data successfully",
       },
