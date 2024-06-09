@@ -31,26 +31,27 @@ const AboutSection: FC<Props> = (props): JSX.Element => {
         <div className="grid grid-cols-3 gap-5 pb-6 max-[600px]:grid-cols-1">
           <div className="video-wrapper">
             <iframe
+              loading="lazy"
               src="https://www.youtube.com/embed/HqfohWLRkWM"
               title="NEW MAZDA6 | PHONG CÁCH &amp; LỊCH LÃM"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              loading="lazy"
               className="w-full h-full"
             ></iframe>
           </div>
           <div className="video-wrapper">
             <iframe
+              loading="lazy"
               src="https://www.youtube.com/embed/pcDjAZlriNU"
               title="NEW MAZDA CX-5 | NÂNG TẦM ĐẲNG CẤP"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              loading="lazy"
               className="w-full h-full"
             ></iframe>
           </div>
           <div className="video-wrapper">
             <iframe
+              loading="lazy"
               src="https://www.youtube.com/embed/pa6ZdijlBmM"
               title="ALL-NEW MAZDA3 - THIẾT KẾ XE ĐẸP NHẤT THẾ GIỚI NĂM 2020 (2020 WORLD CAR DESIGN OF THE YEAR)"
               referrerPolicy="strict-origin-when-cross-origin"
