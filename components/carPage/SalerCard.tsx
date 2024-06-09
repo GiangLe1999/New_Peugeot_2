@@ -2,7 +2,7 @@ import { FC } from "react";
 import NextImage from "../NextImage";
 import BtnWithIcon from "../BtnWithIcon";
 
-import { MdEmail, MdMail, MdPhone } from "react-icons/md";
+import { MdMail, MdPhone } from "react-icons/md";
 import { linkConstants } from "@/data/constants";
 
 interface Props {}

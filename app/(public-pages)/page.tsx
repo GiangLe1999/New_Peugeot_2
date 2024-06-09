@@ -15,7 +15,7 @@ import GoogleMaps from "@/components/home/GoogleMaps";
 
 export const generateMetadata = () => {
   return {
-    title: "Xe Mazda chính hãng | Mazda Thủ Đức",
+    title: "Xe Mazda chính hãng",
     description: pageConstants.siteDescription,
     alternates: {
       canonical: process.env.NEXT_PUBLIC_BASE_URL,
