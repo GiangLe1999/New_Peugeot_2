@@ -34,6 +34,7 @@ const ContainNextImage: FC<Props> = ({
       }`}
       onLoadingComplete={() => setLoading(false)}
       priority={priority}
+      unoptimized
     />
   );
 };

@@ -34,6 +34,7 @@ const NextImage: FC<Props> = ({
       }`}
       onLoadingComplete={() => setLoading(false)}
       priority={priority}
+      unoptimized
     />
   );
 };

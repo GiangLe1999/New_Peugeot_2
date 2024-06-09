@@ -25,7 +25,7 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
           rel="noopener noreferrer"
           className="relative w-[42px] h-[42px] z-50 grid place-items-center group"
         >
-          <NextImage
+          <img
             src="/images/home/zalo-icon.jpg"
             alt="Zalo icon"
             className="animate-wiggle"

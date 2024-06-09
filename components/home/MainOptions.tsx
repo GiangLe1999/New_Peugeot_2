@@ -9,7 +9,7 @@ interface Props {}
 
 const MainOptions: FC<Props> = (props): JSX.Element => {
   return (
-    <section className="mt-10 container grid grid-cols-4 gap-7 max-[625px]:grid-cols-2 max-[350px]:grid-cols-1">
+    <section className="mt-10 container grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-7">
       {homeOptions.map((option, index) => {
         return (
           <Link

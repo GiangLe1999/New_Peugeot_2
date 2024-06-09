@@ -257,7 +257,7 @@ export const reasonsToBuy: itemType[] = [
   {
     icon: SiAdguard,
     title: "BẢO HÀNH THEO TIÊU CHUẨN TOÀN QUỐC",
-    desc: "Anh chị sẽ yên tâm khi mua xe tại Mazda Phú Mỹ Hưng, vì chúng tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng của Mazda trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.",
+    desc: "Anh chị sẽ yên tâm khi mua xe tại Mazda Thủ Đức, vì chúng tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng của Mazda trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.",
   },
   {
     icon: BsFillGiftFill,
