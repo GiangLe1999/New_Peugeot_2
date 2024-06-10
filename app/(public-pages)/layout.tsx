@@ -3,6 +3,7 @@ import Header from "@/components/Layout/Header";
 import MobileBottomNav from "@/components/Layout/MobileBottomNav";
 import StickyBtns from "@/components/Layout/StickyBtns";
 import ContactBtns from "@/components/Layout/contact-btns";
+import MessengerBtn from "@/components/Layout/messeger-btn";
 import StyledProgressBar from "@/components/ProgressBar";
 import { FC, ReactNode } from "react";
 
@@ -18,6 +19,7 @@ const layout: FC<Props> = ({ children }): JSX.Element => {
       {children}
       <StickyBtns />
       <ContactBtns />
+      <MessengerBtn />
       <Footer />
       <MobileBottomNav />
     </>
