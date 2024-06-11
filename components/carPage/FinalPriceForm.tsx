@@ -28,12 +28,9 @@ const FinalPriceFrom: FC<Props> = ({
   choseCarName,
   setChoseCarName,
 }): JSX.Element => {
-  const currentTax = Number(currentLine?.tax);
-  const currentRegistrationFee =
-    (registration * 1000000 * currentTax * 10) / 100 || 0;
+  const currentRegistrationFee = (registration * currentListPrice) / 100;
 
-  const { phiDkyBienso, phiDuongbo, phiDkiem, phiDvu, thuchiho, bhTNDS } =
-    carFees;
+  const { phiDkyBienso, phiDuongbo, phiDkiem, bhTNDS } = carFees;
 
   const currentTotal =
     currentListPrice +
@@ -41,8 +38,6 @@ const FinalPriceFrom: FC<Props> = ({
     phiDkiem +
     phiDkyBienso +
     phiDuongbo +
-    phiDvu +
-    thuchiho +
     bhTNDS;
 
   return (
@@ -125,12 +120,7 @@ const FinalPriceFrom: FC<Props> = ({
             </li>
 
             <li>
-              Khoảng thu, chi hộ khách hàng :
-              <span>{formatPrice(thuchiho)} VNĐ</span>
-            </li>
-
-            <li>
-              Phí dịch vụ đăng ký :<span>{formatPrice(phiDvu)} VNĐ</span>
+              Bảo hiểm TNDS (1 năm) :<span>{formatPrice(bhTNDS)} VNĐ</span>
             </li>
           </ul>
 

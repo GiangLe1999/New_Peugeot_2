@@ -341,9 +341,7 @@ export const footerCol4: { title: string; link: string; icon: IconType }[] = [
 export const carFees = {
   phiDkyBienso: 20000000,
   phiDuongbo: 1560000,
-  phiDkiem: 45000,
-  phiDvu: 2000000,
-  thuchiho: 630000,
+  phiDkiem: 90000,
   bhTNDS: 530700,
 };
 

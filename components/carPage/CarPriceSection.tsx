@@ -54,8 +54,6 @@ const CarPriceSection: FC<Props> = ({
     currentListPrice = currentLine?.price;
   }
 
-  console.log(choseCarName);
-
   const borrowedMoney = (Number(chosePercent) * currentListPrice) / 100 || 0;
 
   const originalPaidMonthly = borrowedMoney / (Number(choseLength) * 12);
