@@ -10,17 +10,17 @@ import { ICarColor } from "@/model/Car2";
 import CarQuickConsultModal from "@/components/Layout/car-quick-consult-modal";
 export const dynamic = "force-dynamic";
 
-export async function generateStaticParams() {
-  const cars = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`).then(
-    (res) => res.json()
-  );
+// export async function generateStaticParams() {
+//   const cars = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`).then(
+//     (res) => res.json()
+//   );
 
-  const carsSlugs = cars?.map((car: CarEntity) => ({
-    carSlug: car.slug,
-  }));
+//   const carsSlugs = cars?.map((car: CarEntity) => ({
+//     carSlug: car.slug,
+//   }));
 
-  return carsSlugs;
-}
+//   return carsSlugs;
+// }
 
 export const generateMetadata = async ({
   params,
