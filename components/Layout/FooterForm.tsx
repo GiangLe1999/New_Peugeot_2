@@ -75,7 +75,7 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
 
   return (
     <form
-      className="w-full bg-primary py-3 pb-5 px-5 rounded-md space-y-3"
+      className="w-full bg-secondary py-3 pb-5 px-5 rounded-md space-y-3"
       onSubmit={submitHandler}
     >
       <div className="form-input-wrapper">
@@ -128,7 +128,7 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
 
       <button
         type="submit"
-        className="bg-secondary w-full text-white uppercase py-2 rounded-sm flex items-center justify-center gap-1 hover:scale-[1.01]"
+        className="bg-primary w-full text-white uppercase py-2 rounded-sm flex items-center justify-center gap-1 hover:scale-[1.01]"
       >
         {loading ? (
           <>

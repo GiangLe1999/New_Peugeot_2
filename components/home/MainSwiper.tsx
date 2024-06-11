@@ -31,7 +31,7 @@ export default function App() {
             <Link href="" className="relative w-full h-full block">
               <NextImage
                 src={banner.src}
-                alt={`Mazda Home Banner ${index}`}
+                alt={`Peugeot Home Banner ${index}`}
                 priority={index === 0}
               />
             </Link>

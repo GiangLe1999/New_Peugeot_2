@@ -15,10 +15,10 @@ import ServiceMenu from "./ServiceMenu";
 interface Props {}
 
 const buyCarTitle = "mua xe";
-const carMenuTitle = "giá xe mazda";
+const carMenuTitle = "giá xe peugeot";
 const serviceTitle = "dịch vụ";
 const commonClasses =
-  "relative uppercase text-sm text-white px-4 py-2 max-[414px]:px-2 hover:bg-secondary rounded-sm transition";
+  "relative uppercase font-semibold text-sm text-white px-4 py-2 max-[414px]:px-2 hover:bg-white hover:text-primary rounded-sm transition";
 
 const Header: FC<Props> = (props): JSX.Element => {
   const pathname = usePathname();
@@ -53,29 +53,29 @@ const Header: FC<Props> = (props): JSX.Element => {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-secondary text-white py-3">
+      <div className="bg-primary text-white py-3">
         <div className="container flex items-center justify-between">
-          <Link href="/" className="relative w-36 h-8 block">
+          <Link href="/" className="relative w-16 aspect-[0.91] block">
             <ContainNextImage
-              src="/images/mazda-logo-800x500.png"
-              alt="Mazda logo"
+              src="/images/peugeot-logo-alt.avif"
+              alt="White Peugeot logo"
               priority
             />
           </Link>
 
-          <h2 className="text-lg font-bold max-[500px]:hidden">
-            <Link href="/">MAZDA THỦ ĐỨC</Link>
+          <h2 className="text-2xl font-bold max-[500px]:hidden">
+            <Link href="/">PEUGEOT THỦ ĐỨC</Link>
           </h2>
 
           <a
             href="tel:0333122512"
             className="flex items-center gap-2 font-medium hover:scale-[1.1] transition"
           >
-            <div className="bg-primary rounded-full w-8 h-8 grid place-items-center">
-              <BsHeadset />
+            <div className="bg-white rounded-full w-10 h-10 grid place-items-center">
+              <BsHeadset className="text-primary text-lg" />
             </div>
 
-            <div className="text-xs">
+            <div className="text-sm">
               <p>HOTLINE</p>
               <p>033.3122.512</p>
             </div>
@@ -84,7 +84,7 @@ const Header: FC<Props> = (props): JSX.Element => {
       </div>
 
       {/* Sticky Header */}
-      <div className="bg-primary text-center sticky top-0 z-50">
+      <div className="bg-secondary text-center sticky top-0 z-50">
         <nav
           className="container flex gap-2 items-center justify-center h-10 relative transition max-[500px]:justify-between max-[500px]:gap-0"
           onMouseLeave={parentUnHoverHandler}
@@ -119,12 +119,14 @@ const Header: FC<Props> = (props): JSX.Element => {
                 href={item.link}
                 className={`${commonClasses} ${
                   !item.isParent && "max-[844px]:hidden"
-                } ${pathname === item.link && "bg-secondary"} ${
-                  showCarMenu && item.title === carMenuTitle && "bg-secondary"
+                } ${pathname === item.link && "bg-white !text-primary"} ${
+                  showCarMenu &&
+                  item.title === carMenuTitle &&
+                  "bg-white !text-primary"
                 } ${
                   showServiceMenu &&
                   item.title === serviceTitle &&
-                  "bg-secondary"
+                  "bg-white !text-primary"
                 }`}
                 onMouseEnter={() => parentHoverHandler(item.title)}
               >

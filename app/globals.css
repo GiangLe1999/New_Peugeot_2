@@ -193,7 +193,7 @@ html {
 
 /* Home Main Swiper */
 .homeSwiper {
-  @apply w-full aspect-[3.2] cursor-pointer;
+  @apply w-full aspect-[2.5] cursor-pointer;
 }
 
 .homeSwiper:hover .swiper-button-prev,

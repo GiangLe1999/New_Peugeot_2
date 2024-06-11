@@ -14,7 +14,7 @@ interface Props {}
 
 const Footer: FC<Props> = (): JSX.Element => {
   return (
-    <footer className="bg-secondary border-t">
+    <footer className="bg-primary border-t">
       <div className="container flex flex-wrap gap-1 py-10 max-[1017px]:gap-3">
         {/* Column1 */}
         <div className="w-1/3 pr-3 max-[1017px]:w-[50%] max-[717px]:w-full">
