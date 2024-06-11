@@ -22,6 +22,24 @@ export const formatLongDate = (ms: number | string) => {
   return date.toLocaleDateString("vi", options);
 };
 
+export const formatDateForSendingMail = (ms: number | string) => {
+  const date = new Date(ms);
+
+  const options: Intl.DateTimeFormatOptions = {
+    timeZone: "Asia/Ho_Chi_Minh",
+    weekday: "long",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false, // sử dụng định dạng 24 giờ, nếu bạn muốn định dạng 12 giờ thì thay bằng true
+  };
+
+  return date.toLocaleDateString("vi-VN", options);
+};
+
 export const formatShortDate = (ms: number | string) => {
   const date = new Date(ms);
 
