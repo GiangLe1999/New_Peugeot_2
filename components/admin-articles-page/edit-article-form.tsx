@@ -120,8 +120,8 @@ const EditArticleForm: FC<Props> = ({ author, article }): JSX.Element => {
       } else {
         setIsLoading(false);
         toast.success(`Cập nhật bài viết thành công`);
-        router.refresh();
-        return router.push(linkConstants.admin_articles);
+        router.push(linkConstants.admin_articles);
+        return router.refresh();
       }
     } catch (error: any) {
       setIsLoading(false);

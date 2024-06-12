@@ -198,8 +198,8 @@ const EditCarFrom: FC<Props> = ({ car }): JSX.Element => {
       } else {
         setIsLoading(false);
         toast.success(`Cập nhật ${data?.data?.name} thành công`);
-        router.refresh();
-        return router.push(linkConstants.admin_cars);
+        router.push(linkConstants.admin_cars);
+        return router.refresh();
       }
     } catch (error: any) {
       setIsLoading(false);
