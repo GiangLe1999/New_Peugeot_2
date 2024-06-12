@@ -25,7 +25,7 @@ const MainOptions: FC<Props> = (props): JSX.Element => {
               {parse(option.des)}
             </p>
             <BtnWithIcon
-              customClasses="bg-primary text-sm text-white"
+              customClasses="bg-secondary text-sm text-white"
               content="Chi tiết"
               icon={MdArrowForward}
             />
