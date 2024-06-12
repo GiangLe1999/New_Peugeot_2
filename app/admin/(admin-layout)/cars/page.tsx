@@ -3,7 +3,7 @@
 import CarsTable from "@/components/admin-cars-page/cars-table";
 import AdminCardTitle from "@/components/admin-card-title";
 import { MdEditSquare } from "react-icons/md";
-import { getAllCarsForAdmin } from "@/service/car.service";
+import { getAllCars } from "@/service/car.service";
 import { useQuery } from "@tanstack/react-query";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -11,8 +11,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 const Page = () => {
   const { data: cars, isPending } = useQuery({
     queryKey: ["get-admin-cars"],
-    queryFn: getAllCarsForAdmin,
-    staleTime: 5000,
+    queryFn: getAllCars,
   });
 
   return (
