@@ -23,7 +23,6 @@ import { carCategories, carTiers } from "@/data/menu";
 import { BiMinusCircle, BiPlusCircle } from "react-icons/bi";
 import { linkConstants } from "@/data/constants";
 import { CarEntity } from "@/entities/car.entity";
-import { useQueryClient } from "@tanstack/react-query";
 
 const schema: any = Yup.object({
   name: Yup.string().required("Vui lòng nhập tên xe"),
@@ -68,7 +67,6 @@ interface ISelectTier {
 
 const EditCarFrom: FC<Props> = ({ car }): JSX.Element => {
   const router = useRouter();
-  const queryClient = useQueryClient();
 
   const [content, setContent] = useState(car?.content || "");
   const [saleContent, setSaleContent] = useState(car?.saleContent || "");
@@ -200,9 +198,8 @@ const EditCarFrom: FC<Props> = ({ car }): JSX.Element => {
       } else {
         setIsLoading(false);
         toast.success(`Cập nhật ${data?.data?.name} thành công`);
-        queryClient.invalidateQueries(["get-admin-cars"] as any);
         return router.push(linkConstants.admin_cars);
-        // router.refresh();
+        router.refresh();
       }
     } catch (error: any) {
       setIsLoading(false);
