@@ -4,7 +4,6 @@ import { editCloudinaryImage } from "@/lib/cloudinary";
 import dbConnect from "@/lib/db";
 import Car from "@/model/Car2";
 import { NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
 export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
@@ -75,8 +74,6 @@ export async function POST(req: Request) {
       ...body,
       avatar: savedAvatar,
     });
-
-    revalidatePath("/admin/cars");
 
     return NextResponse.json(
       {
@@ -217,8 +214,6 @@ export async function PUT(req: Request) {
       { new: true }
     );
 
-    revalidatePath("/admin/cars");
-
     return NextResponse.json(
       {
         status: 200,
@@ -286,8 +281,6 @@ export async function DELETE(req: Request) {
     }
 
     await Car.findByIdAndDelete(car._id);
-
-    revalidatePath("/admin/cars");
 
     return NextResponse.json(
       {

@@ -179,8 +179,8 @@ const CreateCarForm: FC<Props> = (): JSX.Element => {
     try {
       await axiosInstance.post("/api/admin/car", bodyRequest);
       toast.success(`Tạo ${formData.name} thành công`);
-      router.replace(linkConstants.admin_cars);
-      revalidatePath(linkConstants.admin_cars);
+      router.refresh();
+      return router.push(linkConstants.admin_cars);
     } catch (error: any) {
       toast.error(error.message);
     }

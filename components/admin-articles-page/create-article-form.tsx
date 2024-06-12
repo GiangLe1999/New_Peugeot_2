@@ -97,8 +97,8 @@ const CreateArticleForm: FC<Props> = ({ author }): JSX.Element => {
       });
 
       toast.success(`Tạo bài viết thành công`);
-      router.replace(linkConstants.admin_articles);
-      revalidatePath(linkConstants.admin_articles);
+      router.refresh();
+      return router.push(linkConstants.admin_articles);
     } catch (error: any) {
       toast.error(error.message);
     }
