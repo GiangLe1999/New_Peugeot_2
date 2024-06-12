@@ -194,8 +194,7 @@ const EditCarFrom: FC<Props> = ({ car }): JSX.Element => {
 
       setIsLoading(false);
       toast.success(`Cập nhật ${data?.data?.name} thành công`);
-      router.push(linkConstants.admin_cars);
-      return router.refresh();
+      location.href = `${process.env.NEXT_PUBLIC_BASE_URL}/admin/cars`;
     } catch (error: any) {
       setIsLoading(false);
       return toast.error(error.message);
