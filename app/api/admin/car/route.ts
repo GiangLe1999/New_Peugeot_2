@@ -217,6 +217,8 @@ export async function PUT(req: Request) {
       { new: true }
     );
 
+    revalidatePath("/admin/cars");
+
     return NextResponse.json(
       {
         status: 200,
@@ -284,6 +286,8 @@ export async function DELETE(req: Request) {
     }
 
     await Car.findByIdAndDelete(car._id);
+
+    revalidatePath("/admin/cars");
 
     return NextResponse.json(
       {
