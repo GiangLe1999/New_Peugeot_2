@@ -12,6 +12,7 @@ const Page = () => {
   const { data: cars, isPending } = useQuery({
     queryKey: ["get-admin-cars"],
     queryFn: getAllCarsForAdmin,
+    staleTime: 5000,
   });
 
   return (
