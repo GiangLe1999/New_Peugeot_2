@@ -1,7 +1,6 @@
 import { GetAllCarsOutput } from "@/dtos/car/get-all-cars.dto";
 import { GetCarBySlugOutput } from "@/dtos/car/get-car-by-slug.dto";
 import axiosInstance from "@/lib/axios";
-import axios from "axios";
 
 export const getAllCars = async () => {
   try {
@@ -25,7 +24,7 @@ export const getAllCarsForFilter = async () => {
 
 export const getAllCarsForAdmin = async () => {
   try {
-    const { data }: GetAllCarsOutput = await axios("/api/admin/cars");
+    const { data }: GetAllCarsOutput = await axiosInstance("/api/admin/cars");
     return data;
   } catch (error) {
     console.log(error);
