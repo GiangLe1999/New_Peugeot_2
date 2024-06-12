@@ -19,7 +19,6 @@ import FormOptimizedSelect from "../form-optimized-select";
 import { articleCategories } from "@/data/menu";
 import AdminFormInput from "../admin-form-input";
 import AdminBtnWithIcon from "../admin-btn-with-icon";
-import { revalidatePath } from "next/cache";
 import { linkConstants } from "@/data/constants";
 
 const schema: any = Yup.object({

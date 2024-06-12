@@ -1,7 +1,6 @@
 import { CarType } from "@/types";
 import { cache } from "react";
 import axiosInstance from "./axios";
-import axios from "axios";
 
 export const getAllCarsFullData = async () => {
   try {

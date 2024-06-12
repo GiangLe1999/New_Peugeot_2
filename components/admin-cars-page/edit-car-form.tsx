@@ -192,15 +192,10 @@ const EditCarFrom: FC<Props> = ({ car }): JSX.Element => {
         { params: { id: car?._id } }
       );
 
-      if (data.error) {
-        setIsLoading(false);
-        return toast.error(data.msg);
-      } else {
-        setIsLoading(false);
-        toast.success(`Cập nhật ${data?.data?.name} thành công`);
-        return router.push(linkConstants.admin_cars);
-        router.refresh();
-      }
+      setIsLoading(false);
+      toast.success(`Cập nhật ${data?.data?.name} thành công`);
+      router.push(linkConstants.admin_cars);
+      return router.refresh();
     } catch (error: any) {
       setIsLoading(false);
       return toast.error(error.message);

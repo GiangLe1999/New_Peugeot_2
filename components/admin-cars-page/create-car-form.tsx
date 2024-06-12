@@ -22,7 +22,6 @@ import { ICarLine, carCategory, carTier } from "@/model/Car2";
 import { carCategories, carTiers } from "@/data/menu";
 import { BiMinusCircle, BiPlusCircle } from "react-icons/bi";
 import { linkConstants } from "@/data/constants";
-import { revalidatePath } from "next/cache";
 
 const schema: any = Yup.object({
   name: Yup.string().required("Vui lòng nhập tên xe"),
