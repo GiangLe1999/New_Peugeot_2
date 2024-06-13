@@ -17,7 +17,7 @@ const ContentSection: FC<Props> = ({ content }): JSX.Element => {
         const aspectRatio = width / height;
 
         return (
-          <div className="w-full aspect-[3/2] relative" style={{ aspectRatio }}>
+          <div className="w-full relative" style={{ aspectRatio }}>
             <NextImage src={domNode.attribs.src} alt={domNode.attribs.alt} />
           </div>
         );
