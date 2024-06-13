@@ -150,6 +150,10 @@ html {
   @apply rounded-md m-0;
 }
 
+.postContent iframe {
+  @apply w-full aspect-video;
+}
+
 .postContent {
   @apply text-textColor;
 }

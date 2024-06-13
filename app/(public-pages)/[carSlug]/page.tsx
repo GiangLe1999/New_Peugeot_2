@@ -63,18 +63,18 @@ const page: NextPage<Props> = async ({ params }) => {
                   />
                 </div>
                 <CarPromotionSection
-                  content={car.saleContent}
-                  name={car.name}
+                  content={car?.saleContent}
+                  name={car?.name}
                 />
               </div>
 
               <CarPriceSection
-                name={car.name}
-                lines={car.carLines}
-                registration={car.registration}
+                name={car?.name}
+                lines={car?.carLines}
+                registration={car?.registration}
               />
 
-              <ContentSection content={car.content} />
+              <ContentSection content={car?.content} />
             </div>
 
             <SalerCard />
