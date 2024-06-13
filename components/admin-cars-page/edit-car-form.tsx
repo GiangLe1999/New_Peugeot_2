@@ -192,9 +192,15 @@ const EditCarFrom: FC<Props> = ({ car }): JSX.Element => {
         { params: { id: car?._id } }
       );
 
-      setIsLoading(false);
-      toast.success(`Cập nhật ${data?.data?.name} thành công`);
-      location.href = `${process.env.NEXT_PUBLIC_BASE_URL}/admin/cars`;
+      if (data.error) {
+        setIsLoading(false);
+        return toast.error(data.msg);
+      } else {
+        setIsLoading(false);
+        toast.success(`Cập nhật ${data?.data?.name} thành công`);
+        router.push(linkConstants.admin_cars);
+        return router.refresh();
+      }
     } catch (error: any) {
       setIsLoading(false);
       return toast.error(error.message);
