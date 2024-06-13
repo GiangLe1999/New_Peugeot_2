@@ -138,9 +138,9 @@ html {
 }
 
 /* Car Post Content */
-.promotion-ul {
+/* .promotion-ul {
   @apply list-disc space-y-2 ml-3;
-}
+} */
 
 .post-img-wrapper {
   @apply relative;

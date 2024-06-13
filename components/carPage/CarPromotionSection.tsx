@@ -18,7 +18,9 @@ const PromotionSection: FC<Props> = ({ content, name }): JSX.Element => {
         {name}
       </h1>
 
-      <div>{parse(content || "")}</div>
+      <div className="prose-ul:list-disc prose-ul:space-y-2 prose-ul:ml-3">
+        {parse(content || "")}
+      </div>
 
       <div>
         <BtnWithIcon
