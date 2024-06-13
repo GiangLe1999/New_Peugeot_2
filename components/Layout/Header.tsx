@@ -68,7 +68,7 @@ const Header: FC<Props> = (props): JSX.Element => {
           </h2>
 
           <a
-            href="tel:0333122512"
+            href="tel:0961379001"
             className="flex items-center gap-2 font-medium hover:scale-[1.1] transition"
           >
             <div className="bg-white rounded-full w-10 h-10 grid place-items-center">

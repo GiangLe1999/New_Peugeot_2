@@ -32,8 +32,8 @@ const CustomerSwiper: FC<Props> = (props): JSX.Element => {
           <SwiperSlide key={item}>
             <div className="relative w-full aspect-square rounded-sm overflow-hidden">
               <NextImage
-                src={`/images/home/customers/giao-xe-mazda-toi-khach-hang-${item}.jpg`}
-                alt={`Giao xe Mazda tới khách hàng ${item}`}
+                src={`/images/home/customers/giao-xe-peugeot-toi-khach-hang-${item}.webp`}
+                alt={`Giao xe Peugeot tới khách hàng ${item}`}
               />
             </div>
           </SwiperSlide>

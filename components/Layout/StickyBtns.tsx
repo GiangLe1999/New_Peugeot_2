@@ -53,7 +53,7 @@ const StickyBtnsData = [
   {
     title: "Hotline: 033.3122.512",
     icon: FaPhone,
-    tel: "tel:0333122512",
+    tel: "tel:0961379001",
   },
 ];
 

@@ -21,7 +21,7 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
     <div className="fixed bottom-3 left-4 flex flex-col gap-2 z-50">
       <div className={`${common} bg-[#4267f4]`}>
         <a
-          href="https://zalo.me/0333122512"
+          href="https://zalo.me/0961379001"
           target="_blank"
           rel="noopener noreferrer"
           className="relative w-[42px] h-[42px] z-50 grid place-items-center group"
@@ -37,18 +37,18 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
       </div>
 
       <a
-        href="mailto:hualong02072000@gmail.com"
+        href="mailto:vucuong1710@gmail.com"
         className={`${common} bg-[#714497]`}
         aria-label="Gmail contact button"
       >
         <IoIosMail color="white" size={22} className="animate-wiggle" />
         <span className={`${tooltipCommon} bg-[#714497]`}>
-          hualong02072000@gmail.com
+          vucuong1710@gmail.com
         </span>
       </a>
 
       <a
-        href="https://www.facebook.com/profile.php?id=100086421081221&locale=vi_VN"
+        href="https://www.facebook.com/trongthecuong.vu"
         target="_blank"
         rel="noopener noreferrer"
         className={`${common} bg-[#395693]`}
@@ -59,12 +59,12 @@ const ContactBtns: FC<Props> = (props): JSX.Element => {
       </a>
 
       <a
-        href="tel:0333122512"
+        href="tel:0961379001"
         className={`${common} bg-red-700`}
         aria-label="Facebook fanpage button"
       >
         <BsHeadset color="white" size={22} className="animate-wiggle z-30" />
-        <span className={`${tooltipCommon} bg-red-700`}>0333122512</span>
+        <span className={`${tooltipCommon} bg-red-700`}>0961379001</span>
       </a>
 
       <Link

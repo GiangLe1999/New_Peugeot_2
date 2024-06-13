@@ -19,7 +19,7 @@ const Footer: FC<Props> = (): JSX.Element => {
         {/* Column1 */}
         <div className="w-1/3 pr-3 max-[1017px]:w-[50%] max-[717px]:w-full">
           {/* General info */}
-          <p className="footer-title">MAZDA THỦ ĐỨC - THÀNH LONG</p>
+          <p className="footer-title">PEUGEOT THỦ ĐỨC</p>
           <ul>
             {footerCol1.map((item, index) => (
               <li className="footer-item hover:font-normal" key={index}>
@@ -43,7 +43,7 @@ const Footer: FC<Props> = (): JSX.Element => {
           </ul>
           <div className="flex item-center gap-2 my-3">
             <a
-              href="https://www.facebook.com/profile.php?id=100086421081221&locale=vi_VN"
+              href="https://www.facebook.com/trongthecuong.vu"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -115,7 +115,7 @@ const Footer: FC<Props> = (): JSX.Element => {
       <div className="border-t border-[#999999] py-1">
         <div className="container text-[#999999] text-xs flex items-center justify-between">
           <span className="uppercase my-2 text-center">
-            © 2023 Mazda Thủ Đức - Thành Long - All rights reserved
+            © {new Date().getFullYear()} Peugeot Thủ Đức - All rights reserved
           </span>
 
           <span>

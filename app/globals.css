@@ -32,11 +32,11 @@ html {
 }
 
 .price-block-decor {
-  @apply w-10/12 h-11 ml-auto grid place-items-center text-white bg-primary relative z-10 font-medium;
+  @apply w-10/12 h-11 ml-auto grid place-items-center text-white bg-secondary relative z-10 font-medium;
 }
 
 .price-block-decor::before {
-  @apply absolute top-0 -left-[10px] w-8 h-full bg-primary -z-10;
+  @apply absolute top-0 -left-[10px] w-8 h-full bg-secondary -z-10;
   content: "";
   transform: skew(-14deg, 0deg);
 }
@@ -136,11 +136,6 @@ html {
 .components-price-list span {
   @apply block text-right;
 }
-
-/* Car Post Content */
-/* .promotion-ul {
-  @apply list-disc space-y-2 ml-3;
-} */
 
 .post-img-wrapper {
   @apply relative;

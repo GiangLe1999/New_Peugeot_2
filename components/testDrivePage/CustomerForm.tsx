@@ -158,9 +158,9 @@ const CustomerForm: FC<Props> = ({
           </>
         )}
         {isQuotation ? (
-          <>MAZDA THỦ ĐỨC SẼ GỬI BÁO GIÁ ĐẾN BẠN SỚM NHẤT CÓ THỂ</>
+          <>PEUGEOT THỦ ĐỨC SẼ GỬI BÁO GIÁ ĐẾN BẠN SỚM NHẤT CÓ THỂ</>
         ) : (
-          <>MAZDA THỦ ĐỨC SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
+          <>PEUGEOT THỦ ĐỨC SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
         )}
       </p>
 

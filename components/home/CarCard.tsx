@@ -14,7 +14,7 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
     <div className="shadow-md bg-white rounded-sm overflow-hidden border">
       <Link
         href={"/" + car.slug}
-        className="relative w-full main-image-ratio block overflow-hidden"
+        className="relative w-full aspect-[1.667] block overflow-hidden"
       >
         <NextImage
           src={car.avatar.url}

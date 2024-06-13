@@ -24,13 +24,13 @@ const infos = [
   },
   {
     title: "Số điện thoại",
-    link: "tel:0333122512",
+    link: "tel:0961379001",
     content: "033.3122.512 (Mr.Long)",
   },
   {
     title: "Email",
-    link: "mailto:hualong02072000@gmail.com",
-    content: "hualong02072000@gmail.com",
+    link: "mailto:vucuong1710@gmail.com",
+    content: "vucuong1710@gmail.com",
   },
   {
     title: "Website",

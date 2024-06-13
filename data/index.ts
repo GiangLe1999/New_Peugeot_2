@@ -111,64 +111,34 @@ type navCarItemType = {
 
 export const navCarMenu: navCarItemType[] = [
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194430/Mazda/mazda2-do_ekcwdn.jpg",
-    name: "New Mazda 2",
-    price: "429",
-    link: "mazda-2",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1718243277/Mazda%20Car/zwkmwqrwnk2br6irrkjr.avif",
+    name: "New Peugeot 408",
+    price: "1019",
+    link: "peugeot-408",
   },
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194430/Mazda/mazda2-sport-trang_qwmme7.jpg",
-    name: "New Mazda2 Sport",
-    price: "513",
-    link: "mazda-2-sport",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1718247260/Mazda%20Car/cmy0elvrpqotfnhbjk92.avif",
+    name: "New Peugeot 2008",
+    price: "719",
+    link: "peugeot-2008",
   },
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194429/Mazda/mazda-cx3-xanh_g7kbvr.jpg",
-    name: "New Mazda CX3",
-    price: "569",
-    link: "mazda-cx-3",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1718251777/Mazda%20Car/mt0pt8ucljgsxv80ig24.avif",
+    name: "New Peugeot 3008",
+    price: "929",
+    link: "peugeot-3008",
   },
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194429/Mazda/mazda3-den_lhjkli.jpg",
-    name: "New Mazda 3",
-    price: "579",
-    link: "mazda-3",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1718254885/Mazda%20Car/iq7q7qx4hftwgvjy8ah2.avif",
+    name: "New Peugeot 5008",
+    price: "1109",
+    link: "peugeot-3008",
   },
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194427/Mazda/mazdasport-xam_aaj30s.jpg",
-    name: "New Mazda3 Sport",
-    price: "649",
-    link: "mazda-3-sport",
-  },
-  {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194427/Mazda/mazdacx30-trang_xvfhyd.jpg",
-    name: "Mazda CX30",
-    price: "709",
-    link: "mazda-cx-30",
-  },
-  {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194426/Mazda/mazda6-xanhden_n05nvx.jpg",
-    name: "New Mazda 6",
-    price: "779",
-    link: "mazda-6",
-  },
-  {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194426/Mazda/mazdacx5-do_eaoitz.jpg",
-    name: "New Mazda CX5 IPM",
-    price: "779",
-    link: "mazda-cx-5",
-  },
-  {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194425/Mazda/mazdacx8-den_znommi.jpg",
-    name: "New Mazda CX8",
-    price: "949",
-    link: "mazda-cx-8",
-  },
-  {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1693194425/Mazda/bt50-xam_d9htf5.jpg",
-    name: "New Mazda BT-50",
-    price: "609",
-    link: "mazda-bt-50",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1718272084/Mazda%20Car/szf9fyhkg14pq2mokkhv.avif",
+    name: "New Peugeot Traveller",
+    price: "1589",
+    link: "peugeot-traveller",
   },
 ];
 
@@ -227,12 +197,12 @@ export const reasonsToBuy: itemType[] = [
   {
     icon: BsTagsFill,
     title: "GIÁ CẢ ƯU ĐÃI - GIAO XE SỚM",
-    desc: "Mazda Thủ Đức luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất trong 1 ngày.",
+    desc: "Peugeot Thủ Đức luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất trong 1 ngày.",
   },
   {
     icon: SiAdguard,
     title: "BẢO HÀNH THEO TIÊU CHUẨN TOÀN QUỐC",
-    desc: "Anh chị sẽ yên tâm khi mua xe tại Mazda Thủ Đức, vì chúng tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng của Mazda trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.",
+    desc: "Anh chị sẽ yên tâm khi mua xe tại Peugeot Thủ Đức, vì chúng tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng của Peugeot trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.",
   },
   {
     icon: BsFillGiftFill,
@@ -250,42 +220,39 @@ export const aboutItems: itemType[] = [
   {
     icon: FaFlag,
     title: "THIẾT KẾ",
-    desc: "Chúng tôi mang đến niềm vui lái xe thuần túy bằng cách tạo nên những mẫu xe chứa đựng tính cách và tâm hồn. Trong đó, ngôn ngữ thiết kế chính là nét độc đáo mà Mazda sử dụng để tác động và kết nối các giác quan của người nhìn.",
+    desc: "Chúng tôi mang đến niềm vui lái xe thuần túy bằng cách tạo nên những mẫu xe chứa đựng tính cách và tâm hồn. Trong đó, ngôn ngữ thiết kế chính là nét độc đáo mà Peugeot sử dụng để tác động và kết nối các giác quan của người nhìn.",
   },
   {
     icon: FaThumbsUp,
     title: "SÁNG TẠO",
-    desc: "Tại Mazda, tất cả chúng ta đều nói về việc lái xe và cảm giác hứng khởi mà điều đó mang lại. Lái xe không đơn thuần chỉ là vận hành một cỗ máy mà còn liên hệ đến những va chạm và cảm xúc. Một chiếc xe không những phải phản ứng hoàn hảo với các thao tác của người lái mà còn phải sở hữu các hệ thống trực quan.",
+    desc: "Tại Peugeot, tất cả chúng ta đều nói về việc lái xe và cảm giác hứng khởi mà điều đó mang lại. Lái xe không đơn thuần chỉ là vận hành một cỗ máy mà còn liên hệ đến những va chạm và cảm xúc. Một chiếc xe không những phải phản ứng hoàn hảo với các thao tác của người lái mà còn phải sở hữu các hệ thống trực quan.",
   },
   {
     icon: FaShieldAlt,
     title: "AN TOÀN",
-    desc: "Mazda nhắm đến mục tiêu mang đến cho tất cả khách hàng niềm vui lái xe và hiệu suất an toàn trong một môi trường vượt trội. Dựa trên triết lý này, Mazda đang thúc đẩy nghiên cứu và phát triển các tính năng an toàn để hoàn thành mục tiêu quan trọng: xe lưu thông an toàn và không xảy ra tai nạn.",
+    desc: "Peugeot nhắm đến mục tiêu mang đến cho tất cả khách hàng niềm vui lái xe và hiệu suất an toàn trong một môi trường vượt trội. Dựa trên triết lý này, Peugeot đang thúc đẩy nghiên cứu và phát triển các tính năng an toàn để hoàn thành mục tiêu quan trọng: xe lưu thông an toàn và không xảy ra tai nạn.",
   },
   {
     icon: FaHeartbeat,
     title: "CẢM XÚC",
-    desc: "Tại Mazda, Chúng tôi không chỉ sản xuất xe, mà còn mang lại niềm vui và hạnh phúc cho khách hàng bởi Mazda tin rằng chiếc xe sẽ lay động cảm xúc và thức tỉnh các giác quan, tạo sự phấn khích cho người sở hữu.",
+    desc: "Tại Peugeot, Chúng tôi không chỉ sản xuất xe, mà còn mang lại niềm vui và hạnh phúc cho khách hàng bởi Peugeot tin rằng chiếc xe sẽ lay động cảm xúc và thức tỉnh các giác quan, tạo sự phấn khích cho người sở hữu.",
   },
 ];
 
 export const footerCol1: string[] = [
-  "Chuyên cung cấp dòng xe Mazda các loại",
-  "Xe 4 chỗ Mazda 2, 5 chỗ Mazda 3 và Mazda 6, 5 chỗ gầm cao CX-5, 7 chỗ CX-8, bán tải BT-50",
+  "Chuyên cung cấp dòng xe Peugeot các loại",
+  "Xe 5 chỗ Peugeot 408, Peugeot 2008, Xe 7 chỗ Peugeot 5008, Peugeot Traveller, ",
   "Địa chỉ : 127 Quốc Lộ 13, Khu phố 1, Thủ Đức, Ho Chi Minh City, Vietnam",
 ];
 
 type footerItemType = { title: string; link: string };
 
 export const footerCol2: footerItemType[] = [
-  { title: "New Mazda CX-5", link: "/mazda-cx-5" },
-  { title: "Mazda2", link: "/mazda-2" },
-  { title: "Mazda2 Sport", link: "/mazda-2-sport" },
-  { title: "Mazda3", link: "/mazda-3" },
-  { title: "Mazda3 Sport", link: "/mazda-3-sport" },
-  { title: "Mazda6", link: "/mazda-6" },
-  { title: "Mazda CX-8", link: "/mazda-cx-8" },
-  { title: "Mazda BT-50", link: "/mazda-bt-50" },
+  { title: "New Peugeot 408", link: "/peugeot-408" },
+  { title: "New Peugeot 2008", link: "/peugeot-2008" },
+  { title: "New Peugeot 3008", link: "/peugeot-3008" },
+  { title: "New Peugeot 5008", link: "/peugeot-5008" },
+  { title: "Peugeot Traveller", link: "/peugeot-traveller" },
 ];
 
 export const footerCol3: footerItemType[] = [
@@ -305,10 +272,10 @@ export const footerCol32: footerItemType[] = [
 ];
 
 export const footerCol4: { title: string; link: string; icon: IconType }[] = [
-  { title: "Hotline: 0333122512", link: "tel:0333122512", icon: MdPhone },
+  { title: "Hotline: 0961379001", link: "tel:0961379001", icon: MdPhone },
   {
-    title: "hualong02072000@gmail.com",
-    link: "mailto:hualong02072000@gmail.com",
+    title: "vucuong1710@gmail.com",
+    link: "mailto:vucuong1710@gmail.com",
     icon: MdMail,
   },
 ];

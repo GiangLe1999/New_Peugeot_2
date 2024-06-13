@@ -163,7 +163,7 @@ const CarQuickConsultModal: FC<Props> = ({ carSlug }): JSX.Element => {
             <input
               type="number"
               id="phone"
-              placeholder="0333122512"
+              placeholder="0961379001"
               className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
