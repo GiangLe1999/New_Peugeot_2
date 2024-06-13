@@ -1,5 +1,6 @@
 import { FC } from "react";
 import BtnWithIcon from "../BtnWithIcon";
+import parse from "html-react-parser";
 
 import { FaEdit } from "react-icons/fa";
 import { linkConstants } from "@/data/constants";
@@ -17,7 +18,7 @@ const PromotionSection: FC<Props> = ({ content, name }): JSX.Element => {
         {name}
       </h1>
 
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      <div>{parse(content || "")}</div>
 
       <div>
         <BtnWithIcon
