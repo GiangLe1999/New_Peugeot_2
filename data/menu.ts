@@ -41,6 +41,7 @@ export const carCategories = [
   { label: "Sedan", value: "Sedan" },
   { label: "SUV (xe thể thao đa dụng)", value: "SUV (xe thể thao đa dụng)" },
   { label: "Pickup (xe bán tải)", value: "Pickup (xe bán tải)" },
+  { label: "MPV (xe đa dụng)", value: "MPV (xe đa dụng)" },
 ];
 export const carTiers = [
   { label: "Hạng A", value: "Hạng A" },

@@ -94,7 +94,7 @@ const page: NextPage<Props> = async () => {
           <div className="grid grid-cols-3 gap-8 max-[1029px]:grid-cols-1">
             <div className="installment-block-sm">
               <p>
-                <SiGoogleoptimize size={30} color="#0298da" />
+                <SiGoogleoptimize size={30} color="#c32120" />
               </p>
               <h3>Lợi ích khi mua xe trả góp</h3>
               <ol>
@@ -178,40 +178,40 @@ const page: NextPage<Props> = async () => {
                   <strong>Tên xe</strong>
                 </td>
                 <td>
-                  <strong>Mazda 3 Sport 1.5L Luxury 2022</strong>
+                  <strong>Peugeot 2008</strong>
                 </td>
               </tr>
               <tr>
                 <td>Giá xe</td>
-                <td>739.000.000₫</td>
+                <td>719.000.000₫</td>
               </tr>
               <tr>
                 <td>Giá lăn bánh tại TP. HCM</td>
-                <td>835.330.000₫</td>
+                <td>812.783.700₫</td>
               </tr>
               <tr>
                 <td>Giá lăn bánh tại Hà Nội</td>
-                <td>850.110.000₫</td>
+                <td>827.509.500₫</td>
               </tr>
               <tr>
                 <td>Giá lăn bánh tại các tỉnh khác</td>
-                <td>816.330.000₫</td>
+                <td>793.007.400₫</td>
               </tr>
               <tr>
                 <td>Thanh toán trước từ 20%</td>
-                <td>170.022.000₫</td>
+                <td>143.800.000₫</td>
               </tr>
               <tr>
                 <td>Số tiền còn lại</td>
-                <td>680.088.000₫</td>
+                <td>575.200.000₫</td>
               </tr>
               <tr>
                 <td>Số tiền trả mỗi tháng (7 năm)</td>
-                <td>8.096.286₫</td>
+                <td>6.852.381₫</td>
               </tr>
             </table>
             <p>
-              Hỗ trợ tư vẫn mua xe Mazda trả góp tới 95% giá trị xe, thời gian
+              Hỗ trợ tư vẫn mua xe Peugeot trả góp tới 95% giá trị xe, thời gian
               vay tối đa 7 năm. Thủ tục đơn giản nhanh gọn, thời gian thẩm duyệt
               trong vòng 24h, kể cả khách hàng ở tỉnh, bao đậu hồ sơ khó. Vui
               lòng liên hệ để được tư vấn chính xác.

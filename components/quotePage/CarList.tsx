@@ -1,11 +1,12 @@
 "use client";
 
 import { FC } from "react";
-import NextImage from "../NextImage";
 import { formatPrice } from "@/lib/formatData";
 import Link from "next/link";
 import BtnWithIcon from "../BtnWithIcon";
 import { linkConstants } from "@/data/constants";
+import ContainNextImage from "../ContainNextImage";
+import NextImage from "../NextImage";
 
 interface Props {
   cars: any[];
@@ -23,9 +24,9 @@ const CarList: FC<Props> = ({ cars }): JSX.Element => {
             <div className="flex items-center gap-4 max-[779px]:flex-col">
               <Link
                 href={`/${car.slug}`}
-                className="relative w-[30%] main-image-ratio max-[779px]:w-[80%] max-[545px]:w-full"
+                className="relative w-[35%] main-image-ratio max-[779px]:w-[80%] max-[545px]:w-full"
               >
-                <NextImage
+                <ContainNextImage
                   src={car.avatar?.url}
                   alt={car.name}
                   className="hover:scale-[1.05]"

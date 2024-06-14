@@ -35,7 +35,7 @@ export const linkConstants = {
 };
 
 export const pageConstants = {
-  siteTitle: "Mazda Thủ Đức",
+  siteTitle: "Peugeot Thủ Đức",
   siteDescription:
-    "Website chính thức của Mazda Thủ Đức cung cấp thông tin chính xác nhất về các tính năng, hình ảnh và thông số kỹ thuật của tất cả các xe ô tô, SUV, Sedan, Sport.",
+    "Website chính thức của Peugeot Thủ Đức cung cấp thông tin chính xác nhất về các tính năng, hình ảnh và thông số kỹ thuật của tất cả các xe ô tô, SUV, Sedan, MPV.",
 };

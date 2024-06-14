@@ -31,7 +31,7 @@ const Filter: FC<Props> = ({
         "1 tỷ - 2 tỷ",
       ],
     },
-    { header: "fuel", items: ["Xăng", "Dầu"] },
+    { header: "fuel", items: ["Xăng", "Xăng / Dầu"] },
     { header: "seats", items: ["5", "6", "7"] },
     {
       header: "kind",
@@ -42,6 +42,7 @@ const Filter: FC<Props> = ({
         "Coupe (xe thể thao)",
         "SUV (xe thể thao đa dụng)",
         "Pickup (xe bán tải)",
+        "MPV (xe đa dụng)",
       ],
     },
   ];
