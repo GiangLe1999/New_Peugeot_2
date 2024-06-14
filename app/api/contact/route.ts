@@ -59,7 +59,7 @@ export async function POST(req: Request) {
 
     await sendEmail(
       process.env.SMTP_MAIL_TO as string,
-      "KH Mazda mới gửi form liên hệ",
+      "KH Peugeot mới gửi form liên hệ",
       `<h1>Khách hàng gửi form liên hệ tại website ${
         process.env.NEXT_PUBLIC_BASE_URL
       }:</h1>

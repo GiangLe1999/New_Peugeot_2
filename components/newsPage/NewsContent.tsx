@@ -17,10 +17,7 @@ const NewsContent: FC<Props> = ({ content }): JSX.Element => {
         const aspectRatio = width / height;
 
         return (
-          <div
-            className="w-full relative rounded-md shadow-md"
-            style={{ aspectRatio }}
-          >
+          <div className="w-full relative rounded-md" style={{ aspectRatio }}>
             <NextImage
               className="my-0 rounded-md"
               src={domNode.attribs.src}

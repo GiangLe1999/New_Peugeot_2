@@ -11,8 +11,8 @@ const Logo: FC<Props> = ({ wrapperClasses, textWhite }): JSX.Element => {
   return (
     <Link href="/" className={`relative block transition ${wrapperClasses}`}>
       <ContainNextImage
-        src="/images/mazda-logo-800x500.png"
-        alt="Mazda logo"
+        src="/images/peugeot-logo-alt.avif"
+        alt="Peugeot logo"
         priority
       />
     </Link>

@@ -55,11 +55,11 @@ const SubscribeCard = () => {
       <div className="absolute z-10 inset-0 bg-gradient-to-r from-black to-gray-500"></div>
       <div className="relative z-10 md:w-[60%]">
         <h3 className="text-xl font-bold text-white">
-          Subscribe kênh tin tức Mazda
+          Subscribe kênh tin tức Peugeot
         </h3>
         <p className="max-w-md mt-2 text-sm text-white leading-7">
-          Đăng ký nhận tin tức hoặc theo dõi Mazda trên mạng xã hội để cập nhật
-          những thông tin mới nhất về những dòng xe Mazda.
+          Đăng ký nhận tin tức hoặc theo dõi Peugeot trên mạng xã hội để cập
+          nhật những thông tin mới nhất về những dòng xe Peugeot.
         </p>
 
         {/* Form */}

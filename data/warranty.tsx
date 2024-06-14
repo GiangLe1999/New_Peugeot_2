@@ -101,8 +101,8 @@ export const warrantyData = [
           </li>
           <li>
             Bất kỳ hư hỏng sơn, đổi màu, hư hỏng các chi tiết hoặc ăn mòn bề mặt
-            chi tiết do sửa chữa vỏ không đúng theo các thông số của Mazda hoặc
-            sử dụng phụ tùng không chính hãng hoặc sửa chữa ở những
+            chi tiết do sửa chữa vỏ không đúng theo các thông số của Peugeot
+            hoặc sử dụng phụ tùng không chính hãng hoặc sửa chữa ở những
           </li>
           <li>
             nơi không phải là Đại lý của Công ty PC sẽ không được bảo hành.
@@ -163,8 +163,8 @@ export const warrantyData = [
     content: (
       <ul>
         <li>
-          Áp dụng đối với các xe Mazda do Công ty PC phân phối, đã được đăng ký
-          lưu hành và đang hoạt động trong lãnh thổ Việt Nam.{" "}
+          Áp dụng đối với các xe Peugeot do Công ty PC phân phối, đã được đăng
+          ký lưu hành và đang hoạt động trong lãnh thổ Việt Nam.{" "}
         </li>
         <li>
           Áp dụng cho các chủ sở hữu tiếp theo nếu xe còn trong điều kiện bảo
@@ -179,9 +179,9 @@ export const warrantyData = [
     content: (
       <ul>
         <li>
-          Xe Mazda của Quý khách được bảo hành trong vòng 36 tháng hoặc 100.000
-          km tùy điều kiện nào đến trước, kể từ ngày giao xe đầu tiên (ghi trên
-          phiếu đăng ký bảo hành).
+          Xe Peugeot của Quý khách được bảo hành trong vòng 36 tháng hoặc
+          100.000 km tùy điều kiện nào đến trước, kể từ ngày giao xe đầu tiên
+          (ghi trên phiếu đăng ký bảo hành).
         </li>
         <li>Thời gian thực hiện bảo hành không tính vào thời hạn bảo hành.</li>
       </ul>
@@ -195,9 +195,10 @@ export const warrantyData = [
         <li>
           Ngoại trừ các chi tiết có điều kiện bảo hành đặc biệt như ở mục 4 và
           các chi tiết không được bảo hành như ở mục 5, tất cả các chi tiết trên
-          xe Mazda của Quý khách sẽ được các Đại lý của Công ty PC bảo hành bằng
-          cách sửa chữa, điều chỉnh hoặc thay thế miễn phí bất kỳ phụ tùng, chi
-          tiết nào bị hư hỏng do lỗi phụ tùng hoặc lỗi lắp ráp được phát hiện.
+          xe Peugeot của Quý khách sẽ được các Đại lý của Công ty PC bảo hành
+          bằng cách sửa chữa, điều chỉnh hoặc thay thế miễn phí bất kỳ phụ tùng,
+          chi tiết nào bị hư hỏng do lỗi phụ tùng hoặc lỗi lắp ráp được phát
+          hiện.
         </li>
       </ul>
     ),
@@ -274,7 +275,7 @@ export const warrantyData = [
             Thùng sau xe bán tải: Hư hỏng sơn và han rỉ bề mặt của thùng sau xe
             bán tải không được bảo hành.
           </li>
-          <li>Đầu DVD/CD (đối với xe không có hệ thống Mazda Connect):</li>
+          <li>Đầu DVD/CD (đối với xe không có hệ thống Peugeot Connect):</li>
         </ul>
 
         <p>5.3 Lưu ý:</p>
@@ -285,10 +286,10 @@ export const warrantyData = [
             hành.
           </li>
           <li>
-            Đầu đọc DVD/CD thuộc hệ thống Mazda Connect được bảo hành theo xe.
+            Đầu đọc DVD/CD thuộc hệ thống Peugeot Connect được bảo hành theo xe.
           </li>
           <li>
-            Thẻ SD hệ thống dẫn đường (navigation) trên xe có trang bị Mazda
+            Thẻ SD hệ thống dẫn đường (navigation) trên xe có trang bị Peugeot
             Connect chỉ được bảo hành 12 tháng kể từ ngày đăng ký bảo hành.
           </li>
           <li>

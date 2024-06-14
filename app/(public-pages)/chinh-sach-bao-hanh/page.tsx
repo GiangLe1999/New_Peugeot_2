@@ -19,7 +19,7 @@ const page: NextPage<Props> = () => {
     <div>
       <FirstBanner
         heading="CHÍNH SÁCH BẢO HÀNH"
-        subHeading="Tất cả các xe Mazda mua mới đều sẽ có chế độ bảo hành trong khoản thời gian nhất định bên cạnh các dịch vụ sửa chửa xe khi cần thiết. Thông tin chi tiết về chế độ bảo hành được hiển thị bên dưới."
+        subHeading="Tất cả các xe Peugeot mua mới đều sẽ có chế độ bảo hành trong khoản thời gian nhất định bên cạnh các dịch vụ sửa chửa xe khi cần thiết. Thông tin chi tiết về chế độ bảo hành được hiển thị bên dưới."
         bgImg="/images/chinh-sach-bao-hanh/first-banner.jpg"
         bgClasses="!bg-cover"
       />

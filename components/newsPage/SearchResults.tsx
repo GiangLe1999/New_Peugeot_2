@@ -39,7 +39,7 @@ const SearchResults: FC<Props> = ({
           </div>
 
           <div className="p-4 rounded-b-md border-t text-right text-xs text-[#73808C] font-bold">
-            Search By Mazda Thủ Đức
+            Search By Peugeot Thủ Đức
           </div>
         </>
       )}

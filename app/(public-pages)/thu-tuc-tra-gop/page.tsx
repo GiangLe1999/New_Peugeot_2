@@ -9,7 +9,7 @@ export const generateMetadata = () => {
   return {
     title: "Thủ tục trả góp",
     description:
-      "Tìm hiểu thông tin về thủ tục trả góp đối với sản phẩm xe Mazda một cách chính xác nhất tại Mazda Thủ Đức.",
+      "Tìm hiểu thông tin về thủ tục trả góp đối với sản phẩm xe Peugeot một cách chính xác nhất tại Peugeot Thủ Đức.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/thu-tuc-tra-gop`,
   };
 };
@@ -155,7 +155,7 @@ const page: NextPage<Props> = async () => {
             <span>BẢNG TÍNH LÃI VAY MUA XE TRẢ GÓP</span>
           </h2>
           <CarPriceSection
-            name={"new mazda 2"}
+            name={"new Peugeot 2"}
             carNameArr={carNameArr}
             isInstallmentPage
           />

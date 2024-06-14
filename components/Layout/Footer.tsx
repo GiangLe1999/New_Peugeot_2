@@ -50,14 +50,17 @@ const Footer: FC<Props> = (): JSX.Element => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/facebook.jpg"
-                  alt="Mazda Facebook"
+                  alt="Peugeot Facebook"
                 />
               </div>
             </a>
 
             <Link href="" target="_blank" rel="noopener noreferrer">
               <div className="footer-icon">
-                <NextImage src="/images/home/youtube.png" alt="Mazda Youtube" />
+                <NextImage
+                  src="/images/home/youtube.png"
+                  alt="Peugeot Youtube"
+                />
               </div>
             </Link>
 
@@ -65,7 +68,7 @@ const Footer: FC<Props> = (): JSX.Element => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/instagram.png"
-                  alt="Mazda Instagram"
+                  alt="Peugeot Instagram"
                 />
               </div>
             </Link>

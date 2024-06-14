@@ -7,10 +7,10 @@ export const dynamic = "force-dynamic";
 interface Props {}
 
 export const generateMetadata = () => {
+  const thisYear = new Date().getFullYear();
   return {
-    title: "Tính phí lăn bánh Ô tô Mazda 2023",
-    description:
-      "Cách tính và bảng tính phí lăn bánh Ô tô Mazda chính xác nhất 2023.Tham khảo tại Website Mazda Thủ Đức.",
+    title: `Tính phí lăn bánh Ô tô Peugeot ${thisYear}`,
+    description: `Cách tính và bảng tính phí lăn bánh Ô tô Peugeot chính xác nhất ${thisYear}.Tham khảo tại Website Peugeot Thủ Đức.`,
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/tinh-phi-lan-banh`,
   };
 };
@@ -23,8 +23,8 @@ const page: NextPage<Props> = async () => {
   return (
     <div>
       <FirstBanner
-        heading="TÍNH PHÍ LĂN BÁNH MAZDA 2023"
-        subHeading="Cập nhật chính xác nhất giá lăn bánh các dòng xe của Mazda"
+        heading={`TÍNH PHÍ LĂN BÁNH PUEGOT ${new Date().getFullYear()}`}
+        subHeading="Cập nhật chính xác nhất giá lăn bánh các dòng xe của Peugeot"
         bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
         bgClasses="!bg-cover"
       />

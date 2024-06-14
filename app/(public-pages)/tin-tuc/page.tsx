@@ -9,7 +9,7 @@ const AllNewsPage: NextPage<Props> = () => {
     <div>
       <FirstBanner
         heading="TIN TỨC & ƯU ĐÃI"
-        subHeading="Thông tin mới nhất về các dòng xe của Mazda"
+        subHeading="Thông tin mới nhất về các dòng xe của Peugeot"
         bgImg="/images/bao-gia/first-banner.jpg"
         bgClasses="!bg-cover"
       />

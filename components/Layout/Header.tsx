@@ -77,7 +77,7 @@ const Header: FC<Props> = (props): JSX.Element => {
 
             <div className="text-sm">
               <p>HOTLINE</p>
-              <p>033.3122.512</p>
+              <p>096.1379.001</p>
             </div>
           </a>
         </div>

@@ -18,11 +18,11 @@ const serviceList = [
     children: [
       {
         title: "Phụ tùng chính hãng",
-        link: "/tin-tuc/bao-duong-xe-mazda-dinh-ky",
+        link: "/tin-tuc/phu-tung-phu-kien-chinh-hang-peugeot",
       },
       {
         title: "Phụ kiện chính hãng",
-        link: "/tin-tuc/bao-duong-xe-mazda-dinh-ky",
+        link: "/tin-tuc/phu-tung-phu-kien-chinh-hang-peugeot",
       },
     ],
   },

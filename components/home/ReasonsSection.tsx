@@ -31,7 +31,7 @@ const ReasonsSection: FC<Props> = (props): JSX.Element => {
         <div className="relative w-full aspect-[1.5] rounded-sm overflow-hidden">
           <NextImage
             src="/images/home/peugeot-tai-sao-nen-mua.jpg"
-            alt="Tại sao nên mua xe Mazda?"
+            alt="Tại sao nên mua xe Peugeot?"
           />
         </div>
       </div>
