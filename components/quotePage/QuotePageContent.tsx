@@ -29,7 +29,7 @@ const QuotePageContent: FC<Props> = (props): JSX.Element => {
         heading="BẢNG GIÁ"
         subHeading="Bảng giá chi tiết tất cả các dòng xe của Peugeot"
         bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
-        bgClasses="!bg-cover"
+        bgClasses="!bg-cover !bg-[50%_50%]"
       />
 
       <div className="container">
