@@ -29,7 +29,7 @@ const FinalPriceFrom: FC<Props> = ({
   setChoseCarName,
 }): JSX.Element => {
   const currentRegistrationFee = (registration * currentListPrice) / 100;
-  console.log({currentRegistrationFee, currentListPrice, registration})
+  console.log({ currentRegistrationFee, currentListPrice, registration });
 
   const { phiDkyBienso, phiDuongbo, phiDkiem, bhTNDS } = carFees;
 
@@ -43,7 +43,7 @@ const FinalPriceFrom: FC<Props> = ({
 
   return (
     <div className="cal-price-wrapper h-fit">
-      <h4 className="cal-price-title">TÍNH PHÍ LĂN BÁNH</h4>
+      <span className="cal-price-title">TÍNH PHÍ LĂN BÁNH</span>
 
       <form className="pt-4 pb-2 text-textColor">
         {/* Place */}
