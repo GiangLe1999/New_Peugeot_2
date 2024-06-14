@@ -44,8 +44,9 @@ const page: NextPage<Props> = () => {
               </li>
               <li>
                 Nơi đây quy tụ đầy đủ các dòng xe đang thịnh hành mang thương
-                hiệu Peugeot như Peugeot 2, Peugeot 3, Peugeot 6, CX-5, CX-9… và
-                dòng bán tải BT-50..
+                hiệu Peugeot như Peugeot 2008, Peugeot 3008, Peugeot 5008,
+                Peugeot 408, Peugeot Traveller… và dòng xe máy Peugeot Django
+                125..
               </li>
               <li>
                 Không chỉ có những sản phẩm tối ưu với thiết kế độc đáo,
