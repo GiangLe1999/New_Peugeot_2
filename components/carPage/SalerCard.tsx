@@ -13,7 +13,7 @@ const SalerCard: FC<Props> = (props): JSX.Element => {
       <div className="bg-secondary rounded-md overflow-hidden">
         <div className="w-full aspect-square relative">
           <NextImage
-            src="/images/gioi-thieu/phong-kinh-doanh-mazda-sai-gon.png"
+            src="/images/gioi-thieu/phong-kinh-doanh-peugeot-thu-duc.webp"
             alt="Phòng kinh doanh Mazda"
           />
         </div>
