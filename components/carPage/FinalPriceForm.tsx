@@ -29,6 +29,7 @@ const FinalPriceFrom: FC<Props> = ({
   setChoseCarName,
 }): JSX.Element => {
   const currentRegistrationFee = (registration * currentListPrice) / 100;
+  console.log({currentRegistrationFee, currentListPrice, registration})
 
   const { phiDkyBienso, phiDuongbo, phiDkiem, bhTNDS } = carFees;
 

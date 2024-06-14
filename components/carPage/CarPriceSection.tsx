@@ -88,7 +88,7 @@ const CarPriceSection: FC<Props> = ({
   }
 
   const fetchCarDataByName = async () => {
-    const carData = (await getCarData("", choseCarName)) as {
+    const carData = ((await getCarData(choseCarName)) as any)?.data as {
       registration: number;
     };
     setChoseCarData(carData);

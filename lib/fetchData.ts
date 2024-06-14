@@ -56,12 +56,10 @@ export const getAllCarsData = async () => {
   }
 };
 
-export const getCarData = cache(async (carSlug?: string, carName?: string) => {
+export const getCarData = cache(async (carName: string) => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/car?${
-        carSlug ? `slug=${carSlug}` : `name=${carName}`
-      }`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/car/for-calculate?name=${carName}`,
       { cache: "no-store" }
     );
 
