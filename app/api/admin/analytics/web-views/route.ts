@@ -15,7 +15,7 @@ export async function GET(req: Request) {
   });
 
   // Replace 'your-GA4-property-id' with your GA4 Property ID
-  const propertyId = "444253393";
+  const propertyId = "446028783";
 
   try {
     // Make a call to the GA4 Data API

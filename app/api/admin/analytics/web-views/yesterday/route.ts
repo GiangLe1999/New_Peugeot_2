@@ -29,7 +29,7 @@ export async function GET(req: Request) {
   });
 
   // Replace 'your-GA4-property-id' with your GA4 Property ID
-  const propertyId = "434198184";
+  const propertyId = "446028783";
 
   try {
     const [response] = await analyticsDataClient.runReport({

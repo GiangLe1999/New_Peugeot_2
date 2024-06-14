@@ -33,13 +33,13 @@ const CustomerForm: FC<Props> = ({
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const carNames = carLines.map((item) => item.name);
+  const carNames = carLines?.map((item) => item.name);
 
   let carLinesNames = [];
   if (choseCarName) {
     carLinesNames = carLines
       .find((item) => item.name === choseCarName)
-      ?.carLines.map((item2) => item2.name) as any[];
+      ?.carLines?.map((item2) => item2.name) as any[];
   }
 
   const resetFormValue = () => {
@@ -280,8 +280,8 @@ const CustomerForm: FC<Props> = ({
               htmlFor="confirm1"
               className={`cursor-pointer ${!isContactForm && "mt-4"}`}
             >
-              Tôi xác nhận rằng Mazda THỦ ĐỨC có thể gửi cho tôi thêm thông tin
-              về các sản phẩm hoặc dịch vụ của Mazda. *
+              Tôi xác nhận rằng Peugeot THỦ ĐỨC có thể gửi cho tôi thêm thông
+              tin về các sản phẩm hoặc dịch vụ của Peugeot. *
             </label>
           </div>
           {submitted && !confirm1Checked && (
@@ -306,8 +306,8 @@ const CustomerForm: FC<Props> = ({
             />
 
             <label htmlFor="confirm2" className="cursor-pointer">
-              Tôi đã đọc và đồng ý với các quy định và chính sách của Mazda Việt
-              Nam. *
+              Tôi đã đọc và đồng ý với các quy định và chính sách của Peugeot
+              Việt Nam. *
             </label>
           </div>
           {submitted && !confirm2Checked && (

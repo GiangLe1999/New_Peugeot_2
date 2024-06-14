@@ -7,7 +7,7 @@ export const generateMetadata = () => {
   return {
     title: "Chính sách bảo mật thông tin",
     description:
-      "Thông tin mới nhất về chính sách bảo mật thông tin khách hàng tại website chính thức của Mazda Thủ Đức.",
+      "Thông tin mới nhất về chính sách bảo mật thông tin khách hàng tại website chính thức của Peugeot Thủ Đức.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/chinh-sach-bao-mat`,
   };
 };
@@ -19,9 +19,9 @@ const page: NextPage<Props> = () => {
     <div>
       <FirstBanner
         heading="CHÍNH SÁCH BẢO MẬT"
-        subHeading="Thông tin chi tiết về chính sách bảo mật thông tin tại Mazda."
-        bgImg="/images/chinh-sach-bao-hanh/first-banner.jpg"
-        bgClasses="!bg-cover"
+        subHeading="Thông tin chi tiết về chính sách bảo mật thông tin tại Peugeot."
+        bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
+        bgClasses="!bg-cover !bg-[50%_50%]"
       />
 
       <div className="container my-12">

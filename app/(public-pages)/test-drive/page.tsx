@@ -19,16 +19,16 @@ const TestDrivePage = () => {
       <FirstBanner
         heading="ĐĂNG KÝ LÁI THỬ"
         subHeading="Đăng ký và nhận bảng báo giá mới nhất cho dòng xe mà bạn quan tâm."
-        bgImg="/images/lien-he/first-banner.jpg"
-        bgClasses="!bg-[50%_50%] !bg-cover"
+        bgImg="/images/test-drive/first-banner.jpg"
+        bgClasses="!bg-cover"
       />
 
       <div className="container my-12">
         <div className="customer-form-wrapper">
           <div className="relative w-full h-full">
             <NextImage
-              src="/images/test-drive/lai-thu-mazda.jpg"
-              alt="Lái thử Mazda"
+              src="/images/test-drive/lai-thu-peugeot.jpg"
+              alt="Lái thử Peugeot"
             />
           </div>
 

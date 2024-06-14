@@ -43,8 +43,8 @@ export const paymentData = [
     content: (
       <ul>
         <li>
-          Áp dụng đối với các xe Mazda do Công ty PC phân phối, đã được đăng ký
-          lưu hành và đang hoạt động trong lãnh thổ Việt Nam.{" "}
+          Áp dụng đối với các xe Peugeot do Công ty PC phân phối, đã được đăng
+          ký lưu hành và đang hoạt động trong lãnh thổ Việt Nam.{" "}
         </li>
         <li>
           Áp dụng cho các chủ sở hữu tiếp theo nếu xe còn trong điều kiện bảo

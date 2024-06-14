@@ -242,7 +242,7 @@ export const aboutItems: itemType[] = [
 export const footerCol1: string[] = [
   "Chuyên cung cấp dòng xe Peugeot các loại",
   "Xe 5 chỗ Peugeot 408, Peugeot 2008, Xe 7 chỗ Peugeot 5008, Peugeot Traveller, ",
-  "Địa chỉ : 127 Quốc Lộ 13, Khu phố 1, Thủ Đức, Ho Chi Minh City, Vietnam",
+  "Địa chỉ : 127 Quốc Lộ 13, Khu phố 1, Thủ Đức, TP. Hồ Chí Minh, Việt Nam",
 ];
 
 type footerItemType = { title: string; link: string };

@@ -114,7 +114,7 @@ const page: NextPage<Props> = async () => {
 
             <div className="installment-block-sm">
               <p>
-                <SiAddthis size={30} color="#0298da" />
+                <SiAddthis size={30} color="#c32120" />
               </p>
               <h3>Điều kiện mua xe trả góp</h3>
               <ol>
@@ -131,7 +131,7 @@ const page: NextPage<Props> = async () => {
 
             <div className="installment-block-sm">
               <p>
-                <ImUserTie size={30} color="#0298da" />
+                <ImUserTie size={30} color="#c32120" />
               </p>
               <h3>Đối tượng thích hợp nhất</h3>
               <ol>

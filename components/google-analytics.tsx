@@ -11,7 +11,7 @@ const GoogleAnalytics: FC<Props> = (props): JSX.Element => {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-7CN8KFXGLW');`}
+  gtag('config', 'G-8RNVWX21S1');`}
       </Script>
     </>
   );

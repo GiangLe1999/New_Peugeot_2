@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => {
   return {
-    title: "Liên hệ với Mazda Thủ Đức",
+    title: "Liên hệ với Peugeot Thủ Đức",
     description:
-      "Liên hệ ngay với Mazda Thủ Đức để đặt lịch lái thử hoặc nhận báo giá mới nhất cho các dòng xe Mazda.",
+      "Liên hệ ngay với Peugeot Thủ Đức để đặt lịch lái thử hoặc nhận báo giá mới nhất cho các dòng xe Peugeot.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/lien-he`,
   };
 };
@@ -20,12 +20,12 @@ const titleClasses = "text-primary uppercase font-bold text-2xl mb-3";
 const infos = [
   {
     title: "Địa chỉ",
-    content: "125 Quốc Lộ 13, Khu phố 1, Thủ Đức, Ho Chi Minh City, Vietnam",
+    content: "125 Quốc Lộ 13, Khu phố 1, Thủ Đức, TP. Hồ Chí Minh",
   },
   {
     title: "Số điện thoại",
     link: "tel:0961379001",
-    content: "033.3122.512 (Mr.Long)",
+    content: "096.1379.001 (Mr.Cường)",
   },
   {
     title: "Email",
@@ -34,8 +34,8 @@ const infos = [
   },
   {
     title: "Website",
-    link: "https://next-mazda.vercel.app",
-    content: "https://next-mazda.vercel.app",
+    link: process.env.NEXT_PUBLIC_BASE_URL,
+    content: process.env.NEXT_PUBLIC_BASE_URL,
   },
 ];
 
@@ -44,9 +44,9 @@ const ContactPage: NextPage<Props> = () => {
     <div className="text-textColor">
       <FirstBanner
         heading="LIÊN HỆ CHÚNG TÔI"
-        subHeading="Hoặc ghé thăm trực tiếp đại lý Mazda Thủ Đức"
-        bgImg="/images/lien-he/first-banner.jpg"
-        bgClasses="!bg-[50%_50%] !bg-cover"
+        subHeading="Hoặc ghé thăm trực tiếp đại lý Peugeot Thủ Đức"
+        bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
+        bgClasses="!bg-cover"
       />
       <div className="container py-16">
         <div className="pb-16">
@@ -56,7 +56,7 @@ const ContactPage: NextPage<Props> = () => {
         <div className="grid grid-cols-2 gap-9 max-[846px]:grid-cols-1">
           <div className="space-y-11">
             <div>
-              <h1 className={titleClasses}>Mazda Thủ Đức</h1>
+              <h1 className={titleClasses}>Peugeot Thủ Đức</h1>
               <ul>
                 {infos.map((info, index) => (
                   <li key={index} className="flex items-center gap-2 py-2">
@@ -105,7 +105,7 @@ const ContactPage: NextPage<Props> = () => {
 
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7887680054164!2d106.71228047601315!3d10.827470858248212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752902a0e9a235%3A0xb75352c6302b9a24!2zTWF6ZGEgLSBUaMOgbmggUGjhu5EgVGjhu6cgxJDhu6lj!5e0!3m2!1svi!2s!4v1717517833562!5m2!1svi!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.74848539597!2d106.7108456760131!3d10.830549858191102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d9f93fde37%3A0x9bffee2b065489d6!2zUGV1Z2VvdCBCw6xuaCBUcmnhu4d1!5e0!3m2!1svi!2s!4v1718292035911!5m2!1svi!2s"
               className="w-full h-full max-[846px]:aspect-video rounded-md shadow-md"
               loading="lazy"
               allowFullScreen

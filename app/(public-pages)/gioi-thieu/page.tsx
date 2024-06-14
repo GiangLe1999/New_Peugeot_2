@@ -21,7 +21,7 @@ const page: NextPage<Props> = () => {
         heading="VỀ CHÚNG TÔI"
         subHeading="Peogeot Thủ Đức"
         bgImg="/images/thu-tuc-tra-gop/first-banner.jpg"
-        bgClasses="!bg-cover"
+        bgClasses="!bg-cover !bg-[50%_50%]"
       />
 
       <div className="container my-12 space-y-12">

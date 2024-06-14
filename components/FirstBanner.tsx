@@ -15,9 +15,10 @@ const FirstBanner: FC<Props> = ({
 }): JSX.Element => {
   return (
     <div
-      className={`flex flex-col justify-center items-center gap-2 text-white aspect-[5] max-[650px]:py-2 ${bgClasses}`}
+      className={`relative flex flex-col justify-center items-center gap-2 text-white aspect-[5] max-[650px]:py-2 ${bgClasses}`}
       style={{ background: `url('${bgImg}')`, backgroundRepeat: "no-repeat" }}
     >
+      <div className="absolute inset-0 bg-black opacity-45"></div>
       <h1 className="font-bold uppercase text-3xl relative z-10 max-[650px]:text-xl">
         {heading}
       </h1>

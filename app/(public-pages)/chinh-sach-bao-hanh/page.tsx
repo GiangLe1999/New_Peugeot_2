@@ -7,9 +7,9 @@ interface Props {}
 
 export const generateMetadata = () => {
   return {
-    title: "Chính sách bảo hành xe Mazda 2023",
+    title: `Chính sách bảo hành xe Peugeot ${new Date().getFullYear()}`,
     description:
-      "Thông tin mới nhất về chính sách bảo hành cho các dòng xe Mazda: Mazda 2, Mazda 3, Mazda CX-3, ... tại website chính thức của Mazda Thủ Đức.",
+      "Thông tin mới nhất về chính sách bảo hành cho các dòng xe Peugeot: Peugeot 2008, Peugeot 3008, Peugeot 5008, Peugeot 408 ... tại website chính thức của Peugeot Thủ Đức.",
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/chinh-sach-bao-hanh`,
   };
 };
